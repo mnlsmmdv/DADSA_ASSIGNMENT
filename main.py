@@ -55,7 +55,7 @@ def consoleMenu():
 def itemsMenu():
     print("---------------------------------")
     print("|      BigCon Construction      |")
-    print("--------------Menu---------------")
+    print("--------------Items--------------")
     print("1- Diesel                       |")
     print("2- Frozen                       |")
     print("3- Fridge                       |")
