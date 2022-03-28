@@ -156,7 +156,7 @@ def removeItems():
 def searchItems():
     print("----SEARCHING ITEMS----")
     print("---------------------------------")
-    itemName = input('Item Name: ')
+    itemName = input("Item Name: ")
     itemAmount = int(input("Item Amount: "))
     
     # Checks if the entered elements exists in the lists and prints them.
