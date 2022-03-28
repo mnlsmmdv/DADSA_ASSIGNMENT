@@ -1,0 +1,426 @@
+"""
+
+Name: Ahmed Affaan                                  
+
+Title: pseudo_code.txt
+
+Folder: DADSA                            
+
+Date: 10/03/2022                                    
+
+Country: Republic of Maldives                       
+
+Code version: 3.8.10                                
+
+Description: Assignment
+
+Student ID: S1802035                                       
+
+Note: Uncomment codes to execute and comment them when not IN use.                         
+
+"""
+
+
+
+# PROGRAM START.
+
+
+
+# Lists FOR Dhoani's Item Name and Item Amount.
+
+SET dhoaniItemName TO []
+
+SET dhoaniItemAmount TO []
+
+# Lists FOR Supplier Island 01 Item Name and Item Amount.
+
+SET supplierIslandAlphaItemName TO []
+
+SET supplierIslandAlphaItemAmount TO []
+
+# Lists FOR Supplier Island 02 Item Name and Item Amount.
+
+SET supplierIslandBetaItemName TO []
+
+SET supplierIslandBetaItemAmount TO []
+
+# Lists FOR Island A Item Name and Item Amount.
+
+SET islandA_ItemName TO []
+
+SET islandA_ItemAmount TO []
+
+# Lists FOR Island B Item Name and Item Amount.
+
+SET islandB_ItemName TO []
+
+SET islandB_ItemAmount TO []
+
+# Lists FOR Island C Item Name and Item Amount.
+
+SET islandC_ItemName TO []
+
+SET islandC_ItemAmount TO []
+
+# Lists FOR Island D Item Name and Item Amount.
+
+SET islandD_ItemName TO []
+
+SET islandD_ItemAmount TO []
+
+
+
+# This function displays the main console menu.
+
+DEFINE FUNCTION consoleMenu():
+
+    OUTPUT("---------------------------------")
+
+    OUTPUT("|      BigCon Construction      |")
+
+    OUTPUT("--------------Menu---------------")
+
+    OUTPUT("1- Add Items                    |")
+
+    OUTPUT("2- Remove Items                 |")
+
+    OUTPUT("3- Update Items                 |")
+
+    OUTPUT("4- Search Items                 |")
+
+    OUTPUT("5- Print Items                  |")
+
+    OUTPUT("7- QUIT                         |")
+
+    OUTPUT("---------------------------------")
+
+
+
+    # Asks FOR initial user INPUT.
+
+    SET user_INPUT TO int(INPUT("Enter choice: "))
+
+    consoleChoice(user_INPUT)
+
+
+
+# This function displays the Items Menu with their group code.
+
+DEFINE FUNCTION itemsMenu():
+
+    OUTPUT("---------------------------------")
+
+    OUTPUT("|      BigCon Construction      |")
+
+    OUTPUT("--------------Menu---------------")
+
+    OUTPUT("1- Diesel                       |")
+
+    OUTPUT("2- Frozen                       |")
+
+    OUTPUT("3- Fridge                       |")
+
+    OUTPUT("4- Food                         |")
+
+    OUTPUT("5- Protected Material           |")
+
+    OUTPUT("6- Unprotected Material         |")
+
+    OUTPUT("---------------------------------")
+
+
+
+# This function checks the users specific choice and directs to that function.
+
+DEFINE FUNCTION consoleChoice(user_INPUT):
+
+    IF user_INPUT EQUALS 1:
+
+        addItems()
+
+    ELSEIF user_INPUT EQUALS 2:
+
+        removeItems()
+
+    ELSEIF user_INPUT EQUALS 3:
+
+        updateItems()
+
+    ELSEIF user_INPUT EQUALS 4:
+
+        searchItems()
+
+    ELSEIF user_INPUT EQUALS 5:
+
+        OUTPUTItems()
+
+    ELSEIF user_INPUT EQUALS 7:
+
+        exit()
+
+
+
+# This function will add items.
+
+DEFINE FUNCTION addItems():
+
+    # Prints the Items Menu.
+
+    OUTPUT("")    
+
+    itemsMenu()
+
+    # Asks FOR user INPUT.
+
+    SET itemName TO INPUT("Item Name: ").lower()
+
+    SET itemAmount TO int(INPUT("Item Amount: "))
+
+
+
+    # Checks IF Item Name and Item Amount is valid and adds it.
+
+    if((itemName != ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]) and (itemAmount > 30000)):
+
+        OUTPUT("INVALID INPUT")
+
+    ELSE:
+
+        # Adds Item Name and Item Amount IN the list.
+
+        dhoaniItemName.append(itemName)
+
+        dhoaniItemAmount.append(itemAmount)
+
+        
+
+    # Asks user IF they wish to continue or quit.
+
+    OUTPUT("---------------------------------")
+
+    SET user_INPUT TO int(INPUT('Enter 6 to continue or 7 to exit: '))
+
+    OUTPUT("")
+
+    IF user_INPUT EQUALS 6:
+
+        consoleMenu()
+
+    ELSE:
+
+        exit()
+
+
+
+# This function will remove items.
+
+DEFINE FUNCTION removeItems():
+
+    # Prints the Items Menu.
+
+    OUTPUT("")
+
+    itemsMenu()
+
+    # Asks FOR user INPUT
+
+    SET itemName TO INPUT("Item Name: ").lower()
+
+    SET itemAmount TO int(INPUT("Item Amount: "))
+
+
+
+    # Checks IF Item Name and Item Amount is valid and removes it.
+
+    if((itemName != ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]) and (itemAmount > 30000)):
+
+        OUTPUT("INVALID INPUT")
+
+    ELSE:
+
+        IF ((itemName IN dhoaniItemName) and (itemAmount IN dhoaniItemAmount)):  
+
+            # Removing Item Name and Item Amount.
+
+            OUTPUT("REMOVING ITEM!")  
+
+            dhoaniItemName.remove(itemName)
+
+            dhoaniItemAmount.remove(itemAmount)
+
+
+
+            # Asks user IF they wish to continue or quit.
+
+            OUTPUT("---------------------------------")
+
+            SET user_INPUT TO int(INPUT("Enter 6 to continue or 7 to exit: "))
+
+            OUTPUT("")
+
+            IF user_INPUT EQUALS 6:
+
+               consoleMenu()
+
+            ELSE:
+
+               exit()
+
+        ELSE:
+
+            # Error message.
+
+            OUTPUT("INVALID INPUT")
+
+
+
+# This function will update the elements IN the list.
+
+DEFINE FUNCTION updateItems():
+
+    OUTPUT("Updating Inventory")
+
+    OUTPUT("---------------------------------")
+
+    SET itemName TO INPUT('Item Name: ')
+
+    SET itemAmount TO int(INPUT("Item Amount: "))
+
+    
+
+    # Checks IF Item Name and Item Amount is valid and updates it.
+
+    if((itemName != ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]) and (itemAmount > 30000)):
+
+        OUTPUT("INVALID INPUT")
+
+    ELSE:
+
+        IF ((itemName IN dhoaniItemName) and (itemAmount IN dhoaniItemAmount)):  
+
+            # Removing Item Name and Item Amount.
+
+            OUTPUT("REMOVING ITEM!")  
+
+            dhoaniItemName.append(itemName)
+
+            dhoaniItemAmount.append(itemAmount)
+
+
+
+            # Asking user IF they wish to continue.
+
+            OUTPUT("---------------------------------")
+
+            SET user_INPUT TO int(INPUT("Enter 6 to continue or 7 to exit: "))
+
+            OUTPUT("")
+
+            IF user_INPUT EQUALS 6:
+
+               consoleMenu()
+
+            ELSE:
+
+               exit()
+
+        ELSE:
+
+            # Error message.
+
+            OUTPUT("INVALID INPUT")
+
+
+
+# This function will search through the lists and OUTPUT it.
+
+DEFINE FUNCTION searchItems():
+
+    OUTPUT('Searching Inventory')
+
+    OUTPUT("---------------------------------")
+
+    SET itemName TO INPUT('Item Name: ')
+
+    SET itemAmount TO int(INPUT("Item Amount: "))
+
+    
+
+    # Checks IF the entered elements exists IN the lists and OUTPUTs them.
+
+    IF ((itemName IN dhoaniItemName) and (itemAmount IN dhoaniItemAmount)):
+
+        OUTPUT()
+
+        OUTPUT("----ITEM EXISTS!----")
+
+        OUTPUT("Item Name:", dhoaniItemName)
+
+        OUTPUT("Item Amount:", dhoaniItemAmount)
+
+    ELSE:
+
+        # Error message.
+
+        OUTPUT("INVALID INPUT")
+
+
+
+    # Asking user IF they wish to continue.
+
+    OUTPUT("---------------------------------")
+
+    SET user_INPUT TO int(INPUT("Enter 6 to continue or 7 to exit: "))
+
+    OUTPUT("")
+
+    IF user_INPUT EQUALS 6:
+
+        consoleMenu()
+
+    ELSE:
+
+        exit()
+
+
+
+# This function will OUTPUT all of the lists and their amounts.
+
+DEFINE FUNCTION OUTPUTItems():
+
+    OUTPUT('Dhoani Inventory')
+
+    OUTPUT("-----------------------------")
+
+    OUTPUT("Items: ", dhoaniItemName)
+
+    OUTPUT("Amount:", dhoaniItemAmount)
+
+    OUTPUT("-----------------------------")
+
+
+
+    # Asks user IF they wish to continue or quit.
+
+    SET user_INPUT TO int(INPUT('Enter 6 to continue or 7 to exit: '))
+
+    IF user_INPUT EQUALS 6:
+
+            consoleMenu()
+
+    ELSE:
+
+        exit()
+
+
+
+# Calling the function globally.
+
+# Displays main console menu.
+
+consoleMenu()
+
+
+
+# PROGRAM END.
+
