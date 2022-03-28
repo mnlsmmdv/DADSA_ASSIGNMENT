@@ -125,7 +125,7 @@ def removeItems():
             dhoaniItemName.remove(itemName)
             dhoaniItemAmount.remove(itemAmount)
 
-            # Asks user if they wish to continue or quit.
+            # Asking user if they wish to continue or quit.
             print("---------------------------------")
             user_input = int(input("Continue (6) or Exit (7): "))
             print("")
@@ -201,7 +201,7 @@ def printItems():
     print("Amount:", dhoaniItemAmount)
     print("-----------------------------")
 
-    # Asks user if they wish to continue or quit.
+    # Asking user if they wish to continue or quit.
     user_input = int(input("Continue (6) or Exit (7): "))
     if user_input == 6:
         consoleMenu()
