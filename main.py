@@ -136,6 +136,33 @@ def removeItems():
             # Error message.
             print("INVALID INPUT")
 
+# This function will update the elements in the list.
+def updateItems():
+    print("Updating Inventory")
+    print("---------------------------------")
+    itemName = input('Item Name: ')
+    itemAmount = int(input("Item Amount: "))
+    
+    # Checks if Item Name and Item Amount is valid and updates it.
+    if((itemName != ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]) and (itemAmount > 30000)):
+        print("INVALID INPUT")
+    else:
+        if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):  
+            # Removing Item Name and Item Amount.
+            print("REMOVING ITEM!")  
+            dhoaniItemName.append(itemName)
+            dhoaniItemAmount.append(itemAmount)
 
+            # Asking user if they wish to continue.
+            print("---------------------------------")
+            user_input = int(input("Enter 6 to continue or 7 to exit: "))
+            print("")
+            if user_input == 6:
+               consoleMenu()
+            else:
+               exit()
+        else:
+            # Error message.
+            print("INVALID INPUT")
 
 # PROGRAM END.
