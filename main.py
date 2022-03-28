@@ -1,12 +1,13 @@
 """
-Name: Ahmed Affaan                                  
+Author: Ahmed Affaan                                  
 Title: main.py
 Folder: DADSA_ASSIGNMENT                            
 Date: 10/03/2022                                    
 Country: Republic of Maldives                       
 Code version: 3.8.10                                
 Description: DADSA year 02 Assignment - UWE Bristol BSc Computer Science
-Student ID: S1802035                                       
+Student Number(UWE): 19045165
+Student ID:(VC): 1802035                                       
 Note: Uncomment codes to execute and comment them when not in use.                         
 """
 
