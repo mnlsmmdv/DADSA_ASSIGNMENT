@@ -206,6 +206,8 @@ def printItems():
     else:
         exit()
 
-
+# Calling the function globally.
+# Displays main console menu.
+consoleMenu()
 
 # PROGRAM END.
