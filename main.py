@@ -34,6 +34,21 @@ islandC_ItemAmount = []
 islandD_ItemName = []
 islandD_ItemAmount = []
 
+# This function displays the main console menu.
+def consoleMenu():
+    print("---------------------------------")
+    print("|      BigCon Construction      |")
+    print("--------------Menu---------------")
+    print("1- Add Items                    |")
+    print("2- Remove Items                 |")
+    print("3- Update Items                 |")
+    print("4- Search Items                 |")
+    print("5- Print Items                  |")
+    print("7- QUIT                         |")
+    print("---------------------------------")
 
+    # Asks for initial user input.
+    user_input = int(input("Enter choice: "))
+    consoleChoice(user_input)
 
 # PROGRAM END.
