@@ -93,6 +93,7 @@ def addItems():
         print("INVALID INPUT")
     else:
         # Adds Item Name and Item Amount in the list.
+        print("----ADDING ITEM!----")  
         dhoaniItemName.append(itemName)
         dhoaniItemAmount.append(itemAmount)
         
