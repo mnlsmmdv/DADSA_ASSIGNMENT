@@ -191,4 +191,21 @@ def searchItems():
     else:
         exit()
 
+# This function will print all of the lists and their amounts.
+def printItems():
+    print('Dhoani Inventory')
+    print("-----------------------------")
+    print("Items: ", dhoaniItemName)
+    print("Amount:", dhoaniItemAmount)
+    print("-----------------------------")
+
+    # Asks user if they wish to continue or quit.
+    user_input = int(input('Enter 6 to continue or 7 to exit: '))
+    if user_input == 6:
+            consoleMenu()
+    else:
+        exit()
+
+
+
 # PROGRAM END.
