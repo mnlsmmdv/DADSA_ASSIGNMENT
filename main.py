@@ -12,6 +12,9 @@ Note: Uncomment codes to execute and comment them when not in use.
 
 # PROGRAM START.
 
+supplyIslandCapacity = 60000
+
+
 # Lists for Dhoani's Item Name and Item Amount.
 dhoaniItemName = []
 dhoaniItemAmount = []
@@ -36,15 +39,15 @@ islandD_ItemAmount = []
 
 # This function displays the main console menu.
 def consoleMenu():
+    print("")
     print("---------------------------------")
     print("|      BigCon Construction      |")
     print("--------------Menu---------------")
     print("1- Add Items                    |")
     print("2- Remove Items                 |")
-    print("3- Update Items                 |")
-    print("4- Search Items                 |")
-    print("5- Print Items                  |")
-    print("7- QUIT                         |")
+    print("3- Search Items                 |")
+    print("4- Print Items                  |")
+    print("6- QUIT                         |")
     print("---------------------------------")
 
     # Asks for initial user input.
@@ -71,12 +74,10 @@ def consoleChoice(user_input):
     elif user_input == 2:
         removeItems()
     elif user_input == 3:
-        updateItems()
-    elif user_input == 4:
         searchItems()
-    elif user_input == 5:
+    elif user_input == 4:
         printItems()
-    elif user_input == 7:
+    elif user_input == 6:
         exit()
 
 # This function will add items.
@@ -99,9 +100,9 @@ def addItems():
         
     # Asks user if they wish to continue or quit.
     print("---------------------------------")
-    user_input = int(input("Continue (6) or Exit (7): "))
+    user_input = int(input("Continue (5) or Exit (6): "))
     print("")
-    if user_input == 6:
+    if user_input == 5:
         consoleMenu()
     else:
         exit()
@@ -127,38 +128,9 @@ def removeItems():
 
             # Asking user if they wish to continue or quit.
             print("---------------------------------")
-            user_input = int(input("Continue (6) or Exit (7): "))
+            user_input = int(input("Continue (5) or Exit (6): "))
             print("")
-            if user_input == 6:
-               consoleMenu()
-            else:
-               exit()
-        else:
-            # Error message.
-            print("INVALID INPUT")
-
-# This function will update the elements in the list.
-def updateItems():
-    print("----UPDATING ITEMS----")
-    print("---------------------------------")
-    itemName = input('Item Name: ')
-    itemAmount = int(input("Item Amount: "))
-    
-    # Checks if Item Name and Item Amount is valid and updates it.
-    if((itemName != ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]) and (itemAmount > 30000)):
-        print("INVALID INPUT")
-    else:
-        if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):  
-            # Removing Item Name and Item Amount.
-            print("----UPDATING ITEM!----")  
-            dhoaniItemName.append(itemName)
-            dhoaniItemAmount.append(itemAmount)
-
-            # Asking user if they wish to continue or quit.
-            print("---------------------------------")
-            user_input = int(input("Continue (6) or Exit (7): "))
-            print("")
-            if user_input == 6:
+            if user_input == 5:
                consoleMenu()
             else:
                exit()
@@ -185,9 +157,9 @@ def searchItems():
 
     # Asking user if they wish to continue or quit.
     print("---------------------------------")
-    user_input = int(input("Continue (6) or Exit (7): "))
+    user_input = int(input("Continue (5) or Exit (6): "))
     print("")
-    if user_input == 6:
+    if user_input == 5:
         consoleMenu()
     else:
         exit()
@@ -202,8 +174,8 @@ def printItems():
     print("-----------------------------")
 
     # Asking user if they wish to continue or quit.
-    user_input = int(input("Continue (6) or Exit (7): "))
-    if user_input == 6:
+    user_input = int(input("Continue (5) or Exit (6): "))
+    if user_input == 5:
         consoleMenu()
     else:
         exit()
