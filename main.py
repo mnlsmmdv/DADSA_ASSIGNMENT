@@ -153,7 +153,7 @@ def updateItems():
             dhoaniItemName.append(itemName)
             dhoaniItemAmount.append(itemAmount)
 
-            # Asking user if they wish to continue.
+            # Asking user if they wish to continue or quit.
             print("---------------------------------")
             user_input = int(input("Continue (6) or Exit (7): "))
             print("")
@@ -182,7 +182,7 @@ def searchItems():
         # Error message.
         print("INVALID INPUT")
 
-    # Asking user if they wish to continue.
+    # Asking user if they wish to continue or quit.
     print("---------------------------------")
     user_input = int(input("Continue (6) or Exit (7): "))
     print("")
