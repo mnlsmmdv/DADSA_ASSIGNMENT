@@ -12,6 +12,28 @@ Note: Uncomment codes to execute and comment them when not in use.
 
 # PROGRAM START.
 
+# Lists for Dhoani's Item Name and Item Amount.
+dhoaniItemName = []
+dhoaniItemAmount = []
+# Lists for Supplier Island 01 Item Name and Item Amount.
+supplierIslandAlphaItemName = []
+supplierIslandAlphaItemAmount = []
+# Lists for Supplier Island 02 Item Name and Item Amount.
+supplierIslandBetaItemName = []
+supplierIslandBetaItemAmount = []
+# Lists for Island A Item Name and Item Amount.
+islandA_ItemName = []
+islandA_ItemAmount = []
+# Lists for Island B Item Name and Item Amount.
+islandB_ItemName = []
+islandB_ItemAmount = []
+# Lists for Island C Item Name and Item Amount.
+islandC_ItemName = []
+islandC_ItemAmount = []
+# Lists for Island D Item Name and Item Amount.
+islandD_ItemName = []
+islandD_ItemAmount = []
+
 
 
 # PROGRAM END.
