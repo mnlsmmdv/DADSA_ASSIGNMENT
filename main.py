@@ -165,4 +165,30 @@ def updateItems():
             # Error message.
             print("INVALID INPUT")
 
+# This function will search through the lists and print it.
+def searchItems():
+    print('Searching Inventory')
+    print("---------------------------------")
+    itemName = input('Item Name: ')
+    itemAmount = int(input("Item Amount: "))
+    
+    # Checks if the entered elements exists in the lists and prints them.
+    if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):
+        print()
+        print("----ITEM EXISTS!----")
+        print("Item Name:", dhoaniItemName)
+        print("Item Amount:", dhoaniItemAmount)
+    else:
+        # Error message.
+        print("INVALID INPUT")
+
+    # Asking user if they wish to continue.
+    print("---------------------------------")
+    user_input = int(input("Enter 6 to continue or 7 to exit: "))
+    print("")
+    if user_input == 6:
+        consoleMenu()
+    else:
+        exit()
+
 # PROGRAM END.
