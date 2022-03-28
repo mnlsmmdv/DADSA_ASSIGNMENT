@@ -98,7 +98,7 @@ def addItems():
         
     # Asks user if they wish to continue or quit.
     print("---------------------------------")
-    user_input = int(input('Enter 6 to continue or 7 to exit: '))
+    user_input = int(input("Continue (6) or Exit (7): "))
     print("")
     if user_input == 6:
         consoleMenu()
@@ -120,13 +120,13 @@ def removeItems():
     else:
         if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):  
             # Removing Item Name and Item Amount.
-            print("REMOVING ITEM!")  
+            print("----REMOVING ITEM!----")  
             dhoaniItemName.remove(itemName)
             dhoaniItemAmount.remove(itemAmount)
 
             # Asks user if they wish to continue or quit.
             print("---------------------------------")
-            user_input = int(input("Enter 6 to continue or 7 to exit: "))
+            user_input = int(input("Continue (6) or Exit (7): "))
             print("")
             if user_input == 6:
                consoleMenu()
@@ -149,13 +149,13 @@ def updateItems():
     else:
         if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):  
             # Removing Item Name and Item Amount.
-            print("REMOVING ITEM!")  
+            print("----UPDATING ITEM!----")  
             dhoaniItemName.append(itemName)
             dhoaniItemAmount.append(itemAmount)
 
             # Asking user if they wish to continue.
             print("---------------------------------")
-            user_input = int(input("Enter 6 to continue or 7 to exit: "))
+            user_input = int(input("Continue (6) or Exit (7): "))
             print("")
             if user_input == 6:
                consoleMenu()
@@ -167,7 +167,7 @@ def updateItems():
 
 # This function will search through the lists and print it.
 def searchItems():
-    print('Searching Inventory')
+    print("----SEARCHING ITEMS----")
     print("---------------------------------")
     itemName = input('Item Name: ')
     itemAmount = int(input("Item Amount: "))
@@ -184,7 +184,7 @@ def searchItems():
 
     # Asking user if they wish to continue.
     print("---------------------------------")
-    user_input = int(input("Enter 6 to continue or 7 to exit: "))
+    user_input = int(input("Continue (6) or Exit (7): "))
     print("")
     if user_input == 6:
         consoleMenu()
@@ -193,14 +193,14 @@ def searchItems():
 
 # This function will print all of the lists and their amounts.
 def printItems():
-    print('Dhoani Inventory')
+    print("Dhoani Inventory")
     print("-----------------------------")
     print("Items: ", dhoaniItemName)
     print("Amount:", dhoaniItemAmount)
     print("-----------------------------")
 
     # Asks user if they wish to continue or quit.
-    user_input = int(input('Enter 6 to continue or 7 to exit: '))
+    user_input = int(input("Continue (6) or Exit (7): "))
     if user_input == 6:
             consoleMenu()
     else:
