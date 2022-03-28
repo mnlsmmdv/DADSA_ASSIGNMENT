@@ -13,7 +13,6 @@ Note: Uncomment codes to execute and comment them when not in use.
 # PROGRAM START.
 
 #### ----LISTS---- ####
-
 # Lists for Dhoani's Item Name and Item Amount.
 dhoaniItemName = []
 dhoaniItemAmount = []
