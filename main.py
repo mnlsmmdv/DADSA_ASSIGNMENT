@@ -13,6 +13,7 @@ Note: Uncomment codes to execute and comment them when not in use.
 # PROGRAM START.
 
 #### ----LISTS---- ####
+
 # Lists for Dhoani's Item Name and Item Amount.
 dhoaniItemName = []
 dhoaniItemAmount = []
@@ -34,6 +35,7 @@ islandC_ItemAmount = []
 # Lists for Island D Item Name and Item Amount.
 islandD_ItemName = []
 islandD_ItemAmount = []
+#### ----LISTS---- ####
 
 #### ----FUNCTIONS---- ####
 # This function displays the main console menu.
@@ -193,6 +195,7 @@ def printItems():
         consoleMenu()
     else:
         exit()
+#### ----FUNCTIONS---- ####
 
 # Calling the function globally.
 # Displays main console menu.
