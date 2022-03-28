@@ -64,6 +64,21 @@ def itemsMenu():
     print("6- Unprotected Material         |")
     print("---------------------------------")
 
+# This function checks the users specific choice and directs to that function.
+def consoleChoice(user_input):
+    if user_input == 1:
+        addItems()
+    elif user_input == 2:
+        removeItems()
+    elif user_input == 3:
+        updateItems()
+    elif user_input == 4:
+        searchItems()
+    elif user_input == 5:
+        printItems()
+    elif user_input == 7:
+        exit()
+
 
 
 # PROGRAM END.
