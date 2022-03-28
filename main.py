@@ -152,7 +152,7 @@ def removeItems():
             # Error message.
             print("INVALID INPUT")
 
-# This function will search through the lists and print it.
+# This function will search through the lists and print items and their amounts.
 def searchItems():
     print("----SEARCHING ITEMS----")
     print("---------------------------------")
