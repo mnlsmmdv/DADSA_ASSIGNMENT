@@ -51,4 +51,19 @@ def consoleMenu():
     user_input = int(input("Enter choice: "))
     consoleChoice(user_input)
 
+# This function displays the Items Menu with their group code.
+def itemsMenu():
+    print("---------------------------------")
+    print("|      BigCon Construction      |")
+    print("--------------Menu---------------")
+    print("1- Diesel                       |")
+    print("2- Frozen                       |")
+    print("3- Fridge                       |")
+    print("4- Food                         |")
+    print("5- Protected Material           |")
+    print("6- Unprotected Material         |")
+    print("---------------------------------")
+
+
+
 # PROGRAM END.
