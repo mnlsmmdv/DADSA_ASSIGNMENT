@@ -1,5 +1,5 @@
 """
-Author: Ahmed Affaan                                  
+Name: Ahmed Affaan                                  
 Title: main.py
 Folder: DADSA_ASSIGNMENT                            
 Date: 10/03/2022                                    
