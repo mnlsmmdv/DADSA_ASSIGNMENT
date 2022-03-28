@@ -204,7 +204,7 @@ def printItems():
     # Asks user if they wish to continue or quit.
     user_input = int(input("Continue (6) or Exit (7): "))
     if user_input == 6:
-            consoleMenu()
+        consoleMenu()
     else:
         exit()
 
