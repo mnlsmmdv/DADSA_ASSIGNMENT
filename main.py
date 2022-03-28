@@ -139,7 +139,7 @@ def removeItems():
 
 # This function will update the elements in the list.
 def updateItems():
-    print("Updating Inventory")
+    print("----UPDATING ITEMS----")
     print("---------------------------------")
     itemName = input('Item Name: ')
     itemAmount = int(input("Item Amount: "))
