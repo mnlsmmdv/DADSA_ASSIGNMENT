@@ -105,4 +105,37 @@ def addItems():
     else:
         exit()
 
+# This function will remove items.
+def removeItems():
+    # Prints the Items Menu.
+    print("")
+    itemsMenu()
+    # Asks for user input
+    itemName = input("Item Name: ").lower()
+    itemAmount = int(input("Item Amount: "))
+
+    # Checks if Item Name and Item Amount is valid and removes it.
+    if((itemName != ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]) and (itemAmount > 30000)):
+        print("INVALID INPUT")
+    else:
+        if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):  
+            # Removing Item Name and Item Amount.
+            print("REMOVING ITEM!")  
+            dhoaniItemName.remove(itemName)
+            dhoaniItemAmount.remove(itemAmount)
+
+            # Asks user if they wish to continue or quit.
+            print("---------------------------------")
+            user_input = int(input("Enter 6 to continue or 7 to exit: "))
+            print("")
+            if user_input == 6:
+               consoleMenu()
+            else:
+               exit()
+        else:
+            # Error message.
+            print("INVALID INPUT")
+
+
+
 # PROGRAM END.
