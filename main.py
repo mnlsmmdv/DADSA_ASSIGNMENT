@@ -193,6 +193,7 @@ def searchItems():
 
 # This function will print all of the lists and their amounts.
 def printItems():
+    print("")
     print("Dhoani Inventory")
     print("-----------------------------")
     print("Items: ", dhoaniItemName)
