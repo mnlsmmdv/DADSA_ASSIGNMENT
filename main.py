@@ -155,9 +155,9 @@ def addItems():
         
     # Asks user if they wish to continue or quit.
     print("---------------------------------")
-    user_input = int(input("Continue (5) or Quit (6): "))
+    user_input = int(input("Continue (6) or Quit (7): "))
     print("")
-    if user_input == 5:
+    if user_input == 6:
         consoleMenu()
     else:
         exit()
@@ -183,9 +183,9 @@ def removeItems():
 
             # Asking user if they wish to continue or quit.
             print("---------------------------------")
-            user_input = int(input("Continue (5) or Quit (6): "))
+            user_input = int(input("Continue (6) or Quit (7): "))
             print("")
-            if user_input == 5:
+            if user_input == 6:
                consoleMenu()
             else:
                exit()
@@ -212,9 +212,9 @@ def searchItems():
 
     # Asking user if they wish to continue or quit.
     print("---------------------------------")
-    user_input = int(input("Continue (5) or Quit (6): "))
+    user_input = int(input("Continue (6) or Quit (7): "))
     print("")
-    if user_input == 5:
+    if user_input == 6:
         consoleMenu()
     else:
         exit()
@@ -293,8 +293,8 @@ def printItems():
     print("-----------------------------")
 
     # Asking user if they wish to continue or quit.
-    user_input = int(input("Continue (5) or Quit (6): "))
-    if user_input == 5:
+    user_input = int(input("Continue (6) or Quit (7): "))
+    if user_input == 6:
         consoleMenu()
     else:
         exit()
