@@ -261,8 +261,8 @@ DEFINE FUNCTION printItems():
     OUTPUT("-----------------------------")
 
     # Asking user if they wish to continue or quit.
-    SET user_INPUT TO int(INPUT("Continue (5) or Quit (6): "))
-    IF user_INPUT EQUALS 5:
+    SET user_input TO int(INPUT("Continue (5) or Quit (6): "))
+    IF user_input EQUALS 5:
         consoleMenu()
     ELSE:
         exit()
