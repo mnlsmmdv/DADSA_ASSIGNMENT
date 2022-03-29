@@ -134,6 +134,8 @@ def addItems():
         print("----ADDING ITEM!----")  
         dhoaniItemName.append(itemName)
         dhoaniItemAmount.append(itemAmount)
+        # Prints message of Dhoani travel function.
+        print(dhoani1.get_drive())
         
     # Asks user if they wish to continue or quit.
     print("---------------------------------")
