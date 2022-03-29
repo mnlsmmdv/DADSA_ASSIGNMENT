@@ -56,7 +56,7 @@ def consoleMenu():
     consoleChoice(user_input)
 
 # This function displays the Items Menu with their group code.
-# Entering group code will not work. Enter the name in the menu.
+# Entering group code will not work. Enter the name displayed in the menu.
 def itemsMenu():
     print("---------------------------------")
     print("|      BigCon Construction      |")
