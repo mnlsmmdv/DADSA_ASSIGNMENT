@@ -94,7 +94,7 @@ def itemsMenu():
 def destinationMenu():
     print("---------------------------------")
     print("|      BigCon Construction      |")
-    print("---------------------------------")
+    print("----------Destinations-----------")
     print("Dhoani                          |")
     print("Supply Island 01                |")
     print("Supply Island 02                |")
