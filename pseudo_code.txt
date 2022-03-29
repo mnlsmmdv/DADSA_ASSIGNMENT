@@ -53,7 +53,7 @@ DEFINE CLASS DhoaniTravel:
         RETURN self.stop
 #### ----CLASSES---- ####
 
-# Assigning DEFINE CLASS to a variable.
+# Assigning class to a variable.
 SET dhoani1 TO DhoaniTravel()
 
 #### ----FUNCTIONS---- ####
