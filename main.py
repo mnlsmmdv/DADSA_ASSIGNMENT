@@ -240,22 +240,6 @@ def printItems():
     print("Amount:", dhoaniItemAmount)
     print("-----------------------------")
 
-    # Supply Island inventory.
-    print("")
-    print("Supply Island 01 Inventory")
-    print("-----------------------------")
-    print("Items: ", supplierIslandAlphaItemName)
-    print("Amount:", supplierIslandAlphaItemAmount)
-    print("-----------------------------")
-
-    # Supply Island 02 inventory.
-    print("")
-    print("Supply Island 02 Inventory")
-    print("-----------------------------")
-    print("Items: ", supplierIslandBetaItemName)
-    print("Amount:", supplierIslandBetaItemAmount)
-    print("-----------------------------")
-
     # Island A inventory.
     print("")
     print("Supply Island A Inventory")
