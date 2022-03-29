@@ -15,12 +15,12 @@ Note: Uncomment codes to execute and comment them when not in use.
 
 #### ----VARIABLES---- ####
 dhoaniCapacity = 30000
-supplierIslandAlphaCapacity = 30000
-supplierIslandBetaCapacity = 30000
-islandA_Capacity = 30000
-islandB_Capacity = 30000
-islandC_Capacity = 30000
-islandD_Capacity = 30000
+supplierIslandAlphaCapacity = None
+supplierIslandBetaCapacity = None
+islandA_Capacity = 11690
+islandB_Capacity = 13180
+islandC_Capacity = 10200
+islandD_Capacity = 10170
 #### ----VARIABLES---- ####
 
 #### ----LISTS---- ####
