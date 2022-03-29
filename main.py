@@ -221,8 +221,15 @@ def searchItems():
 
 # This function will deliver items to destinations.
 def deliverItems():
-    # Displays the destinations menu.
-    destinationMenu()
+    # Displays menu with destinations.
+    print("---------------------------------")
+    print("|      BigCon Construction      |")
+    print("----------Destinations-----------")
+    print("Island A                        |")
+    print("Island B                        |")
+    print("Island C                        |")
+    print("Island D                        |")
+    print("---------------------------------")
     # Asks for user input.
     user_input = input("Deliver to?: ").lower()
     
