@@ -231,7 +231,8 @@ def deliverItems():
         # Error message.
         print("INVALID INPUT")
     else:
-        print("Delivering to: " + user_input)
+        # Prints message of Dhoani travel function.
+        print("Delivering to: " + user_input + " and the " + dhoani1.get_drive())
         
 # This function will print all of the lists and their amounts.
 def printItems():
