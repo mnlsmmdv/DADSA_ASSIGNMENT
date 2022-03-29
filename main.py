@@ -55,11 +55,6 @@ class DhoaniTravel:
         return self.stop
 #### ----CLASSES---- ####
 
-DhoaniTravel()
-#### ----OBJECTS---- ####
-dhoani_1 = DhoaniTravel("BigCon")
-#### ----OBJECTS---- ####
-
 #### ----FUNCTIONS---- ####
 # This function displays the main console menu.
 def consoleMenu():
