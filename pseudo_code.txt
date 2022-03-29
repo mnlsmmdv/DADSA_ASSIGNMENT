@@ -140,15 +140,19 @@ DEFINE FUNCTION addItems():
         OUTPUT("INVALID INPUT")
     ELSE:
         # Adds Item Name and Item Amount in the list.
-        OUTPUT("----ADDING ITEM!----")  
+        OUTPUT("")
+        OUTPUT("----ADDING ITEM!----")
         dhoaniItemName.append(itemName)
         dhoaniItemAmount.append(itemAmount)
+        # This will calculate and OUTPUT the Dhoani's current capacity left.
+        SET capacityCalculate TO dhoaniCapacity - itemAmount
+        OUTPUT("Capacity left: " + str(capacityCalculate) + "KG")
         # Prints message of Dhoani travel function.
         OUTPUT(dhoani1.get_drive())
 
     # Asks user if they wish to continue or quit.
     OUTPUT("---------------------------------")
-    SET user_input TO int(INPUT("Continue (5) or Exit (6): "))
+    SET user_input TO int(INPUT("Continue (5) or Quit (6): "))
     OUTPUT("")
     IF user_input EQUALS 5:
         consoleMenu()
