@@ -58,6 +58,7 @@ SET dhoani1 TO DhoaniTravel()
 
 #### ----FUNCTIONS---- ####
 # This function displays the main console menu.
+# Option 5 is continue. If 6 is not chosen it selects 5.
 DEFINE FUNCTION consoleMenu():
     OUTPUT("")
     OUTPUT("---------------------------------")
