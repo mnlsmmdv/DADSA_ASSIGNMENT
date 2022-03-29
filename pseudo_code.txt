@@ -38,7 +38,7 @@ SET islandD_ItemAmount TO []
 #### ----CLASSES---- ####
 # This class will display Dhoani's drive and stop messages IN the functions.
 DEFINE CLASS DhoaniTravel:
-    # Dhoani's company name.
+    # Dhoani's function messages.
     SET drive TO "Dhoani is driving"
     SET stop TO "Dhoani has stopped"
 
