@@ -37,7 +37,7 @@ islandD_ItemName = []
 islandD_ItemAmount = []
 #### ----LISTS---- ####
 
-
+#### ----CLASSES---- ####
 # This class will help the Dhoani travel by creating a Dhoani object.
 class DhoaniTravel:
     # Dhoani's travel functions.
@@ -55,6 +55,7 @@ class DhoaniTravel:
     def stop(self):
         # Prints message of the Dhoani's function.
         print("Dhoani " + self.dhoani + " is stopped")
+#### ----CLASSES---- ####
 
 #### ----FUNCTIONS---- ####
 # This function displays the main console menu.
