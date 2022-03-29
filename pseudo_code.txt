@@ -71,7 +71,7 @@ DEFINE FUNCTION consoleMenu():
     OUTPUT("6- QUIT                         |")
     OUTPUT("---------------------------------")
 
-    # Asks FOR initial user input.
+    # Asks for initial user input.
     SET user_INPUT TO int(INPUT("Enter choice: "))
     consoleChoice(user_input)
 
