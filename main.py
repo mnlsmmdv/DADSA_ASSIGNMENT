@@ -90,7 +90,7 @@ def itemsMenu():
     print("6- Unprotected Material         |")
     print("---------------------------------")
 
-# This function displays the Destinations Menu.
+# This function displays the Destinations menu.
 def destinationMenu():
     print("---------------------------------")
     print("|      BigCon Construction      |")
