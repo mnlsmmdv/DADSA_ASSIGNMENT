@@ -51,7 +51,7 @@ islandD_ItemAmount = []
 # This class will display Dhoani's drive and stop messages in the functions.
 class DhoaniTravel:
     # Dhoani's function messages.
-    drive = "Dhoani is driving"
+    drive = "Dhoani is travelling"
     stop = "Dhoani has stopped"
 
     # Dhoani's drive function.
@@ -139,7 +139,10 @@ def addItems():
         # This will calculate and print the Dhoani's current capacity left.
         capacityCalculate = dhoaniCapacity - itemAmount
         print("Capacity left: " + str(capacityCalculate) + "KG")
-        
+
+    # Asks user where to deliver.
+    deliverItems()
+                
     # Asks user if they wish to continue or quit.
     print("---------------------------------")
     user_input = int(input("Continue (6) or Quit (7): "))
@@ -219,15 +222,15 @@ def deliverItems():
     print("---------------------------------")
     # Asks for user input.
     user_input = input("Deliver to?: ").lower()
-    
-    # Checks what user has chosen and directs them to that function.
-    if(user_input != ["island a", "island b", "island c", "island d"]):
-        # Error message.
-        print("INVALID INPUT")
+
+    # Checks what destination the user has chosen and displays where it goes.
+    if (user_input != ["island a", "island b", "island c", "island d"]):
+        print("Items added and the " + dhoani1.get_drive() + " to " + user_input)
+    elif(user_input == ["island a", "island b", "island c", "island d"]):
+        print("hehe")
     else:
-        # Prints message of Dhoani travel function.
-        print("Delivering to: " + user_input + " and the " + dhoani1.get_drive())
-        
+        print("Invalid")
+    
 # This function will print all of the lists and their amounts.
 def printItems():
     # Dhoani inventory.
