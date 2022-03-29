@@ -126,7 +126,7 @@ def addItems():
     # Asks for user input.
     itemName = input("Item Name: ").lower()
     itemAmount = int(input("Item Amount: "))
-
+    
     # Checks if Item Name and Item Amount is valid and adds it.
     if((itemName != ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]) and (itemAmount > 30000)):
         print("INVALID INPUT")
@@ -139,8 +139,6 @@ def addItems():
         # This will calculate and print the Dhoani's current capacity left.
         capacityCalculate = dhoaniCapacity - itemAmount
         print("Capacity left: " + str(capacityCalculate) + "KG")
-        # Prints message of Dhoani travel function.
-        print(dhoani1.get_drive())
         
     # Asks user if they wish to continue or quit.
     print("---------------------------------")
