@@ -184,7 +184,7 @@ DEFINE FUNCTION searchItems():
 
     # Checks if the entered elements exists in the lists and prints them.
     IF ((itemName IN dhoaniItemName) and (itemAmount IN dhoaniItemAmount)):
-        OUTPUT()
+        OUTPUT("")
         OUTPUT("----ITEM EXISTS!----")
         OUTPUT("Item Name:", dhoaniItemName)
         OUTPUT("Item Amount:", dhoaniItemAmount)
