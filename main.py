@@ -103,17 +103,6 @@ def itemsMenu():
     print("6- Unprotected Material         |")
     print("---------------------------------")
 
-# This function displays the Destinations menu.
-def destinationMenu():
-    print("---------------------------------")
-    print("|      BigCon Construction      |")
-    print("----------Destinations-----------")
-    print("Island A                        |")
-    print("Island B                        |")
-    print("Island C                        |")
-    print("Island D                        |")
-    print("---------------------------------")
-
 # This function checks the users specific choice and directs them to that function.
 def consoleChoice(user_input):
     if user_input == 1:
