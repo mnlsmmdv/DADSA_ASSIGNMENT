@@ -37,6 +37,25 @@ islandD_ItemName = []
 islandD_ItemAmount = []
 #### ----LISTS---- ####
 
+
+# This class will help the Dhoani travel by creating a Dhoani object.
+class DhoaniTravel:
+    # Dhoani's travel functions.
+    # Initialising the constructor.
+    def __init__(self, dhoani):
+        # Dhoani's attributes.
+        self.dhoani = dhoani
+
+    # Dhoani's drive function.
+    def drive(self):
+        # Prints message of the Dhoani's function.
+        print("Dhoani " + self.dhoani + " is driving")
+
+    # Dhoani's stop function.
+    def stop(self):
+        # Prints message of the Dhoani's function.
+        print("Dhoani " + self.dhoani + " is stopped")
+
 #### ----FUNCTIONS---- ####
 # This function displays the main console menu.
 def consoleMenu():
@@ -82,24 +101,6 @@ def destinationMenu():
     print("Island C                        |")
     print("Island D                        |")
     print("---------------------------------")
-
-# This class will help the Dhoani travel by creating a Dhoani object.
-class DhoaniTravel:
-    # Dhoani's travel functions.
-    # Initialising the constructor.
-    def __init__(self, dhoani):
-        # Dhoani's attributes.
-        self.dhoani = dhoani
-
-    # Dhoani's drive function.
-    def drive(self):
-        # Prints message of the Dhoani's function.
-        print("Dhoani " + self.dhoani + " is driving")
-
-    # Dhoani's stop function.
-    def stop(self):
-        # Prints message of the Dhoani's function.
-        print("Dhoani " + self.dhoani + " is stopped")
 
 # This function checks the users specific choice and directs them to that function.
 def consoleChoice(user_input):
