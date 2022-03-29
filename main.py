@@ -82,7 +82,7 @@ def consoleMenu():
     print("3- Search Items                 |")
     print("4- Deliver To                   |")
     print("5- Print Items                  |")
-    print("6- QUIT                         |")
+    print("7- QUIT                         |")
     print("---------------------------------")
 
     # Asks for initial user input.
