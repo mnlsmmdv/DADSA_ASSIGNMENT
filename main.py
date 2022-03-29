@@ -41,17 +41,18 @@ islandD_ItemAmount = []
 # This class will help the Dhoani travel by creating a Dhoani object.
 class DhoaniTravel:
     # Dhoani's company name.
-    dhoanCompany = "BigCon"
+    drive = "Dhoani is driving"
+    stop = "Dhoani has stopped"
 
     # Dhoani's drive function.
-    def drive(self):
+    def get_drive(self):
         # Prints message of the Dhoani's function.
-        print("Dhoani " + self.dhoani_company + " is driving")
+        return self.drive
 
     # Dhoani's stop function.
-    def stop(self):
+    def get_stop(self):
         # Prints message of the Dhoani's function.
-        print("Dhoani " + self.dhoani_company + " is stopped")
+        return self.stop
 #### ----CLASSES---- ####
 
 DhoaniTravel()
