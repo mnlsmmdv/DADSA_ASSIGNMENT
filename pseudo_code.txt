@@ -121,7 +121,7 @@ DEFINE FUNCTION addItems():
     # Prints the Items Menu.
     OUTPUT("")    
     itemsMenu()
-    # Asks FOR user input.
+    # Asks for user input.
     SET itemName TO INPUT("Item Name: ").lower()
     SET itemAmount TO int(INPUT("Item Amount: "))
 
@@ -129,14 +129,14 @@ DEFINE FUNCTION addItems():
     if((itemName != ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]) and (itemAmount > 30000)):
         OUTPUT("INVALID INPUT")
     ELSE:
-        # Adds Item Name and Item Amount IN the list.
+        # Adds Item Name and Item Amount in the list.
         OUTPUT("----ADDING ITEM!----")  
         dhoaniItemName.append(itemName)
         dhoaniItemAmount.append(itemAmount)
         # Prints message of Dhoani travel function.
         OUTPUT(dhoani1.get_drive())
 
-    # Asks user IF they wish to continue or quit.
+    # Asks user if they wish to continue or quit.
     OUTPUT("---------------------------------")
     SET user_input TO int(INPUT("Continue (5) or Exit (6): "))
     OUTPUT("")
@@ -150,7 +150,7 @@ DEFINE FUNCTION removeItems():
     # Prints the Items Menu.
     OUTPUT("")
     itemsMenu()
-    # Asks FOR user INPUT
+    # Asks for user input
     SET itemName TO INPUT("Item Name: ").lower()
     SET itemAmount TO int(INPUT("Item Amount: "))
 
