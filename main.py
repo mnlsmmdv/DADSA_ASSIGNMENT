@@ -60,6 +60,10 @@ class DhoaniTravel:
 # Assigning class to a variable.
 travel = DhoaniTravel()
 
+#### ----OBJECTS---- ####
+dhoani_1 = DhoaniTravel("BigCon")
+#### ----OBJECTS---- ####
+
 #### ----FUNCTIONS---- ####
 # This function displays the main console menu.
 def consoleMenu():
