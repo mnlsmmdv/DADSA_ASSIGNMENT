@@ -71,7 +71,6 @@ dhoani1 = DhoaniTravel()
 
 #### ----FUNCTIONS---- ####
 # This function displays the main console menu.
-# Option 5 is continue. If 6 is not chosen it selects 5.
 def consoleMenu():
     print("")
     print("---------------------------------")
