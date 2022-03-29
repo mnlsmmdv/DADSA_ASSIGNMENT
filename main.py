@@ -83,7 +83,7 @@ def destinationMenu():
     print("Island D                        |")
     print("---------------------------------")
 
-# This function checks the users specific choice and directs to that function.
+# This function checks the users specific choice and directs them to that function.
 def consoleChoice(user_input):
     if user_input == 1:
         addItems()
