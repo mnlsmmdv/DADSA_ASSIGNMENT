@@ -80,7 +80,8 @@ def consoleMenu():
     print("1- Add Items                    |")
     print("2- Remove Items                 |")
     print("3- Search Items                 |")
-    print("4- Print Items                  |")
+    print("4- Deliver To                   |")
+    print("5- Print Items                  |")
     print("6- QUIT                         |")
     print("---------------------------------")
 
