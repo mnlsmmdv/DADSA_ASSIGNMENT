@@ -214,6 +214,48 @@ def printItems():
     print("Amount:", dhoaniItemAmount)
     print("-----------------------------")
 
+    print("")
+    print("Supply Island 01 Inventory")
+    print("-----------------------------")
+    print("Items: ", supplierIslandAlphaItemName)
+    print("Amount:", supplierIslandAlphaItemAmount)
+    print("-----------------------------")
+
+    print("")
+    print("Supply Island 02 Inventory")
+    print("-----------------------------")
+    print("Items: ", supplierIslandBetaItemName)
+    print("Amount:", supplierIslandBetaItemAmount)
+    print("-----------------------------")
+
+    print("")
+    print("Supply Island A Inventory")
+    print("-----------------------------")
+    print("Items: ", islandA_ItemName)
+    print("Amount:", islandA_ItemAmount)
+    print("-----------------------------")
+
+    print("")
+    print("Supply Island B Inventory")
+    print("-----------------------------")
+    print("Items: ", islandB_ItemName)
+    print("Amount:", islandB_ItemAmount)
+    print("-----------------------------")
+
+    print("")
+    print("Supply Island C Inventory")
+    print("-----------------------------")
+    print("Items: ", islandC_ItemName)
+    print("Amount:", islandC_ItemAmount)
+    print("-----------------------------")
+
+    print("")
+    print("Supply Island D Inventory")
+    print("-----------------------------")
+    print("Items: ", islandD_ItemName)
+    print("Amount:", islandD_ItemAmount)
+    print("-----------------------------")
+
     # Asking user if they wish to continue or quit.
     user_input = int(input("Continue (5) or Quit (6): "))
     if user_input == 5:
