@@ -236,7 +236,6 @@ def deliverItems():
     else:
         print("Delivering to: " + user_input)
         
-
 # This function will print all of the lists and their amounts.
 def printItems():
     # Dhoani inventory.
