@@ -27,5 +27,5 @@ Student Number(UWE): 19045165
 
 Student ID(VC): 1802035
 
-Code version: 3.8.10
+Python Code version: 3.8.10
 
