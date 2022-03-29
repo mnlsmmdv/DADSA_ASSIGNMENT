@@ -13,6 +13,16 @@ Note: Uncomment codes to execute and comment them when not in use.
 
 # PROGRAM START.
 
+#### ----VARIABLES---- ####
+dhoaniCapacity = 30000
+supplierIslandAlphaCapacity = 30000
+supplierIslandBetaCapacity = 30000
+islandA_Capacity = 30000
+islandB_Capacity = 30000
+islandC_Capacity = 30000
+islandD_Capacity = 30000
+#### ----VARIABLES---- ####
+
 #### ----LISTS---- ####
 # Lists for Dhoani's Item Name and Item Amount.
 dhoaniItemName = []
@@ -133,9 +143,13 @@ def addItems():
         print("INVALID INPUT")
     else:
         # Adds Item Name and Item Amount in the list.
-        print("----ADDING ITEM!----")  
+        print("")
+        print("----ADDING ITEM!----")
         dhoaniItemName.append(itemName)
         dhoaniItemAmount.append(itemAmount)
+        # This will calculate the Dhoani's current capacity left.
+        capacityCalculate = dhoaniCapacity - itemAmount
+        print("Capacity left: " + str(capacityCalculate))
         # Prints message of Dhoani travel function.
         print(dhoani1.get_drive())
         
