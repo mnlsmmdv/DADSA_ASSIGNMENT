@@ -127,6 +127,8 @@ def consoleChoice(user_input):
         searchItems()
     elif user_input == 4:
         printItems()
+    elif user_input == 5:
+        deliverItems()
     elif user_input == 6:
         exit()
 
@@ -219,6 +221,21 @@ def searchItems():
         consoleMenu()
     else:
         exit()
+
+# This function will deliver items to destinations.
+def deliverItems():
+    # Displays the destinations menu.
+    destinationMenu()
+    # Asks for user input.
+    user_input = input("Deliver to?: ").lower()
+    
+    # Checks what user has chosen and directs them to that function.
+    if(user_input != ["island a", "island b", "island c", "island d"]):
+        # Error message.
+        print("INVALID INPUT")
+    else:
+        print("Delivering to: " + user_input)
+        
 
 # This function will print all of the lists and their amounts.
 def printItems():
