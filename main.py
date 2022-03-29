@@ -71,6 +71,7 @@ dhoani1 = DhoaniTravel()
 
 #### ----FUNCTIONS---- ####
 # This function displays the main console menu.
+# Option 6 is continue and option 7 is quit.
 def consoleMenu():
     print("")
     print("---------------------------------")
@@ -117,7 +118,6 @@ def destinationMenu():
     print("---------------------------------")
 
 # This function checks the users specific choice and directs them to that function.
-# Option 6 is continue and option 7 is quit.
 def consoleChoice(user_input):
     if user_input == 1:
         addItems()
