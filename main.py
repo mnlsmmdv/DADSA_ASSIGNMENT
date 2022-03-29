@@ -147,7 +147,7 @@ def addItems():
         print("----ADDING ITEM!----")
         dhoaniItemName.append(itemName)
         dhoaniItemAmount.append(itemAmount)
-        # This will calculate the Dhoani's current capacity left.
+        # This will calculate and print the Dhoani's current capacity left.
         capacityCalculate = dhoaniCapacity - itemAmount
         print("Capacity left: " + str(capacityCalculate) + "KG")
         # Prints message of Dhoani travel function.
