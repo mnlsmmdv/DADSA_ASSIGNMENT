@@ -118,6 +118,7 @@ def destinationMenu():
     print("---------------------------------")
 
 # This function checks the users specific choice and directs them to that function.
+# Option 6 is continue and option 7 is quit.
 def consoleChoice(user_input):
     if user_input == 1:
         addItems()
@@ -129,7 +130,7 @@ def consoleChoice(user_input):
         printItems()
     elif user_input == 5:
         deliverItems()
-    elif user_input == 6:
+    elif user_input == 7:
         exit()
 
 # This function will add items.
