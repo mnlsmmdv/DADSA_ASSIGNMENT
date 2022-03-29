@@ -207,6 +207,7 @@ def searchItems():
 
 # This function will print all of the lists and their amounts.
 def printItems():
+    # Dhoani inventory.
     print("")
     print("Dhoani Inventory")
     print("-----------------------------")
@@ -214,6 +215,7 @@ def printItems():
     print("Amount:", dhoaniItemAmount)
     print("-----------------------------")
 
+    # Supply Island inventory.
     print("")
     print("Supply Island 01 Inventory")
     print("-----------------------------")
@@ -221,6 +223,7 @@ def printItems():
     print("Amount:", supplierIslandAlphaItemAmount)
     print("-----------------------------")
 
+    # Supply Island 02 inventory.
     print("")
     print("Supply Island 02 Inventory")
     print("-----------------------------")
@@ -228,6 +231,7 @@ def printItems():
     print("Amount:", supplierIslandBetaItemAmount)
     print("-----------------------------")
 
+    # Island A inventory.
     print("")
     print("Supply Island A Inventory")
     print("-----------------------------")
@@ -235,6 +239,7 @@ def printItems():
     print("Amount:", islandA_ItemAmount)
     print("-----------------------------")
 
+    # Island B inventory.
     print("")
     print("Supply Island B Inventory")
     print("-----------------------------")
@@ -242,6 +247,7 @@ def printItems():
     print("Amount:", islandB_ItemAmount)
     print("-----------------------------")
 
+    # Island C inventory.
     print("")
     print("Supply Island C Inventory")
     print("-----------------------------")
@@ -249,6 +255,7 @@ def printItems():
     print("Amount:", islandC_ItemAmount)
     print("-----------------------------")
 
+    # Island D Inventory.
     print("")
     print("Supply Island D Inventory")
     print("-----------------------------")
