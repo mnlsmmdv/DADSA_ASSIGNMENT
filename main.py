@@ -40,7 +40,8 @@ islandD_ItemAmount = []
 #### ----CLASSES---- ####
 # This class will help the Dhoani travel by creating a Dhoani object.
 class DhoaniTravel:
-    
+    # Dhoani's company name.
+    dhoanCompany = "BigCon"
 
     # Dhoani's drive function.
     def drive(self):
