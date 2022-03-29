@@ -11,6 +11,16 @@ Student ID:(VC): 1802035
 
 # PROGRAM START.
 
+#### ----VARIABLES---- ####
+dhoaniCapacity = 30000
+supplierIslandAlphaCapacity = 30000
+supplierIslandBetaCapacity = 30000
+islandA_Capacity = 30000
+islandB_Capacity = 30000
+islandC_Capacity = 30000
+islandD_Capacity = 30000
+#### ----VARIABLES---- ####
+
 #### ----LISTS---- ####
 # Lists for Dhoani's Item Name and Item Amount.
 SET dhoaniItemName TO []
