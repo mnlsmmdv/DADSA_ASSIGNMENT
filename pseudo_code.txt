@@ -204,6 +204,7 @@ DEFINE FUNCTION searchItems():
 
 # This function will print all of the lists and their amounts.
 DEFINE FUNCTION printItems():
+    # Dhoani inventory.
     OUTPUT("")
     OUTPUT("Dhoani Inventory")
     OUTPUT("-----------------------------")
@@ -211,9 +212,57 @@ DEFINE FUNCTION printItems():
     OUTPUT("Amount:", dhoaniItemAmount)
     OUTPUT("-----------------------------")
 
+    # Supply Island 01 inventory.
+    OUTPUT("")
+    OUTPUT("Supply Island 01 Inventory")
+    OUTPUT("-----------------------------")
+    OUTPUT("Items: ", supplierIslandAlphaItemName)
+    OUTPUT("Amount:", supplierIslandAlphaItemAmount)
+    OUTPUT("-----------------------------")
+
+    # Supply Island 02 inventory.
+    OUTPUT("")
+    OUTPUT("Supply Island 02 Inventory")
+    OUTPUT("-----------------------------")
+    OUTPUT("Items: ", supplierIslandBetaItemName)
+    OUTPUT("Amount:", supplierIslandBetaItemAmount)
+    OUTPUT("-----------------------------")
+
+    # Island A inventory.
+    OUTPUT("")
+    OUTPUT("Supply Island A Inventory")
+    OUTPUT("-----------------------------")
+    OUTPUT("Items: ", islandA_ItemName)
+    OUTPUT("Amount:", islandA_ItemAmount)
+    OUTPUT("-----------------------------")
+
+    # Island B inventory.
+    OUTPUT("")
+    OUTPUT("Supply Island B Inventory")
+    OUTPUT("-----------------------------")
+    OUTPUT("Items: ", islandB_ItemName)
+    OUTPUT("Amount:", islandB_ItemAmount)
+    OUTPUT("-----------------------------")
+
+    # Island C inventory.
+    OUTPUT("")
+    OUTPUT("Supply Island C Inventory")
+    OUTPUT("-----------------------------")
+    OUTPUT("Items: ", islandC_ItemName)
+    OUTPUT("Amount:", islandC_ItemAmount)
+    OUTPUT("-----------------------------")
+
+    # Island D Inventory.
+    OUTPUT("")
+    OUTPUT("Supply Island D Inventory")
+    OUTPUT("-----------------------------")
+    OUTPUT("Items: ", islandD_ItemName)
+    OUTPUT("Amount:", islandD_ItemAmount)
+    OUTPUT("-----------------------------")
+
     # Asking user if they wish to continue or quit.
-    SET user_input TO int(INPUT("Continue (5) or Exit (6): "))
-    IF user_input EQUALS 5:
+    SET user_INPUT TO int(INPUT("Continue (5) or Quit (6): "))
+    IF user_INPUT EQUALS 5:
         consoleMenu()
     ELSE:
         exit()
