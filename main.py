@@ -38,7 +38,7 @@ islandD_ItemAmount = []
 #### ----LISTS---- ####
 
 #### ----CLASSES---- ####
-# This class will help the Dhoani travel by creating a Dhoani object.
+# This class will display Dhoani's drive and stop messages in the functions.
 class DhoaniTravel:
     # Dhoani's company name.
     drive = "Dhoani is driving"
