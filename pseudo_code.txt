@@ -104,15 +104,15 @@ DEFINE FUNCTION destinationMenu():
 
 # This function checks the users specific choice and directs them to that function.
 DEFINE FUNCTION consoleChoice(user_input):
-    IF user_INPUT EQUALS 1:
+    IF user_input EQUALS 1:
         addItems()
-    ELSEIF user_INPUT EQUALS 2:
+    ELSEIF user_input EQUALS 2:
         removeItems()
-    ELSEIF user_INPUT EQUALS 3:
+    ELSEIF user_input EQUALS 3:
         searchItems()
-    ELSEIF user_INPUT EQUALS 4:
+    ELSEIF user_input EQUALS 4:
         printItems()
-    ELSEIF user_INPUT EQUALS 6:
+    ELSEIF user_input EQUALS 6:
         exit()
 
 # This function will add items.
@@ -137,9 +137,9 @@ DEFINE FUNCTION addItems():
 
     # Asks user IF they wish to continue or quit.
     OUTPUT("---------------------------------")
-    SET user_INPUT TO int(INPUT("Continue (5) or Exit (6): "))
+    SET user_input TO int(INPUT("Continue (5) or Exit (6): "))
     OUTPUT("")
-    IF user_INPUT EQUALS 5:
+    IF user_input EQUALS 5:
         consoleMenu()
     ELSE:
         exit()
@@ -163,11 +163,11 @@ DEFINE FUNCTION removeItems():
             dhoaniItemName.remove(itemName)
             dhoaniItemAmount.remove(itemAmount)
 
-            # Asking user IF they wish to continue or quit.
+            # Asking user if they wish to continue or quit.
             OUTPUT("---------------------------------")
-            SET user_INPUT TO int(INPUT("Continue (5) or Exit (6): "))
+            SET user_input TO int(INPUT("Continue (5) or Exit (6): "))
             OUTPUT("")
-            IF user_INPUT EQUALS 5:
+            IF user_input EQUALS 5:
                consoleMenu()
             ELSE:
                exit()
@@ -175,14 +175,14 @@ DEFINE FUNCTION removeItems():
             # Error message.
             OUTPUT("INVALID INPUT")
 
-# This function will search through the lists and OUTPUT items and their amounts.
+# This function will search through the lists and prints items and their amounts.
 DEFINE FUNCTION searchItems():
     OUTPUT("----SEARCHING ITEMS----")
     OUTPUT("---------------------------------")
     SET itemName TO INPUT("Item Name: ")
     SET itemAmount TO int(INPUT("Item Amount: "))
 
-    # Checks IF the entered elements exists IN the lists and OUTPUTs them.
+    # Checks if the entered elements exists in the lists and prints them.
     IF ((itemName IN dhoaniItemName) and (itemAmount IN dhoaniItemAmount)):
         OUTPUT()
         OUTPUT("----ITEM EXISTS!----")
@@ -192,17 +192,17 @@ DEFINE FUNCTION searchItems():
         # Error message.
         OUTPUT("INVALID INPUT")
 
-    # Asking user IF they wish to continue or quit.
+    # Asking user if they wish to continue or quit.
     OUTPUT("---------------------------------")
-    SET user_INPUT TO int(INPUT("Continue (5) or Exit (6): "))
+    SET user_input TO int(INPUT("Continue (5) or Exit (6): "))
     OUTPUT("")
-    IF user_INPUT EQUALS 5:
+    IF user_input EQUALS 5:
         consoleMenu()
     ELSE:
         exit()
 
-# This function will OUTPUT all of the lists and their amounts.
-DEFINE FUNCTION OUTPUTItems():
+# This function will print all of the lists and their amounts.
+DEFINE FUNCTION printItems():
     OUTPUT("")
     OUTPUT("Dhoani Inventory")
     OUTPUT("-----------------------------")
@@ -210,9 +210,9 @@ DEFINE FUNCTION OUTPUTItems():
     OUTPUT("Amount:", dhoaniItemAmount)
     OUTPUT("-----------------------------")
 
-    # Asking user IF they wish to continue or quit.
-    SET user_INPUT TO int(INPUT("Continue (5) or Exit (6): "))
-    IF user_INPUT EQUALS 5:
+    # Asking user if they wish to continue or quit.
+    SET user_input TO int(INPUT("Continue (5) or Exit (6): "))
+    IF user_input EQUALS 5:
         consoleMenu()
     ELSE:
         exit()
@@ -223,4 +223,3 @@ DEFINE FUNCTION OUTPUTItems():
 consoleMenu()
 
 # PROGRAM END.
-
