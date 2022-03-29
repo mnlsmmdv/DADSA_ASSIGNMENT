@@ -40,11 +40,7 @@ islandD_ItemAmount = []
 #### ----CLASSES---- ####
 # This class will help the Dhoani travel by creating a Dhoani object.
 class DhoaniTravel:
-    # Dhoani's travel functions.
-    # Initialising the constructor.
-    def __init__(self, dhoani_company):
-        # Dhoani's attributes.
-        self.dhoani_company = dhoani_company
+    
 
     # Dhoani's drive function.
     def drive(self):
@@ -57,9 +53,7 @@ class DhoaniTravel:
         print("Dhoani " + self.dhoani_company + " is stopped")
 #### ----CLASSES---- ####
 
-# Assigning class to a variable.
-travel = DhoaniTravel()
-
+DhoaniTravel()
 #### ----OBJECTS---- ####
 dhoani_1 = DhoaniTravel("BigCon")
 #### ----OBJECTS---- ####
