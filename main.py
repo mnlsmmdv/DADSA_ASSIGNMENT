@@ -149,7 +149,7 @@ def addItems():
         dhoaniItemAmount.append(itemAmount)
         # This will calculate the Dhoani's current capacity left.
         capacityCalculate = dhoaniCapacity - itemAmount
-        print("Capacity left: " + str(capacityCalculate) + " KG")
+        print("Capacity left: " + str(capacityCalculate) + "KG")
         # Prints message of Dhoani travel function.
         print(dhoani1.get_drive())
         
