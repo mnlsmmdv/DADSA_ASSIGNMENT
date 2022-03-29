@@ -57,6 +57,9 @@ class DhoaniTravel:
         print("Dhoani " + self.dhoani + " is stopped")
 #### ----CLASSES---- ####
 
+# Assigning class to a variable.
+travel = DhoaniTravel()
+
 #### ----FUNCTIONS---- ####
 # This function displays the main console menu.
 def consoleMenu():
