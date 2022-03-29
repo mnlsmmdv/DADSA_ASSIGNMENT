@@ -40,7 +40,7 @@ islandD_ItemAmount = []
 #### ----CLASSES---- ####
 # This class will display Dhoani's drive and stop messages in the functions.
 class DhoaniTravel:
-    # Dhoani's company name.
+    # Dhoani's function messages.
     drive = "Dhoani is driving"
     stop = "Dhoani has stopped"
 
@@ -53,6 +53,7 @@ class DhoaniTravel:
     def get_stop(self):
         # Prints message of the Dhoani's function.
         return self.stop
+
 #### ----CLASSES---- ####
 
 # Assigning class to a variable.
