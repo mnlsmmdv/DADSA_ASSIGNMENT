@@ -3,13 +3,13 @@
 BigCon is a Python program developed for UWE BSc Computer Science DADSA year 02 assignment.
 
 ## Installation
-Use git to clone this file.
+Use git to clone this file to your system.
 ```bash
 git clone https://gitlab.uwe.ac.uk/a2-affaan/DADSA_ASSIGNMENT.git
 ```
 
 ## Usage
-Use one of the each options to use the program.
+Use one of the each options mentioned to use the program.
 ```bash
 ---------------------------------
 |      BigCon Construction      |
@@ -26,3 +26,6 @@ Use one of the each options to use the program.
 Student Number(UWE): 19045165
 
 Student ID(VC): 1802035
+
+Code version: 3.8.10
+
