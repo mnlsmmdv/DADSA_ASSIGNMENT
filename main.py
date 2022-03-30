@@ -109,10 +109,10 @@ class Menu:
         print("---------------------------------")
         print("|      BigCon Construction      |")
         print("----------Destinations-----------")
-        print("Island_A                        |")
-        print("Island_B                        |")
-        print("Island_C                        |")
-        print("Island_D                        |")
+        print("Island A                        |")
+        print("Island B                        |")
+        print("Island C                        |")
+        print("Island D                        |")
         print("---------------------------------")
     
 #### ----CLASSES---- ####
