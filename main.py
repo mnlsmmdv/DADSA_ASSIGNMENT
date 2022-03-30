@@ -193,7 +193,6 @@ def removeItems():
             dhoaniItemName.remove(itemName)
             dhoaniItemAmount.remove(itemAmount)
             
-
             # Asking user if they wish to continue or quit.
             print("---------------------------------")
             user_input = int(input("Continue (6) or Quit (7): "))
