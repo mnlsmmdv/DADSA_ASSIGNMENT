@@ -178,6 +178,17 @@ while True:
             # Adds item name and item amount
             dhoaniItemName.append(itemName)
             dhoaniItemAmount.append(itemAmount)
+            user_input = input("Add another item?(yes/no): ").lower()
+            print("---------------------------------")
+            if(user_input in "yes"):
+                menu_and_travel.consoleMenu()
+            else:
+                user_input = int(input("Continue (6) or Quit (7): "))
+                print("")
+                if user_input == 6:
+                    menu_and_travel.consoleMenu()
+                else:
+                    exit()
                
         # Prints the Deliver Items Menu.
         deliverItems()
@@ -214,6 +225,17 @@ while True:
                 print("Capacity regained: " + str(capacityCalculate) + "KG")
                 dhoaniItemName.remove(itemName)
                 dhoaniItemAmount.remove(itemAmount)
+                user_input = input("Remove another item?(yes/no): ").lower()
+                print("---------------------------------")
+                if(user_input in "yes"):
+                    menu_and_travel.consoleMenu()
+                else:
+                    user_input = int(input("Continue (6) or Quit (7): "))
+                    print("")
+                    if user_input == 6:
+                        menu_and_travel.consoleMenu()
+                    else:
+                        exit()
                 
                 # Asking user if they wish to continue or quit.
                 print("---------------------------------")
@@ -424,8 +446,8 @@ while True:
             print("INVALID INPUT")
         # Delivers to Island A.
         elif user_input in "island a":
-            island_a.append(*dhoaniItemName)
-            island_a.append(*dhoaniItemAmount)
+            island_a.append(dhoaniItemName)
+            island_a.append(dhoaniItemAmount)
             print(menu_and_travel.get_drive() + user_input.upper())
             calc = 50 / 25
             print("Time: " + str(calc) + " HRS")
@@ -434,8 +456,8 @@ while True:
             print(menu_and_travel.get_stop() + user_input.upper())
         # Delivers to Island B.
         elif user_input in "island b":
-            island_b.append(*dhoaniItemName)
-            island_b.append(*dhoaniItemAmount)
+            island_b.append(dhoaniItemName)
+            island_b.append(dhoaniItemAmount)
             print(menu_and_travel.get_drive() + user_input.upper())
             calc = 130 / 25
             print("Time: " + str(calc) + " HRS")
@@ -444,8 +466,8 @@ while True:
             print(menu_and_travel.get_stop() + user_input.upper())
         # Delivers to Island C.
         elif user_input in "island c":
-            island_c.append(*dhoaniItemName)
-            island_c.append(*dhoaniItemAmount)
+            island_c.append(dhoaniItemName)
+            island_c.append(dhoaniItemAmount)
             print(menu_and_travel.get_drive() + user_input.upper())
             calc = 190 / 25
             print("Time: " + str(calc) + " HRS")
@@ -454,8 +476,8 @@ while True:
             print(menu_and_travel.get_stop() + user_input.upper())
         # Delivers to Island D.
         elif user_input in "island d":
-            island_d.append(*dhoaniItemName)
-            island_d.append(*dhoaniItemAmount)
+            island_d.append(dhoaniItemName)
+            island_d.append(dhoaniItemAmount)
             print(menu_and_travel.get_drive() + user_input.upper())
             calc = 230 / 25
             print("Time: " + str(calc) + " HRS")
@@ -521,7 +543,7 @@ while True:
         else:
             exit()
     #### ----FUNCTIONS---- ####
-    
+
     # Calling the function globally.
     # Displays main console menu.
     menu_and_travel.consoleMenu()
