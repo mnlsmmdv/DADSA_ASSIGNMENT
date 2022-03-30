@@ -114,7 +114,6 @@ class Menu:
         print("Island C                        |")
         print("Island D                        |")
         print("---------------------------------")
-    
 #### ----CLASSES---- ####
 
 # Assigning class to a variable.
