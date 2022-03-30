@@ -160,6 +160,7 @@ def addItems():
         dhoaniCapacity = 30000
         capacityCalculate = dhoaniCapacity - itemAmount
         print("Current left: " + str(capacityCalculate) + "KG")
+        # Adds item name and item amount
         dhoaniItemName.append(itemName)
         dhoaniItemAmount.append(itemAmount)
 
