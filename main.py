@@ -172,10 +172,9 @@ def addItems():
 
 # This function will remove items.
 def removeItems():
-    # Prints the Items Menu.
+    # Prints the Items Menu and asks for user input.
     print("")
     menu1.itemsMenu()
-    # Asks for user input
     itemName = input("Item Name: ").lower()
     itemAmount = int(input("Item Amount: "))
 
