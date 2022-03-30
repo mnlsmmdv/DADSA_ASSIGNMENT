@@ -237,7 +237,8 @@ def searchItems():
 
 # This function will deliver items to destinations.
 def deliverItems():
-    
+    # Calling the menu.
+    menu1.deliverMenu()
     user_input = input("Deliver to?: ").lower()
 
     # Checks what destination the user has chosen and displays where it goes.
