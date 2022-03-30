@@ -34,22 +34,25 @@ supplierIslandAlphaItemAmount = []
 supplierIslandBetaItemName = []
 supplierIslandBetaItemAmount = []
 # Lists for Island A Item Name and Item Amount.
+island_a = []
 islandA_ItemName = []
 islandA_ItemAmount = []
 # Lists for Island B Item Name and Item Amount.
+island_b = []
 islandB_ItemName = []
 islandB_ItemAmount = []
 # Lists for Island C Item Name and Item Amount.
+island_c = []
 islandC_ItemName = []
 islandC_ItemAmount = []
 # Lists for Island D Item Name and Item Amount.
+island_d = []
 islandD_ItemName = []
 islandD_ItemAmount = []
 
-island_a = []
-island_b = []
-island_c = []
-island_d = []
+
+
+
 #### ----LISTS---- ####
 
 #### ----CLASSES---- ####
