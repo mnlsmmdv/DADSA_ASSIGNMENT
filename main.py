@@ -52,8 +52,8 @@ islandD_ItemAmount = []
 #### ----LISTS---- ####
 
 #### ----CLASSES---- ####
-# This class will display Dhoani's drive and stop messages in the functions.
-class DhoaniTravel:
+# This class will display Dhoani's drive and stop messages also the various menu's needed for this program.
+class MENU_AND_TRAVEL:
     # Dhoani's function messages.
     drive = "Dhoani is travelling to "
     stop = "Dhoani has stopped at "
@@ -68,8 +68,6 @@ class DhoaniTravel:
         # Prints message of the Dhoani's function.
         return self.stop
 
-# This class will display different menu's needed for the program.
-class Menu:
     # This function displays the main console menu.
     # Option 6 is continue and option 7 is quit.
     def consoleMenu(self):
@@ -122,8 +120,7 @@ class Menu:
 #### ----CLASSES---- ####
 
 # Assigning classes to variables.
-dhoani1 = DhoaniTravel()
-menu1 = Menu()
+menu_and_travel = MENU_AND_TRAVEL()
 
 #### ----FUNCTIONS---- ####
 # This function checks the users specific choice and directs them to that function.
@@ -145,7 +142,7 @@ def consoleChoice(user_input):
 def addItems():
     # Prints the Items Menu and asks for user input.
     print("")    
-    menu1.itemsMenu()
+    menu_and_travel.itemsMenu()
 
     # Validates item name.
     itemName = input("Item Name: ").lower()    
@@ -177,7 +174,7 @@ def addItems():
     user_input = int(input("Continue (6) or Quit (7): "))
     print("")
     if user_input == 6:
-        menu1.consoleMenu()
+        menu_and_travel.consoleMenu()
     else:
         exit()
 
@@ -185,7 +182,7 @@ def addItems():
 def removeItems():
     # Prints the Items Menu and asks for user input.
     print("")
-    menu1.itemsMenu()
+    menu_and_travel.itemsMenu()
     itemName = input("Item Name: ").lower()
     itemAmount = int(input("Item Amount: "))
 
@@ -209,7 +206,7 @@ def removeItems():
             user_input = int(input("Continue (6) or Quit (7): "))
             print("")
             if user_input == 6:
-               menu1.consoleMenu()
+               menu_and_travel.consoleMenu()
             else:
                exit()
         else:
@@ -238,14 +235,14 @@ def searchItems():
     user_input = int(input("Continue (6) or Quit (7): "))
     print("")
     if user_input == 6:
-        menu1.consoleMenu()
+        menu_and_travel.consoleMenu()
     else:
         exit()
 
 # This function will deliver items to destinations.
 def deliverItems():
     # Calling the menu.
-    menu1.deliverMenu()
+    menu_and_travel.deliverMenu()
     user_input = input("Deliver to?: ").lower()
 
     # Checks what destination the user has chosen and displays where it goes.
@@ -256,22 +253,22 @@ def deliverItems():
     elif user_input in "island a":
         island_a.append(dhoaniItemName)
         island_a.append(dhoaniItemAmount)
-        print(dhoani1.get_drive() + user_input)
+        print(menu_and_travel.get_drive() + user_input)
     # Delivers to Island B.
     elif user_input in "island b":
         island_b.append(dhoaniItemName)
         island_b.append(dhoaniItemAmount)
-        print(dhoani1.get_drive() + user_input)
+        print(menu_and_travel.get_drive() + user_input)
     # Delivers to Island C.
     elif user_input in "island c":
         island_c.append(dhoaniItemName)
         island_c.append(dhoaniItemAmount)
-        print(dhoani1.get_drive() + user_input)
+        print(menu_and_travel.get_drive() + user_input)
     # Delivers to Island D.
     elif user_input in "island d":
         island_d.append(dhoaniItemName)
         island_d.append(dhoaniItemAmount)
-        print(dhoani1.get_drive() + user_input)
+        print(menu_and_travel.get_drive() + user_input)
     
 # This function will print all of the lists and their amounts.
 def printItems():
@@ -324,13 +321,13 @@ def printItems():
     # Asking user if they wish to continue or quit.
     user_input = int(input("Continue (6) or Quit (7): "))
     if user_input == 6:
-        menu1.consoleMenu()
+        menu_and_travel.consoleMenu()
     else:
         exit()
 #### ----FUNCTIONS---- ####
 
 # Calling the function globally.
 # Displays main console menu.
-menu1.consoleMenu()
+menu_and_travel.consoleMenu()
 
 # PROGRAM END.
