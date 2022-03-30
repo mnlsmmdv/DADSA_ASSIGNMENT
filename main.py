@@ -420,8 +420,7 @@ while True:
             calc = 50 / 25
             print("Time: " + str(calc) + " HRS")
             print("Distance: 50KM")
-            print("")
-            print("")
+            print("---------------------------------")
             print(menu_and_travel.get_stop() + user_input.upper())
         # Delivers to Island B.
         elif user_input in "island b":
@@ -431,8 +430,7 @@ while True:
             calc = 130 / 25
             print("Time: " + str(calc) + " HRS")
             print("Distance: 130KM")
-            print("")
-            print("")
+            print("---------------------------------")
             print(menu_and_travel.get_stop() + user_input.upper())
         # Delivers to Island C.
         elif user_input in "island c":
@@ -442,8 +440,7 @@ while True:
             calc = 190 / 25
             print("Time: " + str(calc) + " HRS")
             print("Distance: 130KM")
-            print("")
-            print("")
+            print("---------------------------------")
             print(menu_and_travel.get_stop() + user_input.upper())
         # Delivers to Island D.
         elif user_input in "island d":
@@ -453,8 +450,7 @@ while True:
             calc = 230 / 25
             print("Time: " + str(calc) + " HRS")
             print("Distance: 230KM")
-            print("")
-            print("")
+            print("---------------------------------")
             print(menu_and_travel.get_stop() + user_input.upper())
         # Exits to console menu.
         elif user_input in "quit":
