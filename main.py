@@ -116,7 +116,7 @@ class Menu:
         print("---------------------------------")
 #### ----CLASSES---- ####
 
-# Assigning classes to a variables.
+# Assigning classes to variables.
 #dhoani1 = DhoaniTravel()
 menu1 = Menu()
 
