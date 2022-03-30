@@ -164,7 +164,7 @@ def addItems():
         dhoaniItemName.append(itemName)
         dhoaniItemAmount.append(itemAmount)
            
-    # Asks user where to deliver.
+    # Prints the Deliver Items Menu.
     deliverItems()
 
     # Asks user if they wish to continue or quit.
