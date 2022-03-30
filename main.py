@@ -181,6 +181,7 @@ def addItems():
         if(user_input in "yes"):
             menu_and_travel.consoleMenu()
         else:
+            deliverItems()
             user_input = int(input("Continue (6) or Quit (7): "))
             print("")
             if user_input == 6:
