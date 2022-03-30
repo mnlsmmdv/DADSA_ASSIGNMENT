@@ -47,10 +47,10 @@ This menu displays a list of destinations the Dhoani can travel to.
 ---------------------------------
 |      BigCon Construction      |
 ----------Destinations-----------
-Island_A                        |
-Island_B                        |
-Island_C                        |
-Island_D                        |
+Island A                        |
+Island B                        |
+Island C                        |
+Island D                        |
 ---------------------------------
 ```
 
