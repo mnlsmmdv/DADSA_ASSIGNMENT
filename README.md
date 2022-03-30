@@ -26,7 +26,7 @@ Use one of the each options mentioned to use the program.
 ```
 
 ## Other Menu's
-This program includes menu's that will lead the user to make further choices.
+This program includes few other menu's that will lead the user to make further choices.
 ### Items Menu
 This menu displays a list of the items accepted in the Dhoani and separate islands. 
 ```bash
