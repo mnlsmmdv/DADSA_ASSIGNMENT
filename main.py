@@ -21,6 +21,19 @@ islandA_Capacity = 11690
 islandB_Capacity = 13180
 islandC_Capacity = 10200
 islandD_Capacity = 10170
+
+
+speed = 25
+time = 1
+SUPPLY_TO_A = 50
+SUPPLY_TO_D = 70
+MAX_DISTANCE = 300
+A_TO_B = 80
+B_TO_C = 60
+C_TO_D = 40
+D_TO_C = 40
+C_TO_B = 60
+B_TO_A = 80
 #### ----VARIABLES---- ####
 
 #### ----LISTS---- ####
@@ -55,7 +68,7 @@ islandD_ItemAmount = []
 # This class will display Dhoani's drive and stop messages also the various menu's needed for this program.
 class MENU_AND_TRAVEL:
     # Dhoani's function messages.
-    drive = "Dhoani is travelling to "
+    drive = "Dhoani is now travelling to "
     stop = "Dhoani has stopped at "
 
     # Dhoani's drive function.
@@ -417,6 +430,13 @@ while True:
             island_a.append(*dhoaniItemName)
             island_a.append(*dhoaniItemAmount)
             print(menu_and_travel.get_drive() + user_input)
+            calc = 50 / 25
+            print("Time: " + str(calc) + " HRS")
+            calc = 25 / 1
+            print("Distance: " + str(calc) + " KM")
+            print("")
+            print("")
+            print(menu_and_travel.get_stop() + user_input)
         # Delivers to Island B.
         elif user_input in "island b":
             island_b.append(*dhoaniItemName)
