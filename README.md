@@ -29,6 +29,7 @@ Use one of the each options mentioned to use the program.
 ## Other Menu's
 This program includes menu's that will lead the user to make further choices.
 ### Items Menu
+This menu displays a list of the items accepted in the Dhoani and separate islands. 
 ```bash
 ---------------------------------
 |      BigCon Construction      |
@@ -42,6 +43,7 @@ This program includes menu's that will lead the user to make further choices.
 ---------------------------------
 ```
 ### Deliver Menu
+This menu displays a list of destinations the Dhoani can travel to.
 ```bash
 ---------------------------------
 |      BigCon Construction      |
