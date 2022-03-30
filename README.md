@@ -41,6 +41,17 @@ This program includes menu's that will lead the user to make further choices.
 6- Unprotected Material         |
 ---------------------------------
 ```
+### Deliver Menu
+```bash
+---------------------------------
+|      BigCon Construction      |
+----------Destinations-----------
+Island_A                        |
+Island_B                        |
+Island_C                        |
+Island_D                        |
+---------------------------------
+```
 
 ## Details
 Student Number(UWE): 19045165
