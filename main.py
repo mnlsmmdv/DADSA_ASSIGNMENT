@@ -72,7 +72,7 @@ class DhoaniTravel:
 class Menu:
     # This function displays the main console menu.
     # Option 6 is continue and option 7 is quit.
-    def consoleMenu():
+    def consoleMenu(self):
         print("")
         print("---------------------------------")
         print("|      BigCon Construction      |")
@@ -91,7 +91,7 @@ class Menu:
 
     # This function displays the Items Menu with their group code.
     # Entering group code will not work. Enter the name displayed in the menu.
-    def itemsMenu():
+    def itemsMenu(self):
         print("---------------------------------")
         print("|      BigCon Construction      |")
         print("--------------Items--------------")
@@ -102,9 +102,10 @@ class Menu:
         print("5- Protected Material           |")
         print("6- Unprotected Material         |")
         print("---------------------------------")
-
-    def deliverMenu():
-        # Displays menu with destinations.
+    
+    # This function displays the Deliver Items menu and their destination names.
+    # Displays menu with destinations.
+    def deliverMenu(self):
         print("---------------------------------")
         print("|      BigCon Construction      |")
         print("----------Destinations-----------")
@@ -113,12 +114,11 @@ class Menu:
         print("Island_C                        |")
         print("Island_D                        |")
         print("---------------------------------")
-        
-
+    
 #### ----CLASSES---- ####
 
 # Assigning class to a variable.
-dhoani1 = DhoaniTravel()
+#dhoani1 = DhoaniTravel()
 menu1 = Menu()
 
 #### ----FUNCTIONS---- ####
