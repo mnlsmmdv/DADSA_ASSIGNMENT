@@ -22,9 +22,6 @@ islandB_Capacity = 13180
 islandC_Capacity = 10200
 islandD_Capacity = 10170
 
-
-speed = 25
-time = 1
 SUPPLY_TO_A = 50
 SUPPLY_TO_D = 70
 MAX_DISTANCE = 300
