@@ -146,6 +146,11 @@ while True:
         # Quit program.
         elif user_input == 7:
             exit()
+        # Invalid option.
+        else:
+            # Shows error message and displays console menu.
+            print("INVALID OPTION")
+            menu_and_travel.consoleMenu()
     
     # This function will add items.
     def addItems():
