@@ -176,6 +176,7 @@ def addItems():
         dhoaniItemName.append(itemName)
         dhoaniItemAmount.append(itemAmount)
         # Asks user if they wish to add another item. If not exits.
+        print("---------------------------------")
         user_input = input("Add another item?(yes/no): ").lower()
         print("---------------------------------")
         if(user_input in "yes"):
@@ -435,55 +436,118 @@ def searchItems():
 def deliverItems():
     # Calling the menu.
     menu_and_travel.deliverMenu()
-    user_input = input("Deliver to?: ").lower()
+    user_input = input("Deliver to(A, B, C, D)?: ").lower()
+    from_to = input("From(Supply Island 01, Supply island 02)?: ").lower()
 
-    # Checks what destination the user has chosen and displays where it goes.
-    if user_input not in ["island a", "island b", "island c", "island d"]:
-        # Error Message.
-        print("INVALID INPUT")
-    # Delivers to Island A.
-    elif user_input in "island a":
-        island_a.append(dhoaniItemName)
-        island_a.append(dhoaniItemAmount)
-        print(menu_and_travel.get_drive() + user_input.upper())
-        calc = 50 / 25
-        print("Time: " + str(calc) + " HRS")
-        print("Distance: 50KM")
-        print("---------------------------------")
-        print(menu_and_travel.get_stop() + user_input.upper())
-    # Delivers to Island B.
-    elif user_input in "island b":
-        island_b.append(dhoaniItemName)
-        island_b.append(dhoaniItemAmount)
-        print(menu_and_travel.get_drive() + user_input.upper())
-        calc = 130 / 25
-        print("Time: " + str(calc) + " HRS")
-        print("Distance: 130KM")
-        print("---------------------------------")
-        print(menu_and_travel.get_stop() + user_input.upper())
-    # Delivers to Island C.
-    elif user_input in "island c":
-        island_c.append(dhoaniItemName)
-        island_c.append(dhoaniItemAmount)
-        print(menu_and_travel.get_drive() + user_input.upper())
-        calc = 190 / 25
-        print("Time: " + str(calc) + " HRS")
-        print("Distance: 130KM")
-        print("---------------------------------")
-        print(menu_and_travel.get_stop() + user_input.upper())
-    # Delivers to Island D.
-    elif user_input in "island d":
-        island_d.append(dhoaniItemName)
-        island_d.append(dhoaniItemAmount)
-        print(menu_and_travel.get_drive() + user_input.upper())
-        calc = 230 / 25
-        print("Time: " + str(calc) + " HRS")
-        print("Distance: 230KM")
-        print("---------------------------------")
-        print(menu_and_travel.get_stop() + user_input.upper())
-    # Exits to console menu.
-    elif user_input in "quit":
-        menu_and_travel.consoleMenu
+    # Supply island 01 to other islands.
+    if from_to in "supply island 01":
+        # Checks what destination the user has chosen and displays where it goes.
+        if user_input not in ["island a", "island b", "island c", "island d"]:
+            # Error Message.
+            print("INVALID INPUT")
+        # Delivers to Island A.
+        elif user_input in "island a":
+            island_a.append(dhoaniItemName)
+            island_a.append(dhoaniItemAmount)
+            print(menu_and_travel.get_drive() + user_input.upper())
+            calc = 50 / 25
+            print("Time: " + str(calc) + " HRS")
+            print("Distance: 50KM")
+            print("---------------------------------")
+            print(menu_and_travel.get_stop() + user_input.upper())
+            print("---------------------------------")
+        # Delivers to Island B.
+        elif user_input in "island b":
+            island_b.append(dhoaniItemName)
+            island_b.append(dhoaniItemAmount)
+            print(menu_and_travel.get_drive() + user_input.upper())
+            calc = 130 / 25
+            print("Time: " + str(calc) + " HRS")
+            print("Distance: 130KM")
+            print("---------------------------------")
+            print(menu_and_travel.get_stop() + user_input.upper())
+            print("---------------------------------")
+        # Delivers to Island C.
+        elif user_input in "island c":
+            island_c.append(dhoaniItemName)
+            island_c.append(dhoaniItemAmount)
+            print(menu_and_travel.get_drive() + user_input.upper())
+            calc = 190 / 25
+            print("Time: " + str(calc) + " HRS")
+            print("Distance: 130KM")
+            print("---------------------------------")
+            print(menu_and_travel.get_stop() + user_input.upper())
+            print("---------------------------------")
+        # Delivers to Island D.
+        elif user_input in "island d":
+            island_d.append(dhoaniItemName)
+            island_d.append(dhoaniItemAmount)
+            print(menu_and_travel.get_drive() + user_input.upper())
+            calc = 230 / 25
+            print("Time: " + str(calc) + " HRS")
+            print("Distance: 230KM")
+            print("---------------------------------")
+            print(menu_and_travel.get_stop() + user_input.upper())
+            print("---------------------------------")
+        # Exits to console menu.
+        elif user_input in "quit":
+            menu_and_travel.consoleMenu
+    # Supply island 02 to other islands. 
+    elif from_to in "supply island 02":
+        # Checks what destination the user has chosen and displays where it goes.
+        if user_input not in ["island a", "island b", "island c", "island d"]:
+            # Error Message.
+            print("INVALID INPUT")
+        # Delivers to Island A.
+        elif user_input in "island a":
+            island_a.append(dhoaniItemName)
+            island_a.append(dhoaniItemAmount)
+            print(menu_and_travel.get_drive() + user_input.upper())
+            calc = 60 / 25
+            print("Time: " + str(calc) + " HRS")
+            print("Distance: 50KM")
+            print("---------------------------------")
+            print(menu_and_travel.get_stop() + user_input.upper())
+        # Delivers to Island B.
+        elif user_input in "island b":
+            island_b.append(dhoaniItemName)
+            island_b.append(dhoaniItemAmount)
+            print(menu_and_travel.get_drive() + user_input.upper())
+            calc = 130 / 25
+            print("Time: " + str(calc) + " HRS")
+            print("Distance: 130KM")
+            print("---------------------------------")
+            print(menu_and_travel.get_stop() + user_input.upper())
+        # Delivers to Island C.
+        elif user_input in "island c":
+            island_c.append(dhoaniItemName)
+            island_c.append(dhoaniItemAmount)
+            print(menu_and_travel.get_drive() + user_input.upper())
+            calc = 190 / 25
+            print("Time: " + str(calc) + " HRS")
+            print("Distance: 130KM")
+            print("---------------------------------")
+            print(menu_and_travel.get_stop() + user_input.upper())
+        # Delivers to Island D.
+        elif user_input in "island d":
+            island_d.append(dhoaniItemName)
+            island_d.append(dhoaniItemAmount)
+            print(menu_and_travel.get_drive() + user_input.upper())
+            calc = 230 / 25
+            print("Time: " + str(calc) + " HRS")
+            print("Distance: 230KM")
+            print("---------------------------------")
+            print(menu_and_travel.get_stop() + user_input.upper())
+        # Exits to console menu.
+        elif user_input in "quit":
+            menu_and_travel.consoleMenu
+    else:
+        # Asking user if they wish to continue or quit.
+        user_input = int(input("Continue (6) or Quit (7): "))
+        if user_input == 6:
+            menu_and_travel.consoleMenu()
+        else:
+            exit()
     
 # This function will print all of the lists and their amounts.
 def printItems():
