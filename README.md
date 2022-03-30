@@ -22,7 +22,7 @@ Use one of the each options mentioned to use the program.
 3- Search Items                 |
 4- Deliver Items                |
 5- Print Items                  |
-7- QUIT                         |
+7- QUIT PROGRAM                 |
 ---------------------------------
 ```
 
