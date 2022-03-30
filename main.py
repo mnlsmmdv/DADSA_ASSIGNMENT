@@ -141,15 +141,20 @@ def addItems():
     # Prints the Items Menu and asks for user input.
     print("")    
     menu1.itemsMenu()
-    itemName = input("Item Name: ").lower()
-    itemAmount = int(input("Item Amount: "))
+
+    # Validates item name.
+    itemName = input("Item Name: ").lower()    
+    if itemName not in ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]:
+        # Error message.
+        print("INVALID ITEM")
     
-    # Checks if Item Name and Item Amount is valid and adds it.
-    if((itemName != ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]) and (itemAmount > 30000)):
-        print("INVALID INPUT")
+    # Validates item amount.
+    itemAmount = int(input("Item Amount: "))
+    if itemAmount >= 30000:
+        print("INVALID AMOUNT")
     else:
-        # Adds Item Name and Item Amount in the list.
-        print("")
+        print("---------------------------------")
+        print("Capacity Reaced!")
         print("----ADDING ITEM!----")
         # This will calculate and print the Dhoani's current capacity left.
         dhoaniCapacity = 30000
@@ -157,6 +162,17 @@ def addItems():
         print("Current left: " + str(capacityCalculate) + "KG")
         dhoaniItemName.append(itemName)
         dhoaniItemAmount.append(itemAmount)
+
+
+    
+    """
+    # Checks if Item Name and Item Amount is valid and adds it.
+    if((itemName != ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]) and (itemAmount > 30000)):
+        print("INVALID INPUT")
+    else:
+        # Adds Item Name and Item Amount in the list.
+        print("")
+    """    
         
     # Asks user where to deliver.
     deliverItems()
@@ -293,8 +309,8 @@ def printItems():
     print("Supply Island C Inventory")
     print("-----------------------------")
     print("All Items: ", island_c)
-    print("Items: ", islandC_ItemName)
-    print("Amount:", islandC_ItemAmount)
+    #print("Items: ", islandC_ItemName)
+    #print("Amount:", islandC_ItemAmount)
     print("-----------------------------")
 
     # Island D Inventory.
@@ -302,8 +318,8 @@ def printItems():
     print("Supply Island D Inventory")
     print("-----------------------------")
     print("All Items: ", island_d)
-    print("Items: ", islandD_ItemName)
-    print("Amount:", islandD_ItemAmount)
+    #print("Items: ", islandD_ItemName)
+    #print("Amount:", islandD_ItemAmount)
     print("-----------------------------")
 
     # Asking user if they wish to continue or quit.
