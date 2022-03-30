@@ -128,16 +128,22 @@ while True:
     #### ----FUNCTIONS---- ####
     # This function checks the users specific choice and directs them to that function.
     def consoleChoice(user_input):
+        # Add items.
         if user_input == 1:
             addItems()
+        # Remove items.
         elif user_input == 2:
             removeItems()
+        # Search items.
         elif user_input == 3:
             searchItems()
+        # Deliver items.
         elif user_input == 4:
             deliverItems()
+        # Print items.
         elif user_input == 5:
             printItems()
+        # Quit program.
         elif user_input == 7:
             exit()
     
