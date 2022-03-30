@@ -1,6 +1,5 @@
 # BigCon
-
-BigCon is a Python program developed for UWE BSc Computer Science DADSA year 02 assignment.
+This is a Python program developed for UWE BSc Computer Science DADSA's year 02 assignment.
 
 ## Installation
 Use git to clone this file to your system.
