@@ -122,212 +122,215 @@ class MENU_AND_TRAVEL:
 # Assigning classes to variables.
 menu_and_travel = MENU_AND_TRAVEL()
 
-#### ----FUNCTIONS---- ####
-# This function checks the users specific choice and directs them to that function.
-def consoleChoice(user_input):
-    if user_input == 1:
-        addItems()
-    elif user_input == 2:
-        removeItems()
-    elif user_input == 3:
-        searchItems()
-    elif user_input == 4:
-        deliverItems()
-    elif user_input == 5:
-        printItems()
-    elif user_input == 7:
-        exit()
-
-# This function will add items.
-def addItems():
-    # Prints the Items Menu and asks for user input.
-    print("")    
-    menu_and_travel.itemsMenu()
-
-    # Validates item name.
-    itemName = input("Item Name: ").lower()    
-    if itemName not in ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]:
-        # Error message.
-        print("INVALID ITEM")
+# Iterates the program.
+while True:
+    #
+    #### ----FUNCTIONS---- ####
+    # This function checks the users specific choice and directs them to that function.
+    def consoleChoice(user_input):
+        if user_input == 1:
+            addItems()
+        elif user_input == 2:
+            removeItems()
+        elif user_input == 3:
+            searchItems()
+        elif user_input == 4:
+            deliverItems()
+        elif user_input == 5:
+            printItems()
+        elif user_input == 7:
+            exit()
     
-    # Validates item amount.
-    itemAmount = int(input("Item Amount: "))
-    if itemAmount >= 30000:
-        print("INVALID AMOUNT")
-    else:
-        print("---------------------------------")
-        print("Capacity Reaced!")
-        print("----ADDING ITEM!----")
-        # This will calculate and print the Dhoani's current capacity left.
-        dhoaniCapacity = 30000
-        capacityCalculate = dhoaniCapacity - itemAmount
-        print("Current left: " + str(capacityCalculate) + "KG")
-        # Adds item name and item amount
-        dhoaniItemName.append(itemName)
-        dhoaniItemAmount.append(itemAmount)
-           
-    # Prints the Deliver Items Menu.
-    deliverItems()
-
-    # Asks user if they wish to continue or quit.
-    print("---------------------------------")
-    user_input = int(input("Continue (6) or Quit (7): "))
-    print("")
-    if user_input == 6:
-        menu_and_travel.consoleMenu()
-    else:
-        exit()
-
-# This function will remove items.
-def removeItems():
-    # Prints the Items Menu and asks for user input.
-    print("")
-    menu_and_travel.itemsMenu()
-    itemName = input("Item Name: ").lower()
-    itemAmount = int(input("Item Amount: "))
-
-    # Checks if Item Name and Item Amount is valid and removes it.
-    if((itemName != ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]) and (itemAmount > 30000)):
-        print("INVALID INPUT")
-    else:
-        if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):  
-            # Removing Item Name and Item Amount.
-            print("")
-            print("----REMOVING ITEM!----")  
+    # This function will add items.
+    def addItems():
+        # Prints the Items Menu and asks for user input.
+        print("")    
+        menu_and_travel.itemsMenu()
+    
+        # Validates item name.
+        itemName = input("Item Name: ").lower()    
+        if itemName not in ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]:
+            # Error message.
+            print("INVALID ITEM")
+        
+        # Validates item amount.
+        itemAmount = int(input("Item Amount: "))
+        if itemAmount >= 30000:
+            print("INVALID AMOUNT")
+        else:
+            print("---------------------------------")
+            print("Capacity Reaced!")
+            print("----ADDING ITEM!----")
             # This will calculate and print the Dhoani's current capacity left.
             dhoaniCapacity = 30000
             capacityCalculate = dhoaniCapacity - itemAmount
-            print("Capacity regained: " + str(capacityCalculate) + "KG")
-            dhoaniItemName.remove(itemName)
-            dhoaniItemAmount.remove(itemAmount)
-            
-            # Asking user if they wish to continue or quit.
-            print("---------------------------------")
-            user_input = int(input("Continue (6) or Quit (7): "))
-            print("")
-            if user_input == 6:
-               menu_and_travel.consoleMenu()
+            print("Current left: " + str(capacityCalculate) + "KG")
+            # Adds item name and item amount
+            dhoaniItemName.append(itemName)
+            dhoaniItemAmount.append(itemAmount)
+               
+        # Prints the Deliver Items Menu.
+        deliverItems()
+    
+        # Asks user if they wish to continue or quit.
+        print("---------------------------------")
+        user_input = int(input("Continue (6) or Quit (7): "))
+        print("")
+        if user_input == 6:
+            menu_and_travel.consoleMenu()
+        else:
+            exit()
+    
+    # This function will remove items.
+    def removeItems():
+        # Prints the Items Menu and asks for user input.
+        print("")
+        menu_and_travel.itemsMenu()
+        itemName = input("Item Name: ").lower()
+        itemAmount = int(input("Item Amount: "))
+    
+        # Checks if Item Name and Item Amount is valid and removes it.
+        if((itemName != ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]) and (itemAmount > 30000)):
+            print("INVALID INPUT")
+        else:
+            if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):  
+                # Removing Item Name and Item Amount.
+                print("")
+                print("----REMOVING ITEM!----")  
+                # This will calculate and print the Dhoani's current capacity left.
+                dhoaniCapacity = 30000
+                capacityCalculate = dhoaniCapacity - itemAmount
+                print("Capacity regained: " + str(capacityCalculate) + "KG")
+                dhoaniItemName.remove(itemName)
+                dhoaniItemAmount.remove(itemAmount)
+                
+                # Asking user if they wish to continue or quit.
+                print("---------------------------------")
+                user_input = int(input("Continue (6) or Quit (7): "))
+                print("")
+                if user_input == 6:
+                   menu_and_travel.consoleMenu()
+                else:
+                   exit()
             else:
-               exit()
+                # Error message.
+                print("INVALID INPUT")
+    
+    # This function will search through the lists and print items and their amounts.
+    def searchItems():
+        print("----SEARCHING ITEMS----")
+        print("---------------------------------")
+        itemName = input("Item Name: ")
+        itemAmount = int(input("Item Amount: "))
+        
+        # Checks if the entered elements exists in the lists and prints them.
+        if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):
+            print("")
+            print("----ITEM EXISTS!----")
+            print("Item Name:", dhoaniItemName(user_input))
+            print("Item Amount:", dhoaniItemAmount(user_input))
         else:
             # Error message.
             print("INVALID INPUT")
-
-# This function will search through the lists and print items and their amounts.
-def searchItems():
-    print("----SEARCHING ITEMS----")
-    print("---------------------------------")
-    itemName = input("Item Name: ")
-    itemAmount = int(input("Item Amount: "))
     
-    # Checks if the entered elements exists in the lists and prints them.
-    if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):
+        # Asking user if they wish to continue or quit.
+        print("---------------------------------")
+        user_input = int(input("Continue (6) or Quit (7): "))
         print("")
-        print("----ITEM EXISTS!----")
-        print("Item Name:", dhoaniItemName(user_input))
-        print("Item Amount:", dhoaniItemAmount(user_input))
-    else:
-        # Error message.
-        print("INVALID INPUT")
-
-    # Asking user if they wish to continue or quit.
-    print("---------------------------------")
-    user_input = int(input("Continue (6) or Quit (7): "))
-    print("")
-    if user_input == 6:
-        menu_and_travel.consoleMenu()
-    else:
-        exit()
-
-# This function will deliver items to destinations.
-def deliverItems():
-    # Calling the menu.
-    menu_and_travel.deliverMenu()
-    user_input = input("Deliver to?: ").lower()
-
-    # Checks what destination the user has chosen and displays where it goes.
-    if user_input not in ["island a", "island b", "island c", "island d"]:
-        # Error Message.
-        print("INVALID INPUT")
-    # Delivers to Island A.
-    elif user_input in "island a":
-        island_a.append(dhoaniItemName)
-        island_a.append(dhoaniItemAmount)
-        print(menu_and_travel.get_drive() + user_input)
-    # Delivers to Island B.
-    elif user_input in "island b":
-        island_b.append(dhoaniItemName)
-        island_b.append(dhoaniItemAmount)
-        print(menu_and_travel.get_drive() + user_input)
-    # Delivers to Island C.
-    elif user_input in "island c":
-        island_c.append(dhoaniItemName)
-        island_c.append(dhoaniItemAmount)
-        print(menu_and_travel.get_drive() + user_input)
-    # Delivers to Island D.
-    elif user_input in "island d":
-        island_d.append(dhoaniItemName)
-        island_d.append(dhoaniItemAmount)
-        print(menu_and_travel.get_drive() + user_input)
+        if user_input == 6:
+            menu_and_travel.consoleMenu()
+        else:
+            exit()
     
-# This function will print all of the lists and their amounts.
-def printItems():
-    # Dhoani inventory.
-    print("")
-    print("")
-    print("")
-    print("Dhoani Inventory")
-    print("-----------------------------")
-    print("Items: ", dhoaniItemName)
-    print("Amount:", dhoaniItemAmount)
-    print("-----------------------------")
-
-    # Island A inventory.
-    print("")
-    print("Supply Island A Inventory")
-    print("-----------------------------")
-    print("All Items: ", island_a)
-    #print("Items: ", islandA_ItemName)
-    #print("Amount:", islandA_ItemAmount)
-    print("-----------------------------")
-
-    # Island B inventory.
-    print("")
-    print("Supply Island B Inventory")
-    print("-----------------------------")
-    print("All Items: ", island_b)
-    #print("Items: ", islandB_ItemName)
-    #print("Amount:", islandB_ItemAmount)
-    print("-----------------------------")
-
-    # Island C inventory.
-    print("")
-    print("Supply Island C Inventory")
-    print("-----------------------------")
-    print("All Items: ", island_c)
-    #print("Items: ", islandC_ItemName)
-    #print("Amount:", islandC_ItemAmount)
-    print("-----------------------------")
-
-    # Island D Inventory.
-    print("")
-    print("Supply Island D Inventory")
-    print("-----------------------------")
-    print("All Items: ", island_d)
-    #print("Items: ", islandD_ItemName)
-    #print("Amount:", islandD_ItemAmount)
-    print("-----------------------------")
-
-    # Asking user if they wish to continue or quit.
-    user_input = int(input("Continue (6) or Quit (7): "))
-    if user_input == 6:
-        menu_and_travel.consoleMenu()
-    else:
-        exit()
-#### ----FUNCTIONS---- ####
-
-# Calling the function globally.
-# Displays main console menu.
-menu_and_travel.consoleMenu()
+    # This function will deliver items to destinations.
+    def deliverItems():
+        # Calling the menu.
+        menu_and_travel.deliverMenu()
+        user_input = input("Deliver to?: ").lower()
+    
+        # Checks what destination the user has chosen and displays where it goes.
+        if user_input not in ["island a", "island b", "island c", "island d"]:
+            # Error Message.
+            print("INVALID INPUT")
+        # Delivers to Island A.
+        elif user_input in "island a":
+            island_a.append(dhoaniItemName)
+            island_a.append(dhoaniItemAmount)
+            print(menu_and_travel.get_drive() + user_input)
+        # Delivers to Island B.
+        elif user_input in "island b":
+            island_b.append(dhoaniItemName)
+            island_b.append(dhoaniItemAmount)
+            print(menu_and_travel.get_drive() + user_input)
+        # Delivers to Island C.
+        elif user_input in "island c":
+            island_c.append(dhoaniItemName)
+            island_c.append(dhoaniItemAmount)
+            print(menu_and_travel.get_drive() + user_input)
+        # Delivers to Island D.
+        elif user_input in "island d":
+            island_d.append(dhoaniItemName)
+            island_d.append(dhoaniItemAmount)
+            print(menu_and_travel.get_drive() + user_input)
+        
+    # This function will print all of the lists and their amounts.
+    def printItems():
+        # Dhoani inventory.
+        print("")
+        print("")
+        print("")
+        print("Dhoani Inventory")
+        print("-----------------------------")
+        print("Items: ", dhoaniItemName)
+        print("Amount:", dhoaniItemAmount)
+        print("-----------------------------")
+    
+        # Island A inventory.
+        print("")
+        print("Supply Island A Inventory")
+        print("-----------------------------")
+        print("All Items: ", island_a)
+        #print("Items: ", islandA_ItemName)
+        #print("Amount:", islandA_ItemAmount)
+        print("-----------------------------")
+    
+        # Island B inventory.
+        print("")
+        print("Supply Island B Inventory")
+        print("-----------------------------")
+        print("All Items: ", island_b)
+        #print("Items: ", islandB_ItemName)
+        #print("Amount:", islandB_ItemAmount)
+        print("-----------------------------")
+    
+        # Island C inventory.
+        print("")
+        print("Supply Island C Inventory")
+        print("-----------------------------")
+        print("All Items: ", island_c)
+        #print("Items: ", islandC_ItemName)
+        #print("Amount:", islandC_ItemAmount)
+        print("-----------------------------")
+    
+        # Island D Inventory.
+        print("")
+        print("Supply Island D Inventory")
+        print("-----------------------------")
+        print("All Items: ", island_d)
+        #print("Items: ", islandD_ItemName)
+        #print("Amount:", islandD_ItemAmount)
+        print("-----------------------------")
+    
+        # Asking user if they wish to continue or quit.
+        user_input = int(input("Continue (6) or Quit (7): "))
+        if user_input == 6:
+            menu_and_travel.consoleMenu()
+        else:
+            exit()
+    #### ----FUNCTIONS---- ####
+    
+    # Calling the function globally.
+    # Displays main console menu.
+    menu_and_travel.consoleMenu()
 
 # PROGRAM END.
