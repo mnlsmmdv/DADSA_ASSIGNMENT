@@ -137,7 +137,7 @@ def consoleChoice(user_input):
 def addItems():
     # Prints the Items Menu.
     print("")    
-    itemsMenu()
+    menu1.itemsMenu()
     # Asks for user input.
     itemName = input("Item Name: ").lower()
     itemAmount = int(input("Item Amount: "))
@@ -164,7 +164,7 @@ def addItems():
     user_input = int(input("Continue (6) or Quit (7): "))
     print("")
     if user_input == 6:
-        consoleMenu()
+        menu1.consoleMenu()
     else:
         exit()
 
@@ -172,7 +172,7 @@ def addItems():
 def removeItems():
     # Prints the Items Menu.
     print("")
-    itemsMenu()
+    menu1.itemsMenu()
     # Asks for user input
     itemName = input("Item Name: ").lower()
     itemAmount = int(input("Item Amount: "))
@@ -198,7 +198,7 @@ def removeItems():
             user_input = int(input("Continue (6) or Quit (7): "))
             print("")
             if user_input == 6:
-               consoleMenu()
+               menu1.consoleMenu()
             else:
                exit()
         else:
@@ -227,7 +227,7 @@ def searchItems():
     user_input = int(input("Continue (6) or Quit (7): "))
     print("")
     if user_input == 6:
-        consoleMenu()
+        menu1.consoleMenu()
     else:
         exit()
 
@@ -316,13 +316,13 @@ def printItems():
     # Asking user if they wish to continue or quit.
     user_input = int(input("Continue (6) or Quit (7): "))
     if user_input == 6:
-        consoleMenu()
+        menu1.consoleMenu()
     else:
         exit()
 #### ----FUNCTIONS---- ####
 
 # Calling the function globally.
 # Displays main console menu.
-consoleMenu()
+menu1.consoleMenu()
 
 # PROGRAM END.
