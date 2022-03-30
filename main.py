@@ -86,7 +86,7 @@ def consoleMenu():
     print("1- Add Items                    |")
     print("2- Remove Items                 |")
     print("3- Search Items                 |")
-    print("4- Deliver To                   |")
+    print("4- Deliver Items                |")
     print("5- Print Items                  |")
     print("7- QUIT                         |")
     print("---------------------------------")
