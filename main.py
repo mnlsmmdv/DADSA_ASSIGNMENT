@@ -543,6 +543,8 @@ def deliverItems():
         elif user_input in "quit":
             menu_and_travel.consoleMenu
     else:
+        # Exits after displaying error message.
+        print("INVALID INPUT!")
         # Asking user if they wish to continue or quit.
         user_input = int(input("Continue (6) or Quit (7): "))
         if user_input == 6:
