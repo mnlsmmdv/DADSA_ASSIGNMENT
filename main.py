@@ -242,7 +242,7 @@ def deliverItems():
     user_input = input("Deliver to?: ").lower()
 
     # Checks what destination the user has chosen and displays where it goes.
-    if user_input not in ["a", "b", "c", "d"]:
+    if user_input not in ["island a", "island b", "island c", "island d"]:
         # Error Message.
         print("INVALID INPUT")
     # Delivers to Island A.
