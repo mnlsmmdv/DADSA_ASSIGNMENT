@@ -323,7 +323,7 @@ while True:
                 print("")
                 print("----ITEM EXISTS!----")
                 print("----DHOANI----")  
-                print("Item Name: " + itemName)
+                print("Item Name: " + itemName.upper())
                 print("Item Amount: " + str(itemAmount))
                 
                 # Asking user if they wish to continue or quit.
@@ -340,7 +340,7 @@ while True:
                 print("")
                 print("----ITEM EXISTS!----")
                 print("----ISLAND A----")  
-                print("Item Name: " + itemName)
+                print("Item Name: " + itemName.upper())
                 print("Item Amount: " + str(itemAmount))
                 
                 # Asking user if they wish to continue or quit.
@@ -357,7 +357,7 @@ while True:
                 print("")
                 print("----ITEM EXISTS!----")
                 print("----ISLAND B----")  
-                print("Item Name: " + itemName)
+                print("Item Name: " + itemName.upper())
                 print("Item Amount: " + str(itemAmount))
                 
                 # Asking user if they wish to continue or quit.
@@ -374,7 +374,7 @@ while True:
                 print("")
                 print("----ITEM EXISTS!----")
                 print("----ISLAND C----")  
-                print("Item Name: " + itemName)
+                print("Item Name: " + itemName.upper())
                 print("Item Amount: " + str(itemAmount))
                 
                 # Asking user if they wish to continue or quit.
@@ -391,7 +391,7 @@ while True:
                 print("")
                 print("----ITEM EXISTS!----")
                 print("----ISLAND D----")  
-                print("Item Name: " + itemName)
+                print("Item Name: " + itemName.upper())
                 print("Item Amount: " + str(itemAmount))
                 
                 # Asking user if they wish to continue or quit.
@@ -429,46 +429,46 @@ while True:
         elif user_input in "island a":
             island_a.append(*dhoaniItemName)
             island_a.append(*dhoaniItemAmount)
-            print(menu_and_travel.get_drive() + user_input)
+            print(menu_and_travel.get_drive() + user_input.upper())
             calc = 50 / 25
             print("Time: " + str(calc) + " HRS")
             print("Distance: 50KM")
             print("")
             print("")
-            print(menu_and_travel.get_stop() + user_input)
+            print(menu_and_travel.get_stop() + user_input.upper())
         # Delivers to Island B.
         elif user_input in "island b":
             island_b.append(*dhoaniItemName)
             island_b.append(*dhoaniItemAmount)
-            print(menu_and_travel.get_drive() + user_input)
+            print(menu_and_travel.get_drive() + user_input.upper())
             calc = 130 / 25
             print("Time: " + str(calc) + " HRS")
             print("Distance: 130KM")
             print("")
             print("")
-            print(menu_and_travel.get_stop() + user_input)
+            print(menu_and_travel.get_stop() + user_input.upper())
         # Delivers to Island C.
         elif user_input in "island c":
             island_c.append(*dhoaniItemName)
             island_c.append(*dhoaniItemAmount)
-            print(menu_and_travel.get_drive() + user_input)
+            print(menu_and_travel.get_drive() + user_input.upper())
             calc = 190 / 25
             print("Time: " + str(calc) + " HRS")
             print("Distance: 130KM")
             print("")
             print("")
-            print(menu_and_travel.get_stop() + user_input)
+            print(menu_and_travel.get_stop() + user_input.upper())
         # Delivers to Island D.
         elif user_input in "island d":
             island_d.append(*dhoaniItemName)
             island_d.append(*dhoaniItemAmount)
-            print(menu_and_travel.get_drive() + user_input)
+            print(menu_and_travel.get_drive() + user_input.upper())
             calc = 230 / 25
             print("Time: " + str(calc) + " HRS")
             print("Distance: 230KM")
             print("")
             print("")
-            print(menu_and_travel.get_stop() + user_input)
+            print(menu_and_travel.get_stop() + user_input.upper())
         
     # This function will print all of the lists and their amounts.
     def printItems():
