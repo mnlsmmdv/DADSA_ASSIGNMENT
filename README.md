@@ -26,6 +26,22 @@ Use one of the each options mentioned to use the program.
 ---------------------------------
 ```
 
+## Other Menu's
+This program includes menu's that will lead the user to make further choices.
+### Items Menu
+```bash
+---------------------------------
+|      BigCon Construction      |
+--------------Items--------------
+1- Diesel                       |
+2- Frozen                       |
+3- Fridge                       |
+4- Food                         |
+5- Protected Material           |
+6- Unprotected Material         |
+---------------------------------
+```
+
 ## Details
 Student Number(UWE): 19045165
 
