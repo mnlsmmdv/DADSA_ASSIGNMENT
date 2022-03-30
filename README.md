@@ -20,7 +20,7 @@ Use one of the each options mentioned to use the program.
 1- Add Items                    |
 2- Remove Items                 |
 3- Search Items                 |
-4- Deliver To                   |
+4- Deliver Items                |
 5- Print Items                  |
 7- QUIT                         |
 ---------------------------------
