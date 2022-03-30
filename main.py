@@ -41,27 +41,17 @@ B_TO_A = 80
 dhoaniItemName = []
 dhoaniItemAmount = []
 # Lists for Supplier Island 01 Item Name and Item Amount.
-supplierIslandAlphaItemName = []
-supplierIslandAlphaItemAmount = []
+supplierIslandAlpha = []
 # Lists for Supplier Island 02 Item Name and Item Amount.
-supplierIslandBetaItemName = []
-supplierIslandBetaItemAmount = []
+supplierIslandBeta = []
 # Lists for Island A Item Name and Item Amount.
 island_a = []
-islandA_ItemName = []
-islandA_ItemAmount = []
 # Lists for Island B Item Name and Item Amount.
 island_b = []
-islandB_ItemName = []
-islandB_ItemAmount = []
 # Lists for Island C Item Name and Item Amount.
 island_c = []
-islandC_ItemName = []
-islandC_ItemAmount = []
 # Lists for Island D Item Name and Item Amount.
 island_d = []
-islandD_ItemName = []
-islandD_ItemAmount = []
 #### ----LISTS---- ####
 
 #### ----CLASSES---- ####
