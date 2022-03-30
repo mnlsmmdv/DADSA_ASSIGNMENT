@@ -432,8 +432,7 @@ while True:
             print(menu_and_travel.get_drive() + user_input)
             calc = 50 / 25
             print("Time: " + str(calc) + " HRS")
-            calc = 25 / 1
-            print("Distance: " + str(calc) + " KM")
+            print("Distance: 50KM")
             print("")
             print("")
             print(menu_and_travel.get_stop() + user_input)
@@ -442,16 +441,34 @@ while True:
             island_b.append(*dhoaniItemName)
             island_b.append(*dhoaniItemAmount)
             print(menu_and_travel.get_drive() + user_input)
+            calc = 130 / 25
+            print("Time: " + str(calc) + " HRS")
+            print("Distance: 130KM")
+            print("")
+            print("")
+            print(menu_and_travel.get_stop() + user_input)
         # Delivers to Island C.
         elif user_input in "island c":
             island_c.append(*dhoaniItemName)
             island_c.append(*dhoaniItemAmount)
             print(menu_and_travel.get_drive() + user_input)
+            calc = 190 / 25
+            print("Time: " + str(calc) + " HRS")
+            print("Distance: 130KM")
+            print("")
+            print("")
+            print(menu_and_travel.get_stop() + user_input)
         # Delivers to Island D.
         elif user_input in "island d":
             island_d.append(*dhoaniItemName)
             island_d.append(*dhoaniItemAmount)
             print(menu_and_travel.get_drive() + user_input)
+            calc = 230 / 25
+            print("Time: " + str(calc) + " HRS")
+            print("Distance: 230KM")
+            print("")
+            print("")
+            print(menu_and_travel.get_stop() + user_input)
         
     # This function will print all of the lists and their amounts.
     def printItems():
