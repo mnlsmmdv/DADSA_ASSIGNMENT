@@ -107,17 +107,11 @@ class Menu:
 
 #### ----CLASSES---- ####
 
-
-
 # Assigning class to a variable.
 dhoani1 = DhoaniTravel()
 menu1 = Menu()
 
 #### ----FUNCTIONS---- ####
-
-
-
-
 # This function checks the users specific choice and directs them to that function.
 def consoleChoice(user_input):
     if user_input == 1:
