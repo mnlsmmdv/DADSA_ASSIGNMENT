@@ -14,7 +14,7 @@ Note: Uncomment codes to execute and comment them when not in use.
 # PROGRAM START.
 
 #### ----VARIABLES---- ####
-dhoaniCapacity = 30000
+dhoaniCapacity = 0
 supplierIslandAlphaCapacity = None
 supplierIslandBetaCapacity = None
 islandA_Capacity = 11690
@@ -45,6 +45,12 @@ islandC_ItemAmount = []
 # Lists for Island D Item Name and Item Amount.
 islandD_ItemName = []
 islandD_ItemAmount = []
+
+island_a = []
+island_b = []
+island_c = []
+island_d = []
+
 #### ----LISTS---- ####
 
 #### ----CLASSES---- ####
@@ -112,9 +118,9 @@ def consoleChoice(user_input):
     elif user_input == 3:
         searchItems()
     elif user_input == 4:
-        printItems()
-    elif user_input == 5:
         deliverItems()
+    elif user_input == 5:
+        printItems()
     elif user_input == 7:
         exit()
 
@@ -134,12 +140,13 @@ def addItems():
         # Adds Item Name and Item Amount in the list.
         print("")
         print("----ADDING ITEM!----")
+        # This will calculate and print the Dhoani's current capacity left.
+        dhoaniCapacity = 30000
+        capacityCalculate = dhoaniCapacity - itemAmount
+        print("Current left: " + str(capacityCalculate) + "KG")
         dhoaniItemName.append(itemName)
         dhoaniItemAmount.append(itemAmount)
-        # This will calculate and print the Dhoani's current capacity left.
-        capacityCalculate = dhoaniCapacity - itemAmount
-        print("Capacity left: " + str(capacityCalculate) + "KG")
-
+        
     # Asks user where to deliver.
     deliverItems()
                 
@@ -167,9 +174,15 @@ def removeItems():
     else:
         if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):  
             # Removing Item Name and Item Amount.
+            print("")
             print("----REMOVING ITEM!----")  
+            # This will calculate and print the Dhoani's current capacity left.
+            dhoaniCapacity = 30000
+            capacityCalculate = dhoaniCapacity - itemAmount
+            print("Capacity regained: " + str(capacityCalculate) + "KG")
             dhoaniItemName.remove(itemName)
             dhoaniItemAmount.remove(itemAmount)
+            
 
             # Asking user if they wish to continue or quit.
             print("---------------------------------")
@@ -192,10 +205,10 @@ def searchItems():
     
     # Checks if the entered elements exists in the lists and prints them.
     if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):
-        print()
+        print("")
         print("----ITEM EXISTS!----")
-        print("Item Name:", dhoaniItemName)
-        print("Item Amount:", dhoaniItemAmount)
+        print("Item Name:", dhoaniItemName(user_input))
+        print("Item Amount:", dhoaniItemAmount(user_input))
     else:
         # Error message.
         print("INVALID INPUT")
@@ -215,10 +228,10 @@ def deliverItems():
     print("---------------------------------")
     print("|      BigCon Construction      |")
     print("----------Destinations-----------")
-    print("Island A                        |")
-    print("Island B                        |")
-    print("Island C                        |")
-    print("Island D                        |")
+    print("Island_A                        |")
+    print("Island_B                        |")
+    print("Island_C                        |")
+    print("Island_D                        |")
     print("---------------------------------")
     # Asks for user input.
     user_input = input("Deliver to?: ").lower()
@@ -226,14 +239,16 @@ def deliverItems():
     # Checks what destination the user has chosen and displays where it goes.
     if (user_input != ["island a", "island b", "island c", "island d"]):
         print("Items added and the " + dhoani1.get_drive() + " to " + user_input)
-    elif(user_input == ["island a", "island b", "island c", "island d"]):
-        print("hehe")
+        island_a.append(dhoaniItemName)
+        island_a.append(dhoaniItemAmount)
     else:
         print("Invalid")
     
 # This function will print all of the lists and their amounts.
 def printItems():
     # Dhoani inventory.
+    print("")
+    print("")
     print("")
     print("Dhoani Inventory")
     print("-----------------------------")
@@ -245,22 +260,25 @@ def printItems():
     print("")
     print("Supply Island A Inventory")
     print("-----------------------------")
-    print("Items: ", islandA_ItemName)
-    print("Amount:", islandA_ItemAmount)
+    print("All Items: ", island_a)
+    #print("Items: ", islandA_ItemName)
+    #print("Amount:", islandA_ItemAmount)
     print("-----------------------------")
 
     # Island B inventory.
     print("")
     print("Supply Island B Inventory")
     print("-----------------------------")
-    print("Items: ", islandB_ItemName)
-    print("Amount:", islandB_ItemAmount)
+    print("All Items: ", island_b)
+    #print("Items: ", islandB_ItemName)
+    #print("Amount:", islandB_ItemAmount)
     print("-----------------------------")
 
     # Island C inventory.
     print("")
     print("Supply Island C Inventory")
     print("-----------------------------")
+    print("All Items: ", island_c)
     print("Items: ", islandC_ItemName)
     print("Amount:", islandC_ItemAmount)
     print("-----------------------------")
@@ -269,6 +287,7 @@ def printItems():
     print("")
     print("Supply Island D Inventory")
     print("-----------------------------")
+    print("All Items: ", island_d)
     print("Items: ", islandD_ItemName)
     print("Amount:", islandD_ItemAmount)
     print("-----------------------------")
