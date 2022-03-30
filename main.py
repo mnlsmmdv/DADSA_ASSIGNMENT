@@ -242,12 +242,8 @@ while True:
                    menu_and_travel.consoleMenu()
                 else:
                    exit()
-            else:
-                # Error message.
-                print("INVALID INPUT")
-            
             # Island A
-            if ((itemName in island_a) and (itemAmount in island_a)):  
+            elif ((itemName in island_a) and (itemAmount in island_a)):  
                 # Prints Item Name and Item Amount.
                 print("")
                 print("----ITEM EXISTS!----")  
@@ -262,12 +258,8 @@ while True:
                    menu_and_travel.consoleMenu()
                 else:
                    exit()
-            else:
-                # Error message.
-                print("INVALID INPUT")
-
             # Island B
-            if ((itemName in island_b) and (itemAmount in island_b)):  
+            elif ((itemName in island_b) and (itemAmount in island_b)):  
                 # Prints Item Name and Item Amount.
                 print("")
                 print("----ITEM EXISTS!----")  
@@ -282,12 +274,8 @@ while True:
                    menu_and_travel.consoleMenu()
                 else:
                    exit()
-            else:
-                # Error message.
-                print("INVALID INPUT")
-
             # Island C
-            if ((itemName in island_c) and (itemAmount in island_c)):  
+            elif ((itemName in island_c) and (itemAmount in island_c)):  
                 # Prints Item Name and Item Amount.
                 print("")
                 print("----ITEM EXISTS!----")  
@@ -302,12 +290,8 @@ while True:
                    menu_and_travel.consoleMenu()
                 else:
                    exit()
-            else:
-                # Error message.
-                print("INVALID INPUT")
-
             # Island D
-            if ((itemName in island_d) and (itemAmount in island_d)):  
+            elif ((itemName in island_d) and (itemAmount in island_d)):  
                 # Prints Item Name and Item Amount.
                 print("")
                 print("----ITEM EXISTS!----")  
