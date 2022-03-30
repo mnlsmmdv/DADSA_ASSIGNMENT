@@ -55,8 +55,8 @@ islandD_ItemAmount = []
 # This class will display Dhoani's drive and stop messages in the functions.
 class DhoaniTravel:
     # Dhoani's function messages.
-    drive = "Dhoani is travelling"
-    stop = "Dhoani has stopped"
+    drive = "Dhoani is travelling to "
+    stop = "Dhoani has stopped at "
 
     # Dhoani's drive function.
     def get_drive(self):
@@ -117,7 +117,7 @@ class Menu:
 #### ----CLASSES---- ####
 
 # Assigning classes to variables.
-#dhoani1 = DhoaniTravel()
+dhoani1 = DhoaniTravel()
 menu1 = Menu()
 
 #### ----FUNCTIONS---- ####
@@ -248,21 +248,25 @@ def deliverItems():
         # Error Message.
         print("INVALID INPUT")
     # Delivers to Island A.
-    elif user_input in "a":
+    elif user_input in "island a":
         island_a.append(dhoaniItemName)
         island_a.append(dhoaniItemAmount)
+        print(dhoani1.get_drive() + user_input)
     # Delivers to Island B.
-    elif user_input in "b":
+    elif user_input in "island b":
         island_b.append(dhoaniItemName)
         island_b.append(dhoaniItemAmount)
+        print(dhoani1.get_drive() + user_input)
     # Delivers to Island C.
-    elif user_input in "c":
+    elif user_input in "island c":
         island_c.append(dhoaniItemName)
         island_c.append(dhoaniItemAmount)
+        print(dhoani1.get_drive() + user_input)
     # Delivers to Island D.
-    elif user_input in "d":
+    elif user_input in "island d":
         island_d.append(dhoaniItemName)
         island_d.append(dhoaniItemAmount)
+        print(dhoani1.get_drive() + user_input)
     
 # This function will print all of the lists and their amounts.
 def printItems():
