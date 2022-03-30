@@ -49,10 +49,6 @@ islandC_ItemAmount = []
 island_d = []
 islandD_ItemName = []
 islandD_ItemAmount = []
-
-
-
-
 #### ----LISTS---- ####
 
 #### ----CLASSES---- ####
