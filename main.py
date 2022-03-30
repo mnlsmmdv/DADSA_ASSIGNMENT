@@ -148,7 +148,6 @@ while True:
             exit()
         # Invalid option.
         else:
-            # Shows error message and displays console menu.
             print("INVALID OPTION")
             menu_and_travel.consoleMenu()
     
