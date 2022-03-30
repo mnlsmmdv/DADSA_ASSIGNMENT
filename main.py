@@ -103,7 +103,17 @@ class Menu:
         print("6- Unprotected Material         |")
         print("---------------------------------")
 
-    
+    def deliverMenu():
+        # Displays menu with destinations.
+        print("---------------------------------")
+        print("|      BigCon Construction      |")
+        print("----------Destinations-----------")
+        print("Island_A                        |")
+        print("Island_B                        |")
+        print("Island_C                        |")
+        print("Island_D                        |")
+        print("---------------------------------")
+        
 
 #### ----CLASSES---- ####
 
@@ -227,15 +237,7 @@ def searchItems():
 
 # This function will deliver items to destinations.
 def deliverItems():
-    # Displays menu with destinations.
-    print("---------------------------------")
-    print("|      BigCon Construction      |")
-    print("----------Destinations-----------")
-    print("Island_A                        |")
-    print("Island_B                        |")
-    print("Island_C                        |")
-    print("Island_D                        |")
-    print("---------------------------------")
+    
     user_input = input("Deliver to?: ").lower()
 
     # Checks what destination the user has chosen and displays where it goes.
