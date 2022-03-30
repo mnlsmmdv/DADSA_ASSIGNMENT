@@ -81,7 +81,7 @@ class MENU_AND_TRAVEL:
         print("3- Search Items                 |")
         print("4- Deliver Items                |")
         print("5- Print Items                  |")
-        print("7- QUIT                         |")
+        print("7- QUIT PROGRAM                 |")
         print("---------------------------------")
     
         # Asks for initial user input.
