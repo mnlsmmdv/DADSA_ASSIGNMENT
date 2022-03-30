@@ -178,6 +178,7 @@ while True:
             # Adds item name and item amount
             dhoaniItemName.append(itemName)
             dhoaniItemAmount.append(itemAmount)
+            # Asks user if they wish to add another item. If not exits.
             user_input = input("Add another item?(yes/no): ").lower()
             print("---------------------------------")
             if(user_input in "yes"):
@@ -225,6 +226,7 @@ while True:
                 print("Capacity regained: " + str(capacityCalculate) + "KG")
                 dhoaniItemName.remove(itemName)
                 dhoaniItemAmount.remove(itemAmount)
+                # Asks user if they wish to remove another item. If not exits.
                 user_input = input("Remove another item?(yes/no): ").lower()
                 print("---------------------------------")
                 if(user_input in "yes"):
