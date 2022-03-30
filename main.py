@@ -438,6 +438,7 @@ def deliverItems():
     menu_and_travel.deliverMenu()
     user_input = input("Deliver to(A, B, C, D)?: ").lower()
     from_to = input("From(Supply Island 01, Supply island 02)?: ").lower()
+    print("---------------------------------")
 
     # Supply island 01 to other islands.
     if from_to in "supply island 01":
