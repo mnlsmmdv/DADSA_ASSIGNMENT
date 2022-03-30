@@ -146,8 +146,7 @@ def addItems():
         
     # Asks user where to deliver.
     deliverItems()
-
-                
+                    
     # Asks user if they wish to continue or quit.
     print("---------------------------------")
     user_input = int(input("Continue (6) or Quit (7): "))
