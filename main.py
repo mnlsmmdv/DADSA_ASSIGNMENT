@@ -67,44 +67,56 @@ class DhoaniTravel:
     def get_stop(self):
         # Prints message of the Dhoani's function.
         return self.stop
+
+# This class will display different menu's needed for the program.
+class Menu:
+    # This function displays the main console menu.
+    # Option 6 is continue and option 7 is quit.
+    def consoleMenu():
+        print("")
+        print("---------------------------------")
+        print("|      BigCon Construction      |")
+        print("--------------Menu---------------")
+        print("1- Add Items                    |")
+        print("2- Remove Items                 |")
+        print("3- Search Items                 |")
+        print("4- Deliver Items                |")
+        print("5- Print Items                  |")
+        print("7- QUIT                         |")
+        print("---------------------------------")
+    
+        # Asks for initial user input.
+        user_input = int(input("Enter choice: "))
+        consoleChoice(user_input)
+
+    # This function displays the Items Menu with their group code.
+    # Entering group code will not work. Enter the name displayed in the menu.
+    def itemsMenu():
+        print("---------------------------------")
+        print("|      BigCon Construction      |")
+        print("--------------Items--------------")
+        print("1- Diesel                       |")
+        print("2- Frozen                       |")
+        print("3- Fridge                       |")
+        print("4- Food                         |")
+        print("5- Protected Material           |")
+        print("6- Unprotected Material         |")
+        print("---------------------------------")
+
+    
+
 #### ----CLASSES---- ####
+
+
 
 # Assigning class to a variable.
 dhoani1 = DhoaniTravel()
+menu1 = Menu()
 
 #### ----FUNCTIONS---- ####
-# This function displays the main console menu.
-# Option 6 is continue and option 7 is quit.
-def consoleMenu():
-    print("")
-    print("---------------------------------")
-    print("|      BigCon Construction      |")
-    print("--------------Menu---------------")
-    print("1- Add Items                    |")
-    print("2- Remove Items                 |")
-    print("3- Search Items                 |")
-    print("4- Deliver Items                |")
-    print("5- Print Items                  |")
-    print("7- QUIT                         |")
-    print("---------------------------------")
 
-    # Asks for initial user input.
-    user_input = int(input("Enter choice: "))
-    consoleChoice(user_input)
 
-# This function displays the Items Menu with their group code.
-# Entering group code will not work. Enter the name displayed in the menu.
-def itemsMenu():
-    print("---------------------------------")
-    print("|      BigCon Construction      |")
-    print("--------------Items--------------")
-    print("1- Diesel                       |")
-    print("2- Frozen                       |")
-    print("3- Fridge                       |")
-    print("4- Food                         |")
-    print("5- Protected Material           |")
-    print("6- Unprotected Material         |")
-    print("---------------------------------")
+
 
 # This function checks the users specific choice and directs them to that function.
 def consoleChoice(user_input):
@@ -146,7 +158,7 @@ def addItems():
         
     # Asks user where to deliver.
     deliverItems()
-                    
+
     # Asks user if they wish to continue or quit.
     print("---------------------------------")
     user_input = int(input("Continue (6) or Quit (7): "))
