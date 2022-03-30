@@ -146,7 +146,7 @@ def addItems():
         
     # Asks user where to deliver.
     deliverItems()
-    # Asks for user input.
+
                 
     # Asks user if they wish to continue or quit.
     print("---------------------------------")
