@@ -149,6 +149,7 @@ def addItems():
         
     # Asks user where to deliver.
     deliverItems()
+    # Asks for user input.
                 
     # Asks user if they wish to continue or quit.
     print("---------------------------------")
@@ -233,16 +234,28 @@ def deliverItems():
     print("Island_C                        |")
     print("Island_D                        |")
     print("---------------------------------")
-    # Asks for user input.
     user_input = input("Deliver to?: ").lower()
 
     # Checks what destination the user has chosen and displays where it goes.
-    if (user_input != ["island_a", "island_b", "island_c", "island_d"]):
-        print("Items added and the " + dhoani1.get_drive() + " to " + user_input)
+    if user_input not in ["a", "b", "c", "d"]:
+        # Error Message.
+        print("INVALID INPUT")
+    # Delivers to Island A.
+    elif user_input in "a":
         island_a.append(dhoaniItemName)
         island_a.append(dhoaniItemAmount)
-    else:
-        print("Invalid")
+    # Delivers to Island B.
+    elif user_input in "b":
+        island_b.append(dhoaniItemName)
+        island_b.append(dhoaniItemAmount)
+    # Delivers to Island C.
+    elif user_input in "c":
+        island_c.append(dhoaniItemName)
+        island_c.append(dhoaniItemAmount)
+    # Delivers to Island D.
+    elif user_input in "d":
+        island_d.append(dhoaniItemName)
+        island_d.append(dhoaniItemAmount)
     
 # This function will print all of the lists and their amounts.
 def printItems():
