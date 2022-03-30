@@ -163,18 +163,7 @@ def addItems():
         # Adds item name and item amount
         dhoaniItemName.append(itemName)
         dhoaniItemAmount.append(itemAmount)
-
-
-    
-    """
-    # Checks if Item Name and Item Amount is valid and adds it.
-    if((itemName != ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]) and (itemAmount > 30000)):
-        print("INVALID INPUT")
-    else:
-        # Adds Item Name and Item Amount in the list.
-        print("")
-    """    
-        
+           
     # Asks user where to deliver.
     deliverItems()
 
