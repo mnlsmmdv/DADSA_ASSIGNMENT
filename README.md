@@ -12,6 +12,7 @@ BigCon is a construction company and it has to deliver consumables to separate i
 
 ## Usage
 Use one of the each options mentioned to use the program.
+### Main Menu
 ```bash
 ---------------------------------
 |      BigCon Construction      |
