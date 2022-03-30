@@ -469,6 +469,9 @@ while True:
             print("")
             print("")
             print(menu_and_travel.get_stop() + user_input.upper())
+        # Exits to console menu.
+        elif user_input in "quit":
+            menu_and_travel.consoleMenu
         
     # This function will print all of the lists and their amounts.
     def printItems():
