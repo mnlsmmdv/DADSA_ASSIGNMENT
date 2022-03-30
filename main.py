@@ -74,6 +74,7 @@ class Menu:
     # Option 6 is continue and option 7 is quit.
     def consoleMenu(self):
         print("")
+        print("")
         print("---------------------------------")
         print("|      BigCon Construction      |")
         print("--------------Menu---------------")
@@ -92,6 +93,8 @@ class Menu:
     # This function displays the Items Menu with their group code.
     # Entering group code will not work. Enter the name displayed in the menu.
     def itemsMenu(self):
+        print("")
+        print("")
         print("---------------------------------")
         print("|      BigCon Construction      |")
         print("--------------Items--------------")
@@ -106,6 +109,8 @@ class Menu:
     # This function displays the Deliver Items menu and their destination names.
     # Displays menu with destinations.
     def deliverMenu(self):
+        print("")
+        print("")
         print("---------------------------------")
         print("|      BigCon Construction      |")
         print("----------Destinations-----------")
