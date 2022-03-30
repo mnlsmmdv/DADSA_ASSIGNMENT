@@ -50,7 +50,6 @@ island_a = []
 island_b = []
 island_c = []
 island_d = []
-
 #### ----LISTS---- ####
 
 #### ----CLASSES---- ####
@@ -69,7 +68,6 @@ class DhoaniTravel:
     def get_stop(self):
         # Prints message of the Dhoani's function.
         return self.stop
-
 #### ----CLASSES---- ####
 
 # Assigning class to a variable.
