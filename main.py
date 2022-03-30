@@ -230,7 +230,8 @@ while True:
             if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):  
                 # Prints Item Name and Item Amount.
                 print("")
-                print("----ITEM EXISTS!----")  
+                print("----ITEM EXISTS!----")
+                print("----DHOANI----")  
                 print("Item Name: " + itemName)
                 print("Item Amount: " + str(itemAmount))
                 
