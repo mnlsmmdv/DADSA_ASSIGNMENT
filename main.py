@@ -223,16 +223,109 @@ while True:
         itemName = input("Item Name: ")
         itemAmount = int(input("Item Amount: "))
         
-        # Checks if the entered elements exists in the lists and prints them.
-        if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):
-            print("")
-            print("----ITEM EXISTS!----")
-            print("Item Name:", dhoaniItemName(user_input))
-            print("Item Amount:", dhoaniItemAmount(user_input))
-        else:
-            # Error message.
+        if((itemName != ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]) and (itemAmount > 30000)):
             print("INVALID INPUT")
-    
+        else:
+            # Dhoani
+            if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):  
+                # Prints Item Name and Item Amount.
+                print("")
+                print("----ITEM EXISTS!----")  
+                print("Item Name: " + itemName)
+                print("Item Amount: " + str(itemAmount))
+                
+                # Asking user if they wish to continue or quit.
+                print("---------------------------------")
+                user_input = int(input("Continue (6) or Quit (7): "))
+                print("")
+                if user_input == 6:
+                   menu_and_travel.consoleMenu()
+                else:
+                   exit()
+            else:
+                # Error message.
+                print("INVALID INPUT")
+            
+            # Island A
+            if ((itemName in island_a) and (itemAmount in island_a)):  
+                # Prints Item Name and Item Amount.
+                print("")
+                print("----ITEM EXISTS!----")  
+                print("Item Name: " + itemName)
+                print("Item Amount: " + str(itemAmount))
+                
+                # Asking user if they wish to continue or quit.
+                print("---------------------------------")
+                user_input = int(input("Continue (6) or Quit (7): "))
+                print("")
+                if user_input == 6:
+                   menu_and_travel.consoleMenu()
+                else:
+                   exit()
+            else:
+                # Error message.
+                print("INVALID INPUT")
+
+            # Island B
+            if ((itemName in island_b) and (itemAmount in island_b)):  
+                # Prints Item Name and Item Amount.
+                print("")
+                print("----ITEM EXISTS!----")  
+                print("Item Name: " + itemName)
+                print("Item Amount: " + str(itemAmount))
+                
+                # Asking user if they wish to continue or quit.
+                print("---------------------------------")
+                user_input = int(input("Continue (6) or Quit (7): "))
+                print("")
+                if user_input == 6:
+                   menu_and_travel.consoleMenu()
+                else:
+                   exit()
+            else:
+                # Error message.
+                print("INVALID INPUT")
+
+            # Island C
+            if ((itemName in island_c) and (itemAmount in island_c)):  
+                # Prints Item Name and Item Amount.
+                print("")
+                print("----ITEM EXISTS!----")  
+                print("Item Name: " + itemName)
+                print("Item Amount: " + str(itemAmount))
+                
+                # Asking user if they wish to continue or quit.
+                print("---------------------------------")
+                user_input = int(input("Continue (6) or Quit (7): "))
+                print("")
+                if user_input == 6:
+                   menu_and_travel.consoleMenu()
+                else:
+                   exit()
+            else:
+                # Error message.
+                print("INVALID INPUT")
+
+            # Island D
+            if ((itemName in island_d) and (itemAmount in island_d)):  
+                # Prints Item Name and Item Amount.
+                print("")
+                print("----ITEM EXISTS!----")  
+                print("Item Name: " + itemName)
+                print("Item Amount: " + str(itemAmount))
+                
+                # Asking user if they wish to continue or quit.
+                print("---------------------------------")
+                user_input = int(input("Continue (6) or Quit (7): "))
+                print("")
+                if user_input == 6:
+                   menu_and_travel.consoleMenu()
+                else:
+                   exit()
+            else:
+                # Error message.
+                print("INVALID INPUT")
+                
         # Asking user if they wish to continue or quit.
         print("---------------------------------")
         user_input = int(input("Continue (6) or Quit (7): "))
