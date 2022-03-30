@@ -237,7 +237,7 @@ def deliverItems():
     user_input = input("Deliver to?: ").lower()
 
     # Checks what destination the user has chosen and displays where it goes.
-    if (user_input != ["island a", "island b", "island c", "island d"]):
+    if (user_input != ["island_a", "island_b", "island_c", "island_d"]):
         print("Items added and the " + dhoani1.get_drive() + " to " + user_input)
         island_a.append(dhoaniItemName)
         island_a.append(dhoaniItemAmount)
