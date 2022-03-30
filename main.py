@@ -246,7 +246,8 @@ while True:
             elif ((itemName in island_a) and (itemAmount in island_a)):  
                 # Prints Item Name and Item Amount.
                 print("")
-                print("----ITEM EXISTS!----")  
+                print("----ITEM EXISTS!----")
+                print("----ISLAND A----")  
                 print("Item Name: " + itemName)
                 print("Item Amount: " + str(itemAmount))
                 
@@ -262,7 +263,8 @@ while True:
             elif ((itemName in island_b) and (itemAmount in island_b)):  
                 # Prints Item Name and Item Amount.
                 print("")
-                print("----ITEM EXISTS!----")  
+                print("----ITEM EXISTS!----")
+                print("----ISLAND B----")  
                 print("Item Name: " + itemName)
                 print("Item Amount: " + str(itemAmount))
                 
@@ -278,7 +280,8 @@ while True:
             elif ((itemName in island_c) and (itemAmount in island_c)):  
                 # Prints Item Name and Item Amount.
                 print("")
-                print("----ITEM EXISTS!----")  
+                print("----ITEM EXISTS!----")
+                print("----ISLAND C----")  
                 print("Item Name: " + itemName)
                 print("Item Amount: " + str(itemAmount))
                 
@@ -294,7 +297,8 @@ while True:
             elif ((itemName in island_d) and (itemAmount in island_d)):  
                 # Prints Item Name and Item Amount.
                 print("")
-                print("----ITEM EXISTS!----")  
+                print("----ITEM EXISTS!----")
+                print("----ISLAND D----")  
                 print("Item Name: " + itemName)
                 print("Item Amount: " + str(itemAmount))
                 
