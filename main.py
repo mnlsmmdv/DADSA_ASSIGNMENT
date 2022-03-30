@@ -119,7 +119,7 @@ class MENU_AND_TRAVEL:
         print("---------------------------------")
 #### ----CLASSES---- ####
 
-# Assigning classes to variables.
+# Assigning class to variables.
 menu_and_travel = MENU_AND_TRAVEL()
 
 #### ----FUNCTIONS---- ####
