@@ -227,126 +227,48 @@ def searchItems():
     itemName = input("Item Name: ").lower()
     itemAmount = int(input("Item Amount: "))
     
-    if((itemName != ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]) and (itemAmount > 30000)):
-        print("INVALID INPUT")
-    else:
-        # Dhoani
-        if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):  
-            # Prints Item Name and Item Amount.
-            print("")
-            print("----ITEM EXISTS!----")
-            print("-------DHOANI----")  
-            print("Item Name: " + itemName.upper())
-            print("Item Amount: " + str(itemAmount))
-            nameIndex = dhoaniItemName.index(itemName)
-            amountIndex = dhoaniItemAmount.index(itemAmount)
-            print("Item Index: " + str(nameIndex))
-            print("Amount Index: " + str(amountIndex))
-            
-            # Asking user if they wish to continue or quit.
-            print("---------------------------------")
-            user_input = int(input("Continue (6) or Quit (7): "))
-            print("")
-            if user_input == 6:
-               menu_and_travel.consoleMenu()
-            else:
-               exit()
-        # Island A
-        elif ((itemName in island_a) and (itemAmount in island_a)):  
-            # Prints Item Name and Item Amount.
-            print("")
-            print("----ITEM EXISTS!----")
-            print("-----ISLAND A----")  
-            print("Item Name: " + itemName.upper())
-            print("Item Amount: " + str(itemAmount))
-            nameIndex = dhoaniItemName.index(itemName)
-            amountIndex = dhoaniItemAmount.index(itemAmount)
-            print("Item Index: " + str(nameIndex))
-            print("Amount Index: " + str(amountIndex))
-            
-            # Asking user if they wish to continue or quit.
-            print("---------------------------------")
-            user_input = int(input("Continue (6) or Quit (7): "))
-            print("")
-            if user_input == 6:
-               menu_and_travel.consoleMenu()
-            else:
-               exit()
-        # Island B
-        elif ((itemName in island_b) and (itemAmount in island_b)):  
-            # Prints Item Name and Item Amount.
-            print("")
-            print("----ITEM EXISTS!----")
-            print("-----ISLAND B----")  
-            print("Item Name: " + itemName.upper())
-            print("Item Amount: " + str(itemAmount))
-            nameIndex = dhoaniItemName.index(itemName)
-            amountIndex = dhoaniItemAmount.index(itemAmount)
-            print("Item Index: " + str(nameIndex))
-            print("Amount Index: " + str(amountIndex))
-            
-            # Asking user if they wish to continue or quit.
-            print("---------------------------------")
-            user_input = int(input("Continue (6) or Quit (7): "))
-            print("")
-            if user_input == 6:
-               menu_and_travel.consoleMenu()
-            else:
-               exit()
-        # Island C
-        elif ((itemName in island_c) and (itemAmount in island_c)):  
-            # Prints Item Name and Item Amount.
-            print("")
-            print("----ITEM EXISTS!----")
-            print("------ISLAND C----")  
-            print("Item Name: " + itemName.upper())
-            print("Item Amount: " + str(itemAmount))
-            nameIndex = dhoaniItemName.index(itemName)
-            amountIndex = dhoaniItemAmount.index(itemAmount)
-            print("Item Index: " + str(nameIndex))
-            print("Amount Index: " + str(amountIndex))
-            
-            # Asking user if they wish to continue or quit.
-            print("---------------------------------")
-            user_input = int(input("Continue (6) or Quit (7): "))
-            print("")
-            if user_input == 6:
-               menu_and_travel.consoleMenu()
-            else:
-               exit()
-        # Island D
-        elif ((itemName in island_d) and (itemAmount in island_d)):  
-            # Prints Item Name and Item Amount.
-            print("")
-            print("----ITEM EXISTS!----")
-            print("------ISLAND D----")  
-            print("Item Name: " + itemName.upper())
-            print("Item Amount: " + str(itemAmount))
-            nameIndex = dhoaniItemName.index(itemName)
-            amountIndex = dhoaniItemAmount.index(itemAmount)
-            print("Item Index: " + str(nameIndex))
-            print("Amount Index: " + str(amountIndex))
-            
-            # Asking user if they wish to continue or quit.
-            print("---------------------------------")
-            user_input = int(input("Continue (6) or Quit (7): "))
-            print("")
-            if user_input == 6:
-               menu_and_travel.consoleMenu()
-            else:
-               exit()
+    # Dhoani
+    if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):  
+        # Prints Item Name and Item Amount.
+        print("")
+        print("----ITEM EXISTS!----")
+        print("-------DHOANI-------")  
+        print("Item Name: " + itemName.upper())
+        print("Item Amount: " + str(itemAmount))
+        nameIndex = dhoaniItemName.index(itemName)
+        amountIndex = dhoaniItemAmount.index(itemAmount)
+        print("Item Index: " + str(nameIndex))
+        print("Amount Index: " + str(amountIndex))
+        
+        # Asking user if they wish to continue or quit.
+        print("---------------------------------")
+        user_input = int(input("Continue (6) or Quit (7): "))
+        print("")
+        if user_input == 6:
+           menu_and_travel.consoleMenu()
         else:
-            # Error message.
-            print("INVALID INPUT")
-            
-    # Asking user if they wish to continue or quit.
-    print("---------------------------------")
-    user_input = int(input("Continue (6) or Quit (7): "))
-    print("")
-    if user_input == 6:
-        menu_and_travel.consoleMenu()
-    else:
-        exit()
+           exit()
+    # Island A
+    if ((itemName in island_a) and (itemAmount in island_a)):  
+        # Prints Item Name and Item Amount.
+        print("")
+        print("----ITEM EXISTS!----")
+        print("-----ISLAND A----")  
+        print("Item Name: " + itemName.upper())
+        print("Item Amount: " + str(itemAmount))
+        nameIndex = dhoaniItemName.index(itemName)
+        amountIndex = dhoaniItemAmount.index(itemAmount)
+        print("Item Index: " + str(nameIndex))
+        print("Amount Index: " + str(amountIndex))
+        
+        # Asking user if they wish to continue or quit.
+        print("---------------------------------")
+        user_input = int(input("Continue (6) or Quit (7): "))
+        print("")
+        if user_input == 6:
+           menu_and_travel.consoleMenu()
+        else:
+           exit()
 
 # This function will deliver items to destinations.
 def deliverItems():
