@@ -430,7 +430,7 @@ def deliverItems():
     from_to = input("From(Supply Island 01/02)?: ").lower()
     print("---------------------------------")
 
-    # Supply island 01 to other islands.
+    # Delivers from Supply island 01 to other islands.
     if from_to in "supply island 01":
         # Checks what destination the user has chosen and displays where it goes.
         if user_input not in ["island a", "island b", "island c", "island d"]:
@@ -483,7 +483,8 @@ def deliverItems():
         # Exits to console menu.
         elif user_input in "quit":
             menu_and_travel.consoleMenu
-    # Supply island 02 to other islands. 
+    
+    # Delivers from Supply island 02 to other islands. 
     elif from_to in "supply island 02":
         # Checks what destination the user has chosen and displays where it goes.
         if user_input not in ["island a", "island b", "island c", "island d"]:
