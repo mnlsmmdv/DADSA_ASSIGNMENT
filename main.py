@@ -494,9 +494,9 @@ def deliverItems():
             island_a.append(dhoaniItemName)
             island_a.append(dhoaniItemAmount)
             print(menu_and_travel.get_drive() + user_input.upper())
-            calc = 60 / 25
+            calc = 250 / 25
             print("Time: " + str(calc) + " HRS")
-            print("Distance: 50KM")
+            print("Distance: 250KM")
             print("---------------------------------")
             print(menu_and_travel.get_stop() + user_input.upper())
         # Delivers to Island B.
@@ -504,9 +504,9 @@ def deliverItems():
             island_b.append(dhoaniItemName)
             island_b.append(dhoaniItemAmount)
             print(menu_and_travel.get_drive() + user_input.upper())
-            calc = 130 / 25
+            calc = 170 / 25
             print("Time: " + str(calc) + " HRS")
-            print("Distance: 130KM")
+            print("Distance: 170KM")
             print("---------------------------------")
             print(menu_and_travel.get_stop() + user_input.upper())
         # Delivers to Island C.
@@ -514,9 +514,9 @@ def deliverItems():
             island_c.append(dhoaniItemName)
             island_c.append(dhoaniItemAmount)
             print(menu_and_travel.get_drive() + user_input.upper())
-            calc = 190 / 25
+            calc = 110 / 25
             print("Time: " + str(calc) + " HRS")
-            print("Distance: 130KM")
+            print("Distance: 110KM")
             print("---------------------------------")
             print(menu_and_travel.get_stop() + user_input.upper())
         # Delivers to Island D.
@@ -524,9 +524,9 @@ def deliverItems():
             island_d.append(dhoaniItemName)
             island_d.append(dhoaniItemAmount)
             print(menu_and_travel.get_drive() + user_input.upper())
-            calc = 230 / 25
+            calc = 70 / 25
             print("Time: " + str(calc) + " HRS")
-            print("Distance: 230KM")
+            print("Distance: 70KM")
             print("---------------------------------")
             print(menu_and_travel.get_stop() + user_input.upper())
         # Exits to console menu.
