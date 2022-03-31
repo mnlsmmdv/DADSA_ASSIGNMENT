@@ -8,7 +8,7 @@ git clone https://gitlab.uwe.ac.uk/a2-affaan/DADSA_ASSIGNMENT.git
 ```
 
 ## Description
-BigCon is a construction company and it has to deliver consumables to separate islands. This program consists of two main supplier islands and four un-inhabited islands(A, B, C, D) and a Dhoani. A Dhoani is a boat. The four un-inhabited islands are used to develop housing facilities. The one Dhoani that exists in the program is used to deliver consumables from the two main supplier islands to the four un-inhabited islands. The Dhoani and each island in the program will not accept consumables past their carrying capacity.
+BigCon is a construction company and it has to deliver consumables to separate islands. This program consists of two main supplier islands and four un-inhabited islands(A, B, C, D) and a Dhoani. A Dhoani is a boat. The four un-inhabited islands are used to develop housing facilities. The one Dhoani that exists in the program is used to deliver consumables from the two main supplier islands to the four un-inhabited islands.
 
 ## Usage
 ### Main Menu
