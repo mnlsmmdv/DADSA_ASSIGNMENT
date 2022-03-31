@@ -192,123 +192,32 @@ def addItems():
     else:
         exit()
 
-# This function will remove items.
+# This function will remove items from the dhoani after it has been delivered.
 def removeItems():
     # Prints the Items Menu and asks for user input.
     print("")
     menu_and_travel.itemsMenu()
     itemName = input("Item Name: ").lower()
     itemAmount = int(input("Item Amount: "))
-    # Checks if Item Name and Item Amount is valid and removes it.
-    #if((itemName != ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]) and (itemAmount > 30000)):
-    #    print("INVALID INPUT!")
     from_remove = input("From: ").lower()
 
-    #else:
-    # Dhoani.
-    if from_remove in "dhoani":
-        if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):  
-            # Removing Item Name and Item Amount.
+    # Checks if Item Name and Item Amount is valid and removes it.
+    if from_remove == "dhoani":
+        print("")
+        print("----REMOVING ITEM!----")
+        dhoaniItemName.remove(itemName)
+        dhoaniItemAmount.remove(itemAmount)
+        user_input = input("Remove another item?(yes/no): ").lower()
+        print("---------------------------------")
+        if user_input == "yes":
+            menu_and_travel.consoleMenu()
+        else:
+            user_input = int(input("Continue (6) or Quit (7): "))
             print("")
-            print("----REMOVING ITEM!----")  
-            # This will calculate and print the Dhoani's current capacity left.
-            dhoaniCapacity = 30000
-            capacityCalculate = dhoaniCapacity - itemAmount
-            print("Capacity regained: " + str(capacityCalculate) + "KG")
-            dhoaniItemName.remove(itemName)
-            dhoaniItemAmount.remove(itemAmount)
-            # Asks user if they wish to remove another item. If not exits.
-            user_input = input("Remove another item?(yes/no): ").lower()
-            print("---------------------------------")
-            if(user_input in "yes"):
+            if user_input == 6:
                 menu_and_travel.consoleMenu()
             else:
-                user_input = int(input("Continue (6) or Quit (7): "))
-                print("")
-                if user_input == 6:
-                    menu_and_travel.consoleMenu()
-                else:
-                    exit()
-    # Island A.
-    elif from_remove in "island a":
-        if ((itemName in island_a) and (itemAmount in island_a)):  
-            # Removing Item Name and Item Amount.
-            print("")
-            print("----REMOVING ITEM!----")  
-            # This will calculate and print Island A's current capacity left.
-            capacityCalculate = islandA_Capacity - itemAmount
-            print("Capacity regained: " + str(capacityCalculate) + "KG")
-            island_a.remove(itemName)
-            island_a.remove(itemAmount)
-            
-            # Asking user if they wish to continue or quit.
-            print("---------------------------------")
-            user_input = int(input("Continue (6) or Quit (7): "))
-            print("")
-            if user_input == 6:
-               menu_and_travel.consoleMenu()
-            else:
-               exit()
-    # Island B.
-    elif from_remove in "island b":
-        if ((itemName in island_b) and (itemAmount in island_b)):  
-            # Removing Item Name and Item Amount.
-            print("")
-            print("----REMOVING ITEM!----")  
-            # This will calculate and print Island A's current capacity left.
-            capacityCalculate = islandB_Capacity - itemAmount
-            print("Capacity regained: " + str(capacityCalculate) + "KG")
-            island_b.remove(itemName)
-            island_b.remove(itemAmount)
-            
-            # Asking user if they wish to continue or quit.
-            print("---------------------------------")
-            user_input = int(input("Continue (6) or Quit (7): "))
-            print("")
-            if user_input == 6:
-               menu_and_travel.consoleMenu()
-            else:
-               exit()
-    # Island C.
-    elif from_remove in "island c":
-        if ((itemName in island_c) and (itemAmount in island_c)):  
-            # Removing Item Name and Item Amount.
-            print("")
-            print("----REMOVING ITEM!----")  
-            # This will calculate and print Island A's current capacity left.
-            capacityCalculate = islandC_Capacity - itemAmount
-            print("Capacity regained: " + str(capacityCalculate) + "KG")
-            island_c.remove(itemName)
-            island_c.remove(itemAmount)
-            
-            # Asking user if they wish to continue or quit.
-            print("---------------------------------")
-            user_input = int(input("Continue (6) or Quit (7): "))
-            print("")
-            if user_input == 6:
-               menu_and_travel.consoleMenu()
-            else:
-               exit()
-    # Island D.
-    elif from_remove in "island d":
-        if ((itemName in island_d) and (itemAmount in island_d)):  
-            # Removing Item Name and Item Amount.
-            print("")
-            print("----REMOVING ITEM!----")  
-            # This will calculate and print Island A's current capacity left.
-            capacityCalculate = islandD_Capacity - itemAmount
-            print("Capacity regained: " + str(capacityCalculate) + "KG")
-            island_d.remove(itemName)
-            island_d.remove(itemAmount)
-            
-            # Asking user if they wish to continue or quit.
-            print("---------------------------------")
-            user_input = int(input("Continue (6) or Quit (7): "))
-            print("")
-            if user_input == 6:
-               menu_and_travel.consoleMenu()
-            else:
-               exit()
+                exit()
 
 # This function will search through the lists and print items and their amounts.
 # in method to verify and display and index search to display index of elements.
@@ -326,7 +235,7 @@ def searchItems():
             # Prints Item Name and Item Amount.
             print("")
             print("----ITEM EXISTS!----")
-            print("----DHOANI----")  
+            print("-------DHOANI----")  
             print("Item Name: " + itemName.upper())
             print("Item Amount: " + str(itemAmount))
             nameIndex = dhoaniItemName.index(itemName)
