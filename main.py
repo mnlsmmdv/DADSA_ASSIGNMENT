@@ -32,13 +32,18 @@ supplierIslandAlpha = []
 # Lists for Supplier Island 02 Item Name and Item Amount.
 supplierIslandBeta = []
 # Lists for Island A Item Name and Item Amount.
-island_a = []
+islandA_ItemName = []
+islandA_ItemAmount = []
+#islandA = islandA_ItemName + islandA_ItemAmount
 # Lists for Island B Item Name and Item Amount.
-island_b = []
+islandB_ItemName = []
+islandB_ItemAmount = []
 # Lists for Island C Item Name and Item Amount.
-island_c = []
+islandC_ItemName = []
+islandC_ItemAmount = []
 # Lists for Island D Item Name and Item Amount.
-island_d = []
+islandD_ItemName = []
+islandD_ItemAmount = []
 #### ----LISTS---- ####
 
 #### ----CLASSES---- ####
@@ -133,8 +138,6 @@ def consoleChoice(user_input):
     # Quit program.
     elif user_input == 7:
         exit()
-    elif user_input == 8:
-        forConsumption()
     # Invalid option.
     else:
         print("INVALID OPTION")
@@ -158,12 +161,12 @@ def addItems():
         print("INVALID AMOUNT")
     else:
         print("---------------------------------")
-        print("Capacity Reaced!")
+        #print("Capacity Reaced!")
         print("----ADDING ITEM!----")
         # This will calculate and print the Dhoani's current capacity left.
         dhoaniCapacity = 30000
         capacityCalculate = dhoaniCapacity - itemAmount
-        print("Current left: " + str(capacityCalculate) + "KG")
+        print("Capacity left: " + str(capacityCalculate) + "KG")
         # Adds item name and item amount
         dhoaniItemName.append(itemName)
         dhoaniItemAmount.append(itemAmount)
@@ -173,7 +176,8 @@ def addItems():
         print("---------------------------------")
         if(user_input in "yes"):
             menu_and_travel.consoleMenu()
-        else:
+        
+        if(user_input in "no"):
             deliverItems()
             user_input = int(input("Continue (6) or Quit (7): "))
             print("")
@@ -220,6 +224,83 @@ def removeItems():
                 menu_and_travel.consoleMenu()
             else:
                 exit()
+    
+    # Checks if Item Name and Item Amount is valid and removes it.
+    elif from_remove == "island a":
+        print("")
+        print("----REMOVING ITEM!----")
+        print("-----CONSUMPTION------")
+        islandA_ItemName.remove(dhoaniItemName)
+        islandA_ItemAmount.remove(dhoaniItemAmount)
+        user_input = input("Remove another item?(yes/no): ").lower()
+        print("---------------------------------")
+        if user_input == "yes":
+            menu_and_travel.consoleMenu()
+        else:
+            user_input = int(input("Continue (6) or Quit (7): "))
+            print("")
+            if user_input == 6:
+                menu_and_travel.consoleMenu()
+            else:
+                exit()
+
+    # Checks if Item Name and Item Amount is valid and removes it.
+    elif from_remove == "island b":
+        print("")
+        print("----REMOVING ITEM!----")
+        print("-----CONSUMPTION------")
+        islandB_ItemName.remove(dhoaniItemName)
+        islandB_ItemAmount.remove(dhoaniItemAmount)
+        user_input = input("Remove another item?(yes/no): ").lower()
+        print("---------------------------------")
+        if user_input == "yes":
+            menu_and_travel.consoleMenu()
+        else:
+            user_input = int(input("Continue (6) or Quit (7): "))
+            print("")
+            if user_input == 6:
+                menu_and_travel.consoleMenu()
+            else:
+                exit()
+
+    # Checks if Item Name and Item Amount is valid and removes it.
+    elif from_remove == "island c":
+        print("")
+        print("----REMOVING ITEM!----")
+        print("-----CONSUMPTION------")
+        islandC_ItemName.remove(dhoaniItemName)
+        islandC_ItemAmount.remove(dhoaniItemAmount)
+        user_input = input("Remove another item?(yes/no): ").lower()
+        print("---------------------------------")
+        if user_input == "yes":
+            menu_and_travel.consoleMenu()
+        else:
+            user_input = int(input("Continue (6) or Quit (7): "))
+            print("")
+            if user_input == 6:
+                menu_and_travel.consoleMenu()
+            else:
+                exit()
+
+    # Checks if Item Name and Item Amount is valid and removes it.
+    elif from_remove == "island d":
+        print("")
+        print("----REMOVING ITEM!----")
+        print("-----CONSUMPTION------")
+        islandD_ItemName.remove(dhoaniItemName)
+        islandD_ItemAmount.remove(dhoaniItemAmount)
+        user_input = input("Remove another item?(yes/no): ").lower()
+        print("---------------------------------")
+        if user_input == "yes":
+            menu_and_travel.consoleMenu()
+        else:
+            user_input = int(input("Continue (6) or Quit (7): "))
+            print("")
+            if user_input == 6:
+                menu_and_travel.consoleMenu()
+            else:
+                exit()
+    
 
 # This function will search through the lists and print items and their amounts.
 # in method to verify and display and index search to display index of elements.
@@ -251,7 +332,7 @@ def searchItems():
         else:
            exit()
     # Island A
-    if ((itemName in island_a) and (itemAmount in island_a)):  
+    if ((itemName in islandA_ItemName) and (itemAmount in islandA_ItemAmount)):  
         # Prints Item Name and Item Amount.
         print("")
         print("----ITEM EXISTS!----")
@@ -288,8 +369,8 @@ def deliverItems():
             print("INVALID INPUT")
         # Delivers to Island A.
         elif user_input in "island a":
-            island_a.append(dhoaniItemName)
-            island_a.append(dhoaniItemAmount)
+            islandA_ItemName.append(dhoaniItemName)
+            islandA_ItemAmount.append(dhoaniItemAmount)
             print(menu_and_travel.get_drive() + user_input.upper())
             calc = 50 / 25
             print("Time: " + str(calc) + " HRS")
@@ -299,8 +380,8 @@ def deliverItems():
             print("---------------------------------")
         # Delivers to Island B.
         elif user_input in "island b":
-            island_b.append(dhoaniItemName)
-            island_b.append(dhoaniItemAmount)
+            islandB_ItemName.append(dhoaniItemName)
+            islandB_ItemAmount.append(dhoaniItemAmount)
             print(menu_and_travel.get_drive() + user_input.upper())
             calc = 130 / 25
             print("Time: " + str(calc) + " HRS")
@@ -310,8 +391,8 @@ def deliverItems():
             print("---------------------------------")
         # Delivers to Island C.
         elif user_input in "island c":
-            island_c.append(dhoaniItemName)
-            island_c.append(dhoaniItemAmount)
+            islandC_ItemName.append(dhoaniItemName)
+            islandC_ItemAmount.append(dhoaniItemAmount)
             print(menu_and_travel.get_drive() + user_input.upper())
             calc = 190 / 25
             print("Time: " + str(calc) + " HRS")
@@ -321,8 +402,8 @@ def deliverItems():
             print("---------------------------------")
         # Delivers to Island D.
         elif user_input in "island d":
-            island_d.append(dhoaniItemName)
-            island_d.append(dhoaniItemAmount)
+            islandD_ItemName.append(dhoaniItemName)
+            islandD_ItemAmount.append(dhoaniItemAmount)
             print(menu_and_travel.get_drive() + user_input.upper())
             calc = 230 / 25
             print("Time: " + str(calc) + " HRS")
@@ -342,8 +423,8 @@ def deliverItems():
             print("INVALID INPUT")
         # Delivers to Island A.
         elif user_input in "island a":
-            island_a.append(dhoaniItemName)
-            island_a.append(dhoaniItemAmount)
+            islandA_ItemName.append(dhoaniItemName)
+            islandA_ItemAmount.append(dhoaniItemAmount)
             print(menu_and_travel.get_drive() + user_input.upper())
             calc = 250 / 25
             print("Time: " + str(calc) + " HRS")
@@ -352,8 +433,8 @@ def deliverItems():
             print(menu_and_travel.get_stop() + user_input.upper())
         # Delivers to Island B.
         elif user_input in "island b":
-            island_b.append(dhoaniItemName)
-            island_b.append(dhoaniItemAmount)
+            islandB_ItemName.append(dhoaniItemName)
+            islandB_ItemAmount.append(dhoaniItemAmount)
             print(menu_and_travel.get_drive() + user_input.upper())
             calc = 170 / 25
             print("Time: " + str(calc) + " HRS")
@@ -362,8 +443,8 @@ def deliverItems():
             print(menu_and_travel.get_stop() + user_input.upper())
         # Delivers to Island C.
         elif user_input in "island c":
-            island_c.append(dhoaniItemName)
-            island_c.append(dhoaniItemAmount)
+            islandC_ItemName.append(dhoaniItemName)
+            islandC_ItemAmount.append(dhoaniItemAmount)
             print(menu_and_travel.get_drive() + user_input.upper())
             calc = 110 / 25
             print("Time: " + str(calc) + " HRS")
@@ -372,8 +453,8 @@ def deliverItems():
             print(menu_and_travel.get_stop() + user_input.upper())
         # Delivers to Island D.
         elif user_input in "island d":
-            island_d.append(dhoaniItemName)
-            island_d.append(dhoaniItemAmount)
+            islandD_ItemName.append(dhoaniItemName)
+            islandD_ItemAmount.append(dhoaniItemAmount)
             print(menu_and_travel.get_drive() + user_input.upper())
             calc = 70 / 25
             print("Time: " + str(calc) + " HRS")
@@ -392,33 +473,7 @@ def deliverItems():
             menu_and_travel.consoleMenu()
         else:
             exit()
-
-"""
-def forConsumption():
-    print("")
-    print("")
-    print("---------------------------------")
-    print("|      BigCon Construction      |")
-    print("-----------Consumption----------")
-    print("1- Diesel                       |")
-    print("2- Frozen                       |")
-    print("3- Fridge                       |")
-    print("4- Food                         |")
-    print("5- Protected Material           |")
-    print("6- Unprotected Material         |")
-    print("---------------------------------")
-    item_name = input("Item Name: ")
-    item_amount = int(input("Item Amount: "))
-    consumption_from = input("From: ")
-
-    if consumption_from == "island a":
-        if((item_name in island_a) and (item_amount in island_a)):
-            island_a.remove(item_name)
-            island_a.remove(item_amount)
-    else:
-        print("INVALID INPUT")
-"""
-    
+   
 # This function will print all of the lists and their amounts.
 def printItems():
     # Dhoani inventory.
@@ -435,36 +490,36 @@ def printItems():
     print("")
     print("Supply Island A Inventory")
     print("-----------------------------")
-    print("All Items: ", *island_a)
-    #print("Items: ", islandA_ItemName)
-    #print("Amount:", islandA_ItemAmount)
+    #print("All Items: ", *island_a)
+    print("Items: ", islandA_ItemName)
+    print("Amount:", islandA_ItemAmount)
     print("-----------------------------")
 
     # Island B inventory.
     print("")
     print("Supply Island B Inventory")
     print("-----------------------------")
-    print("All Items: ", *island_b)
-    #print("Items: ", islandB_ItemName)
-    #print("Amount:", islandB_ItemAmount)
+    #print("All Items: ", *island_b)
+    print("Items: ", islandB_ItemName)
+    print("Amount:", islandB_ItemAmount)
     print("-----------------------------")
 
     # Island C inventory.
     print("")
     print("Supply Island C Inventory")
     print("-----------------------------")
-    print("All Items: ", *island_c)
-    #print("Items: ", islandC_ItemName)
-    #print("Amount:", islandC_ItemAmount)
+    #print("All Items: ", *island_c)
+    print("Items: ", islandC_ItemName)
+    print("Amount:", islandC_ItemAmount)
     print("-----------------------------")
 
     # Island D Inventory.
     print("")
     print("Supply Island D Inventory")
     print("-----------------------------")
-    print("All Items: ", *island_d)
-    #print("Items: ", islandD_ItemName)
-    #print("Amount:", islandD_ItemAmount)
+    #print("All Items: ", *island_d)
+    print("Items: ", islandD_ItemName)
+    print("Amount:", islandD_ItemAmount)
     print("-----------------------------")
 
     # Asking user if they wish to continue or quit.
