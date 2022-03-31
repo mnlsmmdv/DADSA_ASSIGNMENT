@@ -200,15 +200,13 @@ def removeItems():
     itemName = input("Item Name: ").lower()
     itemAmount = int(input("Item Amount: "))
     # Checks if Item Name and Item Amount is valid and removes it.
-    if((itemName != ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]) and (itemAmount > 30000)):
-        print("INVALID INPUT!")
+    #if((itemName != ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]) and (itemAmount > 30000)):
+    #    print("INVALID INPUT!")
     from_remove = input("From: ").lower()
 
     #else:
-    if from_remove not in ["island", "island b", "island c", "island d", "dhoani"]:
-        print("INVALID INPUT!")
     # Dhoani.
-    elif from_remove in "dhoani":
+    if from_remove in "dhoani":
         if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):  
             # Removing Item Name and Item Amount.
             print("")
@@ -313,10 +311,11 @@ def removeItems():
                exit()
 
 # This function will search through the lists and print items and their amounts.
+# in method to verify and display and index search to display index of elements.
 def searchItems():
     print("----SEARCHING ITEMS----")
     print("---------------------------------")
-    itemName = input("Item Name: ")
+    itemName = input("Item Name: ").lower()
     itemAmount = int(input("Item Amount: "))
     
     if((itemName != ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]) and (itemAmount > 30000)):
@@ -330,6 +329,10 @@ def searchItems():
             print("----DHOANI----")  
             print("Item Name: " + itemName.upper())
             print("Item Amount: " + str(itemAmount))
+            nameIndex = dhoaniItemName.index(itemName)
+            amountIndex = dhoaniItemAmount.index(itemAmount)
+            print("Item Index: " + str(nameIndex))
+            print("Amount Index: " + str(amountIndex))
             
             # Asking user if they wish to continue or quit.
             print("---------------------------------")
@@ -347,6 +350,10 @@ def searchItems():
             print("-----ISLAND A----")  
             print("Item Name: " + itemName.upper())
             print("Item Amount: " + str(itemAmount))
+            nameIndex = dhoaniItemName.index(itemName)
+            amountIndex = dhoaniItemAmount.index(itemAmount)
+            print("Item Index: " + str(nameIndex))
+            print("Amount Index: " + str(amountIndex))
             
             # Asking user if they wish to continue or quit.
             print("---------------------------------")
@@ -364,6 +371,10 @@ def searchItems():
             print("-----ISLAND B----")  
             print("Item Name: " + itemName.upper())
             print("Item Amount: " + str(itemAmount))
+            nameIndex = dhoaniItemName.index(itemName)
+            amountIndex = dhoaniItemAmount.index(itemAmount)
+            print("Item Index: " + str(nameIndex))
+            print("Amount Index: " + str(amountIndex))
             
             # Asking user if they wish to continue or quit.
             print("---------------------------------")
@@ -381,6 +392,10 @@ def searchItems():
             print("------ISLAND C----")  
             print("Item Name: " + itemName.upper())
             print("Item Amount: " + str(itemAmount))
+            nameIndex = dhoaniItemName.index(itemName)
+            amountIndex = dhoaniItemAmount.index(itemAmount)
+            print("Item Index: " + str(nameIndex))
+            print("Amount Index: " + str(amountIndex))
             
             # Asking user if they wish to continue or quit.
             print("---------------------------------")
@@ -398,6 +413,10 @@ def searchItems():
             print("------ISLAND D----")  
             print("Item Name: " + itemName.upper())
             print("Item Amount: " + str(itemAmount))
+            nameIndex = dhoaniItemName.index(itemName)
+            amountIndex = dhoaniItemAmount.index(itemAmount)
+            print("Item Index: " + str(nameIndex))
+            print("Amount Index: " + str(amountIndex))
             
             # Asking user if they wish to continue or quit.
             print("---------------------------------")
