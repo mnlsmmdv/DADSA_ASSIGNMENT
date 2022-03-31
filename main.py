@@ -21,16 +21,6 @@ islandA_Capacity = 11690
 islandB_Capacity = 13180
 islandC_Capacity = 10200
 islandD_Capacity = 10170
-
-SUPPLY_TO_A = 50
-SUPPLY_TO_D = 70
-MAX_DISTANCE = 300
-A_TO_B = 80
-B_TO_C = 60
-C_TO_D = 40
-D_TO_C = 40
-C_TO_B = 60
-B_TO_A = 80
 #### ----VARIABLES---- ####
 
 #### ----LISTS---- ####
