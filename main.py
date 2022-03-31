@@ -346,7 +346,7 @@ def searchItems():
             # Prints Item Name and Item Amount.
             print("")
             print("----ITEM EXISTS!----")
-            print("----ISLAND A----")  
+            print("-----ISLAND A----")  
             print("Item Name: " + itemName.upper())
             print("Item Amount: " + str(itemAmount))
             
@@ -363,7 +363,7 @@ def searchItems():
             # Prints Item Name and Item Amount.
             print("")
             print("----ITEM EXISTS!----")
-            print("----ISLAND B----")  
+            print("-----ISLAND B----")  
             print("Item Name: " + itemName.upper())
             print("Item Amount: " + str(itemAmount))
             
@@ -380,7 +380,7 @@ def searchItems():
             # Prints Item Name and Item Amount.
             print("")
             print("----ITEM EXISTS!----")
-            print("----ISLAND C----")  
+            print("------ISLAND C----")  
             print("Item Name: " + itemName.upper())
             print("Item Amount: " + str(itemAmount))
             
@@ -397,7 +397,7 @@ def searchItems():
             # Prints Item Name and Item Amount.
             print("")
             print("----ITEM EXISTS!----")
-            print("----ISLAND D----")  
+            print("------ISLAND D----")  
             print("Item Name: " + itemName.upper())
             print("Item Amount: " + str(itemAmount))
             
