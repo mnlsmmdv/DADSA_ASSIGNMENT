@@ -596,7 +596,8 @@ def printItems():
         menu_and_travel.consoleMenu()
     else:
         exit()
-#### ----FUNCTIONS---- 
+#### ----FUNCTIONS---- ####
+
 # Calling the function globally.
 # Displays main console menu.
 menu_and_travel.consoleMenu()
