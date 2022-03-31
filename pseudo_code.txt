@@ -1,0 +1,524 @@
+# PROGRAM START.
+
+#### ----VARIABLES---- ####
+SET dhoaniCapacity TO 0
+SET supplierIslandAlphaCapacity TO None
+SET supplierIslandBetaCapacity TO None
+SET islandA_Capacity TO 11690
+SET islandB_Capacity TO 13180
+SET islandC_Capacity TO 10200
+SET islandD_Capacity TO 10170
+#### ----VARIABLES---- ####
+
+#### ----LISTS---- ####
+# Lists for Dhoani's Item Name and Item Amount.
+SET dhoaniItemName TO []
+SET dhoaniItemAmount TO []
+# Lists for Supplier Island 01 Item Name and Item Amount.
+SET supplierIslandAlpha TO []
+# Lists for Supplier Island 02 Item Name and Item Amount.
+SET supplierIslandBeta TO []
+# Lists for Island A Item Name and Item Amount.
+SET islandA_ItemName TO []
+SET islandA_ItemAmount TO []
+SET #islandA TO islandA_ItemName + islandA_ItemAmount
+# Lists for Island B Item Name and Item Amount.
+SET islandB_ItemName TO []
+SET islandB_ItemAmount TO []
+# Lists for Island C Item Name and Item Amount.
+SET islandC_ItemName TO []
+SET islandC_ItemAmount TO []
+# Lists for Island D Item Name and Item Amount.
+SET islandD_ItemName TO []
+SET islandD_ItemAmount TO []
+#### ----LISTS---- ####
+
+#### ----CLASSES---- ####
+# This class will display Dhoani's drive and stop messages also the various menu's needed for this program.
+DEFINE CLASS MENU_AND_TRAVEL:
+    # Dhoani's function messages.
+    SET drive TO "Dhoani is now travelling to "
+    SET stop TO "Dhoani has stopped at "
+
+    # Dhoani's drive function.
+    DEFINE FUNCTION get_drive(self):
+        # Prints message of the Dhoani's function.
+        RETURN self.drive
+
+    # Dhoani's stop function.
+    DEFINE FUNCTION get_stop(self):
+        # Prints message of the Dhoani's function.
+        RETURN self.stop
+
+    # This function displays the main console menu.
+    # Option 6 is continue and option 7 is quit.
+    DEFINE FUNCTION consoleMenu(self):
+        OUTPUT("")
+        OUTPUT("")
+        OUTPUT("---------------------------------")
+        OUTPUT("|      BigCon Construction      |")
+        OUTPUT("--------------Menu---------------")
+        OUTPUT("1- Add Items                    |")
+        OUTPUT("2- Remove Items                 |")
+        OUTPUT("3- Search Items                 |")
+        OUTPUT("4- Deliver Items                |")
+        OUTPUT("5- Print Items                  |")
+        OUTPUT("7- QUIT PROGRAM                 |")
+        OUTPUT("---------------------------------")
+
+        # Asks for initial user input.
+        SET user_input TO int(INPUT("Enter choice: "))
+        consoleChoice(user_input)
+
+    # This function displays the Items Menu with their group code.
+    # Entering group code will not work. Enter the name displayed in the menu.
+    DEFINE FUNCTION itemsMenu(self):
+        OUTPUT("")
+        OUTPUT("")
+        OUTPUT("---------------------------------")
+        OUTPUT("|      BigCon Construction      |")
+        OUTPUT("--------------Items--------------")
+        OUTPUT("1- Diesel                       |")
+        OUTPUT("2- Frozen                       |")
+        OUTPUT("3- Fridge                       |")
+        OUTPUT("4- Food                         |")
+        OUTPUT("5- Protected Material           |")
+        OUTPUT("6- Unprotected Material         |")
+        OUTPUT("---------------------------------")
+
+    # This function displays the Deliver Items menu and their destination names.
+    # Displays menu with destinations.
+    DEFINE FUNCTION deliverMenu(self):
+        OUTPUT("")
+        OUTPUT("")
+        OUTPUT("---------------------------------")
+        OUTPUT("|      BigCon Construction      |")
+        OUTPUT("----------Destinations-----------")
+        OUTPUT("Island A                        |")
+        OUTPUT("Island B                        |")
+        OUTPUT("Island C                        |")
+        OUTPUT("Island D                        |")
+        OUTPUT("---------------------------------")
+#### ----CLASSES---- ####
+
+# Assigning DEFINE CLASS to variables.
+SET menu_and_travel TO MENU_AND_TRAVEL()
+
+#### ----FUNCTIONS---- ####
+# This function checks the users specific choice and directs them to that function.
+DEFINE FUNCTION consoleChoice(user_input):
+    # Add items.
+    IF user_input EQUALS 1:
+        addItems()
+    # Remove items.
+    ELSEIF user_input EQUALS 2:
+        removeItems()
+    # Search items.
+    ELSEIF user_input EQUALS 3:
+        searchItems()
+    # Deliver items.
+    ELSEIF user_input EQUALS 4:
+        deliverItems()
+    # Print items.
+    ELSEIF user_input EQUALS 5:
+        printItems()
+    # Quit program.
+    ELSEIF user_input EQUALS 7:
+        exit()
+    # Invalid option.
+    ELSE:
+        OUTPUT("INVALID OPTION")
+        menu_and_travel.consoleMenu()
+
+# This function will add items.
+DEFINE FUNCTION addItems():
+    # Prints the Items Menu and asks for user input.
+    OUTPUT("")    
+    menu_and_travel.itemsMenu()
+
+    # Validates item name.
+    SET itemName TO INPUT("Item Name: ").lower()    
+    IF itemName not IN ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]:
+        # Error message.
+        OUTPUT("INVALID ITEM")
+    # Validates item amount.
+    SET itemAmount TO int(INPUT("Item Amount: "))
+    IF itemAmount >= 30000:
+        OUTPUT("INVALID AMOUNT")
+    ELSE:
+        OUTPUT("---------------------------------")
+        #OUTPUT("Capacity Reaced!")
+        OUTPUT("----ADDING ITEM!----")
+        # This will calculate and OUTPUT the Dhoani's current capacity left.
+        SET dhoaniCapacity TO 30000
+        SET capacityCalculate TO dhoaniCapacity - itemAmount
+        OUTPUT("Capacity left: " + str(capacityCalculate) + "KG")
+        # Adds item name and item amount
+        dhoaniItemName.append(itemName)
+        dhoaniItemAmount.append(itemAmount)
+        # Asks user if they wish to add another item. If not exits.
+        OUTPUT("---------------------------------")
+        SET user_input TO INPUT("Add another item?(yes/no): ").lower()
+        OUTPUT("---------------------------------")
+        if(user_input IN "yes"):
+            menu_and_travel.consoleMenu()
+        
+        if(user_input IN "no"):
+            deliverItems()
+            SET user_input TO int(INPUT("Continue (6) or Quit (7): "))
+            OUTPUT("")
+            IF user_input EQUALS 6:
+                menu_and_travel.consoleMenu()
+            ELSE:
+                exit()
+
+    # Prints the Deliver Items Menu.
+    deliverItems()
+
+    # Asks user if they wish to continue or quit.
+    OUTPUT("---------------------------------")
+    SET user_input TO int(INPUT("Continue (6) or Quit (7): "))
+    OUTPUT("")
+    IF user_input EQUALS 6:
+        menu_and_travel.consoleMenu()
+    ELSE:
+        exit()
+
+# This function will remove items from the dhoani after it has been delivered.
+DEFINE FUNCTION removeItems():
+    # Prints the Items Menu and asks for user input.
+    OUTPUT("")
+    menu_and_travel.itemsMenu()
+    SET itemName TO INPUT("Item Name: ").lower()
+    SET itemAmount TO int(INPUT("Item Amount: "))
+    SET from_remove TO INPUT("From: ").lower()
+
+    # Checks if Item Name and Item Amount is valid and removes it.
+    IF from_remove EQUALS "dhoani":
+        OUTPUT("")
+        OUTPUT("----REMOVING ITEM!----")
+        dhoaniItemName.remove(itemName)
+        dhoaniItemAmount.remove(itemAmount)
+        SET user_input TO INPUT("Remove another item?(yes/no): ").lower()
+        OUTPUT("---------------------------------")
+        IF user_input EQUALS "yes":
+            menu_and_travel.consoleMenu()
+        ELSE:
+            SET user_input TO int(INPUT("Continue (6) or Quit (7): "))
+            OUTPUT("")
+            IF user_input EQUALS 6:
+                menu_and_travel.consoleMenu()
+            ELSE:
+                exit()
+
+    # Checks if Item Name and Item Amount is valid and removes it.
+    ELSEIF from_remove EQUALS "island a":
+        OUTPUT("")
+        OUTPUT("----REMOVING ITEM!----")
+        OUTPUT("-----CONSUMPTION------")
+        islandA_ItemName.remove(dhoaniItemName)
+        islandA_ItemAmount.remove(dhoaniItemAmount)
+        SET user_input TO INPUT("Remove another item?(yes/no): ").lower()
+        OUTPUT("---------------------------------")
+        IF user_input EQUALS "yes":
+            menu_and_travel.consoleMenu()
+        ELSE:
+            SET user_input TO int(INPUT("Continue (6) or Quit (7): "))
+            OUTPUT("")
+            IF user_input EQUALS 6:
+                menu_and_travel.consoleMenu()
+            ELSE:
+                exit()
+
+    # Checks if Item Name and Item Amount is valid and removes it.
+    ELSEIF from_remove EQUALS "island b":
+        OUTPUT("")
+        OUTPUT("----REMOVING ITEM!----")
+        OUTPUT("-----CONSUMPTION------")
+        islandB_ItemName.remove(dhoaniItemName)
+        islandB_ItemAmount.remove(dhoaniItemAmount)
+        SET user_input TO INPUT("Remove another item?(yes/no): ").lower()
+        OUTPUT("---------------------------------")
+        IF user_input EQUALS "yes":
+            menu_and_travel.consoleMenu()
+        ELSE:
+            SET user_input TO int(INPUT("Continue (6) or Quit (7): "))
+            OUTPUT("")
+            IF user_input EQUALS 6:
+                menu_and_travel.consoleMenu()
+            ELSE:
+                exit()
+
+    # Checks if Item Name and Item Amount is valid and removes it.
+    ELSEIF from_remove EQUALS "island c":
+        OUTPUT("")
+        OUTPUT("----REMOVING ITEM!----")
+        OUTPUT("-----CONSUMPTION------")
+        islandC_ItemName.remove(dhoaniItemName)
+        islandC_ItemAmount.remove(dhoaniItemAmount)
+        SET user_input TO INPUT("Remove another item?(yes/no): ").lower()
+        OUTPUT("---------------------------------")
+        IF user_input EQUALS "yes":
+            menu_and_travel.consoleMenu()
+        ELSE:
+            SET user_input TO int(INPUT("Continue (6) or Quit (7): "))
+            OUTPUT("")
+            IF user_input EQUALS 6:
+                menu_and_travel.consoleMenu()
+            ELSE:
+                exit()
+
+    # Checks if Item Name and Item Amount is valid and removes it.
+    ELSEIF from_remove EQUALS "island d":
+        OUTPUT("")
+        OUTPUT("----REMOVING ITEM!----")
+        OUTPUT("-----CONSUMPTION------")
+        islandD_ItemName.remove(dhoaniItemName)
+        islandD_ItemAmount.remove(dhoaniItemAmount)
+        SET user_input TO INPUT("Remove another item?(yes/no): ").lower()
+        OUTPUT("---------------------------------")
+        IF user_input EQUALS "yes":
+            menu_and_travel.consoleMenu()
+        ELSE:
+            SET user_input TO int(INPUT("Continue (6) or Quit (7): "))
+            OUTPUT("")
+            IF user_INPUT EQUALS 6:
+                menu_and_travel.consoleMenu()
+            ELSE:
+                exit()
+
+# This function will search through the lists and OUTPUT items and their amounts.
+# IN method to verify and display and index search to display index of elements.
+DEFINE FUNCTION searchItems():
+    OUTPUT("----SEARCHING ITEMS----")
+    OUTPUT("---------------------------------")
+    SET itemName TO INPUT("Item Name: ").lower()
+    SET itemAmount TO int(INPUT("Item Amount: "))
+    
+    # Dhoani
+    IF ((itemName IN dhoaniItemName) and (itemAmount IN dhoaniItemAmount)):  
+        # Prints Item Name and Item Amount.
+        OUTPUT("")
+        OUTPUT("----ITEM EXISTS!----")
+        OUTPUT("-------DHOANI-------")  
+        OUTPUT("Item Name: " + itemName.upper())
+        OUTPUT("Item Amount: " + str(itemAmount))
+        SET nameIndex TO dhoaniItemName.index(itemName)
+        SET amountIndex TO dhoaniItemAmount.index(itemAmount)
+        OUTPUT("Item Index: " + str(nameIndex))
+        OUTPUT("Amount Index: " + str(amountIndex))
+
+        # Asking user if they wish to continue or quit.
+        OUTPUT("---------------------------------")
+        SET user_input TO int(INPUT("Continue (6) or Quit (7): "))
+        OUTPUT("")
+        IF user_input EQUALS 6:
+           menu_and_travel.consoleMenu()
+        ELSE:
+           exit()
+    # Island A
+    IF ((itemName IN islandA_ItemName) and (itemAmount IN islandA_ItemAmount)):  
+        # Prints Item Name and Item Amount.
+        OUTPUT("")
+        OUTPUT("----ITEM EXISTS!----")
+        OUTPUT("-----ISLAND A----")  
+        OUTPUT("Item Name: " + itemName.upper())
+        OUTPUT("Item Amount: " + str(itemAmount))
+        SET nameIndex TO dhoaniItemName.index(itemName)
+        SET amountIndex TO dhoaniItemAmount.index(itemAmount)
+        OUTPUT("Item Index: " + str(nameIndex))
+        OUTPUT("Amount Index: " + str(amountIndex))
+
+        # Asking user if they wish to continue or quit.
+        OUTPUT("---------------------------------")
+        SET user_input TO int(INPUT("Continue (6) or Quit (7): "))
+        OUTPUT("")
+        IF user_input EQUALS 6:
+           menu_and_travel.consoleMenu()
+        ELSE:
+           exit()
+
+# This function will deliver items to destinations.
+DEFINE FUNCTION deliverItems():
+    # Calling the menu.
+    menu_and_travel.deliverMenu()
+    SET user_input TO INPUT("Deliver to island(A, B, C, D)?: ").lower()
+    SET from_to TO INPUT("From(Supply Island 01/02)?: ").lower()
+    OUTPUT("---------------------------------")
+
+    # Delivers from Supply island 01 to other islands.
+    IF from_to IN "supply island 01":
+        # Checks what destination the user has chosen and displays where it goes.
+        IF user_input not IN ["island a", "island b", "island c", "island d"]:
+            # Error Message.
+            OUTPUT("INVALID INPUT")
+        # Delivers to Island A.
+        ELSEIF user_input IN "island a":
+            islandA_ItemName.append(dhoaniItemName)
+            islandA_ItemAmount.append(dhoaniItemAmount)
+            OUTPUT(menu_and_travel.get_drive() + user_input.upper())
+            SET calc TO 50 / 25
+            OUTPUT("Time: " + str(calc) + " HRS")
+            OUTPUT("Distance: 50KM")
+            OUTPUT("---------------------------------")
+            OUTPUT(menu_and_travel.get_stop() + user_input.upper())
+            OUTPUT("---------------------------------")
+        # Delivers to Island B.
+        ELSEIF user_input IN "island b":
+            islandB_ItemName.append(dhoaniItemName)
+            islandB_ItemAmount.append(dhoaniItemAmount)
+            OUTPUT(menu_and_travel.get_drive() + user_input.upper())
+            SET calc TO 130 / 25
+            OUTPUT("Time: " + str(calc) + " HRS")
+            OUTPUT("Distance: 130KM")
+            OUTPUT("---------------------------------")
+            OUTPUT(menu_and_travel.get_stop() + user_INPUT.upper())
+            OUTPUT("---------------------------------")
+        # Delivers to Island C.
+        ELSEIF user_input IN "island c":
+            islandC_ItemName.append(dhoaniItemName)
+            islandC_ItemAmount.append(dhoaniItemAmount)
+            OUTPUT(menu_and_travel.get_drive() + user_input.upper())
+            SET calc TO 190 / 25
+            OUTPUT("Time: " + str(calc) + " HRS")
+            OUTPUT("Distance: 130KM")
+            OUTPUT("---------------------------------")
+            OUTPUT(menu_and_travel.get_stop() + user_input.upper())
+            OUTPUT("---------------------------------")
+        # Delivers to Island D.
+        ELSEIF user_input IN "island d":
+            islandD_ItemName.append(dhoaniItemName)
+            islandD_ItemAmount.append(dhoaniItemAmount)
+            OUTPUT(menu_and_travel.get_drive() + user_input.upper())
+            SET calc TO 230 / 25
+            OUTPUT("Time: " + str(calc) + " HRS")
+            OUTPUT("Distance: 230KM")
+            OUTPUT("---------------------------------")
+            OUTPUT(menu_and_travel.get_stop() + user_input.upper())
+            OUTPUT("---------------------------------")
+
+        # Exits to console menu.
+        ELSEIF user_input IN "quit":
+            menu_and_travel.consoleMenu
+
+    # Delivers from Supply island 02 to other islands. 
+    ELSEIF from_to IN "supply island 02":
+        # Checks what destination the user has chosen and displays where it goes.
+        IF user_input not IN ["island a", "island b", "island c", "island d"]:
+            # Error Message.
+            OUTPUT("INVALID INPUT")
+        # Delivers to Island A.
+        ELSEIF user_input IN "island a":
+            islandA_ItemName.append(dhoaniItemName)
+            islandA_ItemAmount.append(dhoaniItemAmount)
+            OUTPUT(menu_and_travel.get_drive() + user_input.upper())
+            SET calc TO 250 / 25
+            OUTPUT("Time: " + str(calc) + " HRS")
+            OUTPUT("Distance: 250KM")
+            OUTPUT("---------------------------------")
+            OUTPUT(menu_and_travel.get_stop() + user_input.upper())
+        # Delivers to Island B.
+        ELSEIF user_input IN "island b":
+            islandB_ItemName.append(dhoaniItemName)
+            islandB_ItemAmount.append(dhoaniItemAmount)
+            OUTPUT(menu_and_travel.get_drive() + user_input.upper())
+            SET calc TO 170 / 25
+            OUTPUT("Time: " + str(calc) + " HRS")
+            OUTPUT("Distance: 170KM")
+            OUTPUT("---------------------------------")
+            OUTPUT(menu_and_travel.get_stop() + user_input.upper())
+        # Delivers to Island C.
+        ELSEIF user_input IN "island c":
+            islandC_ItemName.append(dhoaniItemName)
+            islandC_ItemAmount.append(dhoaniItemAmount)
+            OUTPUT(menu_and_travel.get_drive() + user_input.upper())
+            SET calc TO 110 / 25
+            OUTPUT("Time: " + str(calc) + " HRS")
+            OUTPUT("Distance: 110KM")
+            OUTPUT("---------------------------------")
+            OUTPUT(menu_and_travel.get_stop() + user_input.upper())
+        # Delivers to Island D.
+        ELSEIF user_input IN "island d":
+            islandD_ItemName.append(dhoaniItemName)
+            islandD_ItemAmount.append(dhoaniItemAmount)
+            OUTPUT(menu_and_travel.get_drive() + user_input.upper())
+            SET calc TO 70 / 25
+            OUTPUT("Time: " + str(calc) + " HRS")
+            OUTPUT("Distance: 70KM")
+            OUTPUT("---------------------------------")
+            OUTPUT(menu_and_travel.get_stop() + user_input.upper())
+        # Exits to console menu.
+        ELSEIF user_input IN "quit":
+            menu_and_travel.consoleMenu
+    # Exits after displaying error message.
+    ELSE:
+        OUTPUT("INVALID INPUT!")
+        # Asking user IF they wish to continue or quit.
+        SET user_input TO int(INPUT("Continue (6) or Quit (7): "))
+        IF user_input EQUALS 6:
+            menu_and_travel.consoleMenu()
+        ELSE:
+            exit()
+
+# This function will OUTPUT all of the lists and their amounts.
+DEFINE FUNCTION printItems():
+    # Dhoani inventory.
+    OUTPUT("")
+    OUTPUT("")
+    OUTPUT("")
+    OUTPUT("Dhoani Inventory")
+    OUTPUT("-----------------------------")
+    OUTPUT("Items: ", *dhoaniItemName)
+    OUTPUT("Amount:", *dhoaniItemAmount)
+    OUTPUT("-----------------------------")
+
+    # Island A inventory.
+    OUTPUT("")
+    OUTPUT("Supply Island A Inventory")
+    OUTPUT("-----------------------------")
+    #OUTPUT("All Items: ", *island_a)
+    OUTPUT("Items: ", islandA_ItemName)
+    OUTPUT("Amount:", islandA_ItemAmount)
+    OUTPUT("-----------------------------")
+
+    # Island B inventory.
+    OUTPUT("")
+    OUTPUT("Supply Island B Inventory")
+    OUTPUT("-----------------------------")
+    #OUTPUT("All Items: ", *island_b)
+    OUTPUT("Items: ", islandB_ItemName)
+    OUTPUT("Amount:", islandB_ItemAmount)
+    OUTPUT("-----------------------------")
+
+    # Island C inventory.
+    OUTPUT("")
+    OUTPUT("Supply Island C Inventory")
+    OUTPUT("-----------------------------")
+    #OUTPUT("All Items: ", *island_c)
+    OUTPUT("Items: ", islandC_ItemName)
+    OUTPUT("Amount:", islandC_ItemAmount)
+    OUTPUT("-----------------------------")
+
+    # Island D Inventory.
+    OUTPUT("")
+    OUTPUT("Supply Island D Inventory")
+    OUTPUT("-----------------------------")
+    #OUTPUT("All Items: ", *island_d)
+    OUTPUT("Items: ", islandD_ItemName)
+    OUTPUT("Amount:", islandD_ItemAmount)
+    OUTPUT("-----------------------------")
+
+    # Asking user IF they wish to continue or quit.
+    SET user_input TO int(INPUT("Continue (6) or Quit (7): "))
+    IF user_input EQUALS 6:
+        menu_and_travel.consoleMenu()
+    ELSE:
+        exit()
+#### ----FUNCTIONS---- ####
+
+# Calling the function globally.
+# Displays main console menu.
+menu_and_travel.consoleMenu()
+
+# PROGRAM END.
+
