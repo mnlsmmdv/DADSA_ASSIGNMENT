@@ -199,127 +199,118 @@ def removeItems():
     menu_and_travel.itemsMenu()
     itemName = input("Item Name: ").lower()
     itemAmount = int(input("Item Amount: "))
-    from_to = input("From: ").lower()
-
     # Checks if Item Name and Item Amount is valid and removes it.
     if((itemName != ["diesel", "frozen", "fridge", "food", "protected material", "unprotected material"]) and (itemAmount > 30000)):
         print("INVALID INPUT!")
-    else:
-        if from_to not in ["island", "island b", "island c", "island d", "dhoani"]:
-            print("INVALID INPUT!")
-        # Dhoani.
-        elif from_to in "dhoani":
-            if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):  
-                # Removing Item Name and Item Amount.
+    from_remove = input("From: ").lower()
+
+    #else:
+    if from_remove not in ["island", "island b", "island c", "island d", "dhoani"]:
+        print("INVALID INPUT!")
+    # Dhoani.
+    elif from_remove in "dhoani":
+        if ((itemName in dhoaniItemName) and (itemAmount in dhoaniItemAmount)):  
+            # Removing Item Name and Item Amount.
+            print("")
+            print("----REMOVING ITEM!----")  
+            # This will calculate and print the Dhoani's current capacity left.
+            dhoaniCapacity = 30000
+            capacityCalculate = dhoaniCapacity - itemAmount
+            print("Capacity regained: " + str(capacityCalculate) + "KG")
+            dhoaniItemName.remove(itemName)
+            dhoaniItemAmount.remove(itemAmount)
+            # Asks user if they wish to remove another item. If not exits.
+            user_input = input("Remove another item?(yes/no): ").lower()
+            print("---------------------------------")
+            if(user_input in "yes"):
+                menu_and_travel.consoleMenu()
+            else:
+                user_input = int(input("Continue (6) or Quit (7): "))
                 print("")
-                print("----REMOVING ITEM!----")  
-                # This will calculate and print the Dhoani's current capacity left.
-                dhoaniCapacity = 30000
-                capacityCalculate = dhoaniCapacity - itemAmount
-                print("Capacity regained: " + str(capacityCalculate) + "KG")
-                dhoaniItemName.remove(itemName)
-                dhoaniItemAmount.remove(itemAmount)
-                # Asks user if they wish to remove another item. If not exits.
-                user_input = input("Remove another item?(yes/no): ").lower()
-                print("---------------------------------")
-                if(user_input in "yes"):
+                if user_input == 6:
                     menu_and_travel.consoleMenu()
                 else:
-                    user_input = int(input("Continue (6) or Quit (7): "))
-                    print("")
-                    if user_input == 6:
-                        menu_and_travel.consoleMenu()
-                    else:
-                        exit()
-                
-                # Asking user if they wish to continue or quit.
-                print("---------------------------------")
-                user_input = int(input("Continue (6) or Quit (7): "))
-                print("")
-                if user_input == 6:
-                   menu_and_travel.consoleMenu()
-                else:
-                   exit()
-        # Island A.
-        elif from_to in "island a":
-            if ((itemName in island_a) and (itemAmount in island_a)):  
-                # Removing Item Name and Item Amount.
-                print("")
-                print("----REMOVING ITEM!----")  
-                # This will calculate and print Island A's current capacity left.
-                capacityCalculate = islandA_Capacity - itemAmount
-                print("Capacity regained: " + str(capacityCalculate) + "KG")
-                island_a.remove(itemName)
-                island_a.remove(itemAmount)
-                
-                # Asking user if they wish to continue or quit.
-                print("---------------------------------")
-                user_input = int(input("Continue (6) or Quit (7): "))
-                print("")
-                if user_input == 6:
-                   menu_and_travel.consoleMenu()
-                else:
-                   exit()
-        # Island B.
-        elif from_to in "island b":
-            if ((itemName in island_b) and (itemAmount in island_b)):  
-                # Removing Item Name and Item Amount.
-                print("")
-                print("----REMOVING ITEM!----")  
-                # This will calculate and print Island A's current capacity left.
-                capacityCalculate = islandB_Capacity - itemAmount
-                print("Capacity regained: " + str(capacityCalculate) + "KG")
-                island_b.remove(itemName)
-                island_b.remove(itemAmount)
-                
-                # Asking user if they wish to continue or quit.
-                print("---------------------------------")
-                user_input = int(input("Continue (6) or Quit (7): "))
-                print("")
-                if user_input == 6:
-                   menu_and_travel.consoleMenu()
-                else:
-                   exit()
-        # Island C.
-        elif from_to in "island c":
-            if ((itemName in island_c) and (itemAmount in island_c)):  
-                # Removing Item Name and Item Amount.
-                print("")
-                print("----REMOVING ITEM!----")  
-                # This will calculate and print Island A's current capacity left.
-                capacityCalculate = islandC_Capacity - itemAmount
-                print("Capacity regained: " + str(capacityCalculate) + "KG")
-                island_c.remove(itemName)
-                island_c.remove(itemAmount)
-                
-                # Asking user if they wish to continue or quit.
-                print("---------------------------------")
-                user_input = int(input("Continue (6) or Quit (7): "))
-                print("")
-                if user_input == 6:
-                   menu_and_travel.consoleMenu()
-                else:
-                   exit()
-        # Island D.
-        elif from_to in "island d":
-            if ((itemName in island_d) and (itemAmount in island_d)):  
-                # Removing Item Name and Item Amount.
-                print("")
-                print("----REMOVING ITEM!----")  
-                # This will calculate and print Island A's current capacity left.
-                capacityCalculate = islandD_Capacity - itemAmount
-                print("Capacity regained: " + str(capacityCalculate) + "KG")
-                island_d.remove(itemName)
-                island_d.remove(itemAmount)
-                
-                # Asking user if they wish to continue or quit.
-                print("---------------------------------")
-                user_input = int(input("Continue (6) or Quit (7): "))
-                print("")
-                if user_input == 6:
-                   menu_and_travel.consoleMenu()
-                else:
-                   exit()
+                    exit()
+    # Island A.
+    elif from_remove in "island a":
+        if ((itemName in island_a) and (itemAmount in island_a)):  
+            # Removing Item Name and Item Amount.
+            print("")
+            print("----REMOVING ITEM!----")  
+            # This will calculate and print Island A's current capacity left.
+            capacityCalculate = islandA_Capacity - itemAmount
+            print("Capacity regained: " + str(capacityCalculate) + "KG")
+            island_a.remove(itemName)
+            island_a.remove(itemAmount)
+            
+            # Asking user if they wish to continue or quit.
+            print("---------------------------------")
+            user_input = int(input("Continue (6) or Quit (7): "))
+            print("")
+            if user_input == 6:
+               menu_and_travel.consoleMenu()
+            else:
+               exit()
+    # Island B.
+    elif from_remove in "island b":
+        if ((itemName in island_b) and (itemAmount in island_b)):  
+            # Removing Item Name and Item Amount.
+            print("")
+            print("----REMOVING ITEM!----")  
+            # This will calculate and print Island A's current capacity left.
+            capacityCalculate = islandB_Capacity - itemAmount
+            print("Capacity regained: " + str(capacityCalculate) + "KG")
+            island_b.remove(itemName)
+            island_b.remove(itemAmount)
+            
+            # Asking user if they wish to continue or quit.
+            print("---------------------------------")
+            user_input = int(input("Continue (6) or Quit (7): "))
+            print("")
+            if user_input == 6:
+               menu_and_travel.consoleMenu()
+            else:
+               exit()
+    # Island C.
+    elif from_remove in "island c":
+        if ((itemName in island_c) and (itemAmount in island_c)):  
+            # Removing Item Name and Item Amount.
+            print("")
+            print("----REMOVING ITEM!----")  
+            # This will calculate and print Island A's current capacity left.
+            capacityCalculate = islandC_Capacity - itemAmount
+            print("Capacity regained: " + str(capacityCalculate) + "KG")
+            island_c.remove(itemName)
+            island_c.remove(itemAmount)
+            
+            # Asking user if they wish to continue or quit.
+            print("---------------------------------")
+            user_input = int(input("Continue (6) or Quit (7): "))
+            print("")
+            if user_input == 6:
+               menu_and_travel.consoleMenu()
+            else:
+               exit()
+    # Island D.
+    elif from_remove in "island d":
+        if ((itemName in island_d) and (itemAmount in island_d)):  
+            # Removing Item Name and Item Amount.
+            print("")
+            print("----REMOVING ITEM!----")  
+            # This will calculate and print Island A's current capacity left.
+            capacityCalculate = islandD_Capacity - itemAmount
+            print("Capacity regained: " + str(capacityCalculate) + "KG")
+            island_d.remove(itemName)
+            island_d.remove(itemAmount)
+            
+            # Asking user if they wish to continue or quit.
+            print("---------------------------------")
+            user_input = int(input("Continue (6) or Quit (7): "))
+            print("")
+            if user_input == 6:
+               menu_and_travel.consoleMenu()
+            else:
+               exit()
 
 # This function will search through the lists and print items and their amounts.
 def searchItems():
