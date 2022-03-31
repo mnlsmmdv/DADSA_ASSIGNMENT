@@ -133,6 +133,8 @@ def consoleChoice(user_input):
     # Quit program.
     elif user_input == 7:
         exit()
+    elif user_input == 8:
+        forConsumption()
     # Invalid option.
     else:
         print("INVALID OPTION")
@@ -390,6 +392,32 @@ def deliverItems():
             menu_and_travel.consoleMenu()
         else:
             exit()
+
+"""
+def forConsumption():
+    print("")
+    print("")
+    print("---------------------------------")
+    print("|      BigCon Construction      |")
+    print("-----------Consumption----------")
+    print("1- Diesel                       |")
+    print("2- Frozen                       |")
+    print("3- Fridge                       |")
+    print("4- Food                         |")
+    print("5- Protected Material           |")
+    print("6- Unprotected Material         |")
+    print("---------------------------------")
+    item_name = input("Item Name: ")
+    item_amount = int(input("Item Amount: "))
+    consumption_from = input("From: ")
+
+    if consumption_from == "island a":
+        if((item_name in island_a) and (item_amount in island_a)):
+            island_a.remove(item_name)
+            island_a.remove(item_amount)
+    else:
+        print("INVALID INPUT")
+"""
     
 # This function will print all of the lists and their amounts.
 def printItems():
