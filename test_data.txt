@@ -1,5 +1,4 @@
 
-
 ---------------------------------
 |      BigCon Construction      |
 --------------Menu---------------
@@ -8,7 +7,7 @@
 3- Search Items                 |
 4- Deliver Items                |
 5- Print Items                  |
-7- QUIT                         |
+7- QUIT PROGRAM                 |
 ---------------------------------
 Enter choice: 1
 
@@ -25,11 +24,183 @@ Enter choice: 1
 6- Unprotected Material         |
 ---------------------------------
 Item Name: diesel
-Item Amount: 2000
+Item Amount: 4000
 ---------------------------------
-Capacity Reaced!
 ----ADDING ITEM!----
-Current left: 28000KG
+Capacity left: 26000KG
+---------------------------------
+Add another item?(yes/no): yes
+---------------------------------
+
+
+---------------------------------
+|      BigCon Construction      |
+--------------Menu---------------
+1- Add Items                    |
+2- Remove Items                 |
+3- Search Items                 |
+4- Deliver Items                |
+5- Print Items                  |
+7- QUIT PROGRAM                 |
+---------------------------------
+Enter choice: 1
+
+
+
+---------------------------------
+|      BigCon Construction      |
+--------------Items--------------
+1- Diesel                       |
+2- Frozen                       |
+3- Fridge                       |
+4- Food                         |
+5- Protected Material           |
+6- Unprotected Material         |
+---------------------------------
+Item Name: frozen
+Item Amount: 40
+---------------------------------
+----ADDING ITEM!----
+Capacity left: 29960KG
+---------------------------------
+Add another item?(yes/no): yes
+---------------------------------
+
+
+---------------------------------
+|      BigCon Construction      |
+--------------Menu---------------
+1- Add Items                    |
+2- Remove Items                 |
+3- Search Items                 |
+4- Deliver Items                |
+5- Print Items                  |
+7- QUIT PROGRAM                 |
+---------------------------------
+Enter choice: 1
+
+
+
+---------------------------------
+|      BigCon Construction      |
+--------------Items--------------
+1- Diesel                       |
+2- Frozen                       |
+3- Fridge                       |
+4- Food                         |
+5- Protected Material           |
+6- Unprotected Material         |
+---------------------------------
+Item Name: fridge
+Item Amount: 50
+---------------------------------
+----ADDING ITEM!----
+Capacity left: 29950KG
+---------------------------------
+Add another item?(yes/no): yes
+---------------------------------
+
+
+---------------------------------
+|      BigCon Construction      |
+--------------Menu---------------
+1- Add Items                    |
+2- Remove Items                 |
+3- Search Items                 |
+4- Deliver Items                |
+5- Print Items                  |
+7- QUIT PROGRAM                 |
+---------------------------------
+Enter choice: 1
+
+
+
+---------------------------------
+|      BigCon Construction      |
+--------------Items--------------
+1- Diesel                       |
+2- Frozen                       |
+3- Fridge                       |
+4- Food                         |
+5- Protected Material           |
+6- Unprotected Material         |
+---------------------------------
+Item Name: food
+Item Amount: 9333
+---------------------------------
+----ADDING ITEM!----
+Capacity left: 20667KG
+---------------------------------
+Add another item?(yes/no): yes
+---------------------------------
+
+
+---------------------------------
+|      BigCon Construction      |
+--------------Menu---------------
+1- Add Items                    |
+2- Remove Items                 |
+3- Search Items                 |
+4- Deliver Items                |
+5- Print Items                  |
+7- QUIT PROGRAM                 |
+---------------------------------
+Enter choice: 1
+
+
+
+---------------------------------
+|      BigCon Construction      |
+--------------Items--------------
+1- Diesel                       |
+2- Frozen                       |
+3- Fridge                       |
+4- Food                         |
+5- Protected Material           |
+6- Unprotected Material         |
+---------------------------------
+Item Name: protected material
+Item Amount: 9333
+---------------------------------
+----ADDING ITEM!----
+Capacity left: 20667KG
+---------------------------------
+Add another item?(yes/no): yes
+---------------------------------
+
+
+---------------------------------
+|      BigCon Construction      |
+--------------Menu---------------
+1- Add Items                    |
+2- Remove Items                 |
+3- Search Items                 |
+4- Deliver Items                |
+5- Print Items                  |
+7- QUIT PROGRAM                 |
+---------------------------------
+Enter choice: 1
+
+
+
+---------------------------------
+|      BigCon Construction      |
+--------------Items--------------
+1- Diesel                       |
+2- Frozen                       |
+3- Fridge                       |
+4- Food                         |
+5- Protected Material           |
+6- Unprotected Material         |
+---------------------------------
+Item Name: unprotected material
+Item Amount: 9333
+---------------------------------
+----ADDING ITEM!----
+Capacity left: 20667KG
+---------------------------------
+Add another item?(yes/no): no
+---------------------------------
 
 
 ---------------------------------
@@ -40,12 +211,13 @@ Island B                        |
 Island C                        |
 Island D                        |
 ---------------------------------
-Deliver to?: island a
+Deliver to island(A, B, C, D)?: island a
+From(Supply Island 01/02)?: supply island 01
+---------------------------------
 Dhoani is now travelling to ISLAND A
 Time: 2.0 HRS
 Distance: 50KM
-
-
+---------------------------------
 Dhoani has stopped at ISLAND A
 ---------------------------------
 Continue (6) or Quit (7): 6
@@ -60,7 +232,7 @@ Continue (6) or Quit (7): 6
 3- Search Items                 |
 4- Deliver Items                |
 5- Print Items                  |
-7- QUIT                         |
+7- QUIT PROGRAM                 |
 ---------------------------------
 Enter choice: 5
 
@@ -68,28 +240,32 @@ Enter choice: 5
 
 Dhoani Inventory
 -----------------------------
-Items:  diesel
-Amount: 2000
+Items:  diesel frozen fridge food protected material unprotected material
+Amount: 4000 40 50 9333 9333 9333
 -----------------------------
 
 Supply Island A Inventory
 -----------------------------
-All Items:  diesel 2000
+Items:  [['diesel', 'frozen', 'fridge', 'food', 'protected material', 'unprotected material']]
+Amount: [[4000, 40, 50, 9333, 9333, 9333]]
 -----------------------------
 
 Supply Island B Inventory
 -----------------------------
-All Items: 
+Items:  []
+Amount: []
 -----------------------------
 
 Supply Island C Inventory
 -----------------------------
-All Items: 
+Items:  []
+Amount: []
 -----------------------------
 
 Supply Island D Inventory
 -----------------------------
-All Items: 
+Items:  []
+Amount: []
 -----------------------------
 Continue (6) or Quit (7): 6
 
@@ -102,7 +278,34 @@ Continue (6) or Quit (7): 6
 3- Search Items                 |
 4- Deliver Items                |
 5- Print Items                  |
-7- QUIT                         |
+7- QUIT PROGRAM                 |
+---------------------------------
+Enter choice: 3 
+----SEARCHING ITEMS----
+---------------------------------
+Item Name: diesel
+Item Amount: 4000
+
+----ITEM EXISTS!----
+-------DHOANI-------
+Item Name: DIESEL
+Item Amount: 4000
+Item Index: 0
+Amount Index: 0
+---------------------------------
+Continue (6) or Quit (7): 6
+
+
+
+---------------------------------
+|      BigCon Construction      |
+--------------Menu---------------
+1- Add Items                    |
+2- Remove Items                 |
+3- Search Items                 |
+4- Deliver Items                |
+5- Print Items                  |
+7- QUIT PROGRAM                 |
 ---------------------------------
 Enter choice: 2
 
@@ -119,10 +322,11 @@ Enter choice: 2
 6- Unprotected Material         |
 ---------------------------------
 Item Name: diesel
-Item Amount: 2000
+Item Amount: 4000
+From: dhoani
 
 ----REMOVING ITEM!----
-Capacity regained: 28000KG
+Remove another item?(yes/no): no
 ---------------------------------
 Continue (6) or Quit (7): 6
 
@@ -136,7 +340,7 @@ Continue (6) or Quit (7): 6
 3- Search Items                 |
 4- Deliver Items                |
 5- Print Items                  |
-7- QUIT                         |
+7- QUIT PROGRAM                 |
 ---------------------------------
 Enter choice: 5
 
@@ -144,28 +348,32 @@ Enter choice: 5
 
 Dhoani Inventory
 -----------------------------
-Items: 
-Amount:
+Items:  frozen fridge food protected material unprotected material
+Amount: 40 50 9333 9333 9333
 -----------------------------
 
 Supply Island A Inventory
 -----------------------------
-All Items:  diesel 2000
+Items:  [['frozen', 'fridge', 'food', 'protected material', 'unprotected material']]
+Amount: [[40, 50, 9333, 9333, 9333]]
 -----------------------------
 
 Supply Island B Inventory
 -----------------------------
-All Items: 
+Items:  []
+Amount: []
 -----------------------------
 
 Supply Island C Inventory
 -----------------------------
-All Items: 
+Items:  []
+Amount: []
 -----------------------------
 
 Supply Island D Inventory
 -----------------------------
-All Items: 
+Items:  []
+Amount: []
 -----------------------------
 Continue (6) or Quit (7): 6
 
@@ -178,73 +386,6 @@ Continue (6) or Quit (7): 6
 3- Search Items                 |
 4- Deliver Items                |
 5- Print Items                  |
-7- QUIT                         |
----------------------------------
-Enter choice: 3
-----SEARCHING ITEMS----
----------------------------------
-Item Name: diesel
-Item Amount: 2000
-
-----ITEM EXISTS!----
-----ISLAND A----
-Item Name: DIESEL
-Item Amount: 2000
----------------------------------
-Continue (6) or Quit (7): 6
-
-
-
----------------------------------
-|      BigCon Construction      |
---------------Menu---------------
-1- Add Items                    |
-2- Remove Items                 |
-3- Search Items                 |
-4- Deliver Items                |
-5- Print Items                  |
-7- QUIT                         |
----------------------------------
-Enter choice: 5
-
-
-
-Dhoani Inventory
------------------------------
-Items: 
-Amount:
------------------------------
-
-Supply Island A Inventory
------------------------------
-All Items:  diesel 2000
------------------------------
-
-Supply Island B Inventory
------------------------------
-All Items: 
------------------------------
-
-Supply Island C Inventory
------------------------------
-All Items: 
------------------------------
-
-Supply Island D Inventory
------------------------------
-All Items: 
------------------------------
-Continue (6) or Quit (7): 6
-
-
----------------------------------
-|      BigCon Construction      |
---------------Menu---------------
-1- Add Items                    |
-2- Remove Items                 |
-3- Search Items                 |
-4- Deliver Items                |
-5- Print Items                  |
-7- QUIT                         |
+7- QUIT PROGRAM                 |
 ---------------------------------
 Enter choice: 7
