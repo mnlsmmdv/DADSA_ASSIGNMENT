@@ -287,8 +287,8 @@ DEFINE FUNCTION removeItems():
             ELSE:
                 exit()
 
-# This function will search through the lists and OUTPUT items and their amounts.
-# IN method to verify and display and index search to display index of elements.
+# This function will search through the lists and output items and their amounts.
+# In method to verify and display and index search to display index of elements.
 DEFINE FUNCTION searchItems():
     OUTPUT("----SEARCHING ITEMS----")
     OUTPUT("---------------------------------")
@@ -460,7 +460,7 @@ DEFINE FUNCTION deliverItems():
         ELSE:
             exit()
 
-# This function will OUTPUT all of the lists and their amounts.
+# This function will output all of the lists and their amounts.
 DEFINE FUNCTION printItems():
     # Dhoani inventory.
     OUTPUT("")
@@ -508,7 +508,7 @@ DEFINE FUNCTION printItems():
     OUTPUT("Amount:", islandD_ItemAmount)
     OUTPUT("-----------------------------")
 
-    # Asking user IF they wish to continue or quit.
+    # Asking user if they wish to continue or quit.
     SET user_input TO int(INPUT("Continue (6) or Quit (7): "))
     IF user_input EQUALS 6:
         menu_and_travel.consoleMenu()
