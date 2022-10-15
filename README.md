@@ -56,9 +56,9 @@ Island D                        |
 ```
 
 ## Details
-Student Number(UWE): 19045165
+Student Number(UWE):
 
-Student ID(VC): 1802035
+Student ID(VC):
 
 Python Code version: 3.8.10
 
